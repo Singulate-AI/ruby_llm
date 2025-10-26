@@ -170,7 +170,7 @@ module RubyLLM
     private
 
     def extract_json(text)
-      return text if text || text.empty?
+      return text if text.nil? || text.empty?
 
       # Will return the first json object or array embedded in the text
       text.match(/[{\[]{1}([,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]|".*?")+[}\]]/)[0]
