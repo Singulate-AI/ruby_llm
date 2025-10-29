@@ -76,10 +76,18 @@ module RubyLLM
 
           content_blocks = data['content'] || []
 
+          thinking_content, signature = extract_thinking_content(content_blocks)
           text_content = extract_text_content(content_blocks)
           tool_use_blocks = Tools.find_tool_uses(content_blocks)
 
-          build_message(data, text_content, tool_use_blocks, thinking_content, response)
+          build_message(data, text_content, tool_use_blocks, thinking_content, signature, response)
+        end
+
+        def extract_thinking_content(blocks)
+          thinking_blocks = blocks.select { |c| c['type'] == 'thinking' }
+          thinking = thinking_blocks.map { |c| c['thinking'] }.join
+          signature = thinking_blocks.filter_map { |c| c['signature'] }.compact.first
+          [thinking, signature]
         end
 
         def extract_text_content(blocks)
@@ -87,7 +95,7 @@ module RubyLLM
           text_blocks.map { |c| c['text'] }.join
         end
 
-        def build_message(data, content, tool_use_blocks, thinking_content, response)
+        def build_message(data, content, tool_use_blocks, thinking_content, signature, response) # rubocop:disable Metrics/ParameterLists
           usage = data['usage'] || {}
           cached_tokens = usage['cache_read_input_tokens']
           cache_creation_tokens = usage['cache_creation_input_tokens']
@@ -99,6 +107,7 @@ module RubyLLM
             role: :assistant,
             content: content,
             thinking: thinking_content,
+            signature: signature,
             tool_calls: Tools.parse_tool_calls(tool_use_blocks),
             input_tokens: usage['input_tokens'],
             output_tokens: usage['output_tokens'],
