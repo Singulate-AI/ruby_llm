@@ -37,7 +37,7 @@ module RubyLLM
       self.class.configuration_requirements
     end
 
-    def complete(messages, tools:, temperature:, model:, params: {}, headers: {}, schema: nil, &) # rubocop:disable Metrics/ParameterLists
+    def complete(messages, tools:, temperature:, model:, thinking:, thinking_budget:, params: {}, headers: {}, schema: nil, &) # rubocop:disable Metrics/ParameterLists
       normalized_temperature = maybe_normalize_temperature(temperature, model)
 
       payload = Utils.deep_merge(
@@ -46,7 +46,9 @@ module RubyLLM
           tools: tools,
           temperature: normalized_temperature,
           model: model,
-          stream: block_given?,
+          thinking: thinking,
+                                 thinking_budget: thinking_budget,
+                                 stream: block_given?,
           schema: schema
         ),
         params
