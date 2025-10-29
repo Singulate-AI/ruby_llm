@@ -39,7 +39,7 @@ module RubyLLM
         end
 
         def supports_extended_thinking?(model_id)
-          model_id.match?(/claude-3-7-sonnet|claude-sonnet-4|claude-opus-4/)
+          model_id.match?(/claude-3-7-sonnet|claude-sonnet-4|claude-opus-4|claude-haiku-4/)
         end
 
         def model_family(model_id)
@@ -52,6 +52,7 @@ module RubyLLM
           when /claude-3-opus/      then 'claude-3-opus'
           when /claude-3-sonnet/    then 'claude-3-sonnet'
           when /claude-3-haiku/     then 'claude-3-haiku'
+          when /claude-4-5-haiku/   then 'claude-4-haiku'
           else 'claude-2'
           end
         end
@@ -94,7 +95,7 @@ module RubyLLM
         def capabilities_for(model_id)
           capabilities = ['streaming']
 
-          if model_id.match?(/claude-3|claude-sonnet-4|claude-opus-4/)
+          if model_id.match?(/claude-3|claude-sonnet-4|claude-opus-4|claude-haiku-4/)
             capabilities << 'function_calling'
             capabilities << 'batch'
           end

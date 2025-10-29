@@ -67,7 +67,7 @@ module RubyLLM
         end
 
         def supports_extended_thinking?(model_id)
-          model_id.match?(/claude-3-7-sonnet|claude-sonnet-4|claude-opus-4/)
+          model_id.match?(/claude-3-7-sonnet|claude-sonnet-4|claude-opus-4|claude-haiku-4/)
         end
 
         # Model family patterns for capability lookup
@@ -78,6 +78,7 @@ module RubyLLM
           /anthropic\.claude-3-7-sonnet/ => :claude3_sonnet,
           /anthropic\.claude-3-haiku/ => :claude3_haiku,
           /anthropic\.claude-3-5-haiku/ => :claude3_5_haiku,
+          /anthropic\.claude-4-5-haiku/ => :claude4_5_haiku,
           /anthropic\.claude-v2/ => :claude2,
           /anthropic\.claude-instant/ => :claude_instant,
           /anthropic\.claude-sonnet-4/ => :claude_sonnet4,
