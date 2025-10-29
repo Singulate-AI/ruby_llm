@@ -11,11 +11,12 @@ module RubyLLM
           '/v1/messages'
         end
 
-        def render_payload(messages, tools:, temperature:, model:, thinking:, thinking_budget:, stream: false, schema: nil) # rubocop:disable Metrics/ParameterLists
+        def render_payload(messages, tools:, temperature:, model:, thinking:, # rubocop:disable Metrics/ParameterLists
+                           thinking_budget:, stream: false, schema: nil)
           system_messages, chat_messages = separate_messages(messages)
           system_content = build_system_content(system_messages, schema)
 
-          build_base_payload(chat_messages, temperature, model, stream).tap do |payload|
+          build_base_payload(chat_messages, model, stream).tap do |payload|
             add_optional_fields(payload, system_content:, tools:, temperature:, thinking:, thinking_budget:)
           end
         end
@@ -51,13 +52,13 @@ module RubyLLM
         def build_base_payload(chat_messages, model, stream)
           {
             model: model.id,
-            messages: chat_messages.map { |msg| format_message(msg) },
+            messages: chat_messages.map { |msg| format_message(msg) }.flatten,
             stream: stream,
             max_tokens: model.max_tokens || 4096
           }
         end
 
-        def add_optional_fields(payload, system_content:, tools:, thinking:, thinking_budget:, temperature:)
+        def add_optional_fields(payload, system_content:, tools:, thinking:, thinking_budget:, temperature:) # rubocop:disable Metrics/ParameterLists
           payload[:tools] = tools.values.map { |t| Tools.function_for(t) } if tools.any?
           payload[:system] = system_content unless system_content.empty?
           payload[:temperature] = temperature unless temperature.nil?
@@ -75,7 +76,6 @@ module RubyLLM
 
           content_blocks = data['content'] || []
 
-          thinking_content = extract_thinking_content(content_blocks)
           text_content = extract_text_content(content_blocks)
           tool_use_blocks = Tools.find_tool_uses(content_blocks)
 

@@ -59,9 +59,9 @@ module RubyLLM
     end
 
     def with_model(model_id, provider: nil, assume_exists: false)
-      @model, @provider = Models.resolve(model_id, provider:, assume_exists:)
-      @connection = @context ? @context.connection_for(@provider) : @provider.connection(@config)
-      # TODO: Currently the unsupported errors will not retrigger after model reassignment.
+      @model, @provider = Models.resolve(model_id, provider:, assume_exists:, config: @config)
+      # # TODO: Currently the unsupported errors will not retrigger after model reassignment.
+      @connection = @provider.connection
 
       self
     end
@@ -142,7 +142,7 @@ module RubyLLM
         messages,
         tools: @tools,
         temperature: @temperature,
-        model: @model.id,
+        model: @model,
         thinking: @thinking,
         thinking_budget: @thinking_budget,
         params: @params,
