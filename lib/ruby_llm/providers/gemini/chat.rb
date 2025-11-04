@@ -14,7 +14,7 @@ module RubyLLM
           "models/#{@model}:generateContent"
         end
 
-        def render_payload(messages, tools:, temperature:, model:, stream: false, schema: nil, **) # rubocop:disable Lint/UnusedMethodArgument
+        def render_payload(messages, tools:, temperature:, model:, stream: false, schema: nil, **) # rubocop:disable Lint/UnusedMethodArgument, Metrics/ParameterLists
           @model = model.id
           payload = {
             contents: format_messages(messages),
