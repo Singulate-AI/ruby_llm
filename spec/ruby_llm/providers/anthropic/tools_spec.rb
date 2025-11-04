@@ -9,6 +9,7 @@ RSpec.describe RubyLLM::Providers::Anthropic::Tools do
     let(:msg) do
       instance_double(RubyLLM::Message,
                       content: 'Some content',
+                      thinking: nil,
                       tool_calls: {
                         'tool_123' => instance_double(RubyLLM::ToolCall,
                                                       id: 'tool_123',
@@ -38,6 +39,7 @@ RSpec.describe RubyLLM::Providers::Anthropic::Tools do
       let(:msg) do
         instance_double(RubyLLM::Message,
                         content: nil,
+                        thinking: nil,
                         tool_calls: {
                           'tool_123' => instance_double(RubyLLM::ToolCall,
                                                         id: 'tool_123',
@@ -67,6 +69,7 @@ RSpec.describe RubyLLM::Providers::Anthropic::Tools do
       let(:msg) do
         instance_double(RubyLLM::Message,
                         content: '',
+                        thinking: nil,
                         tool_calls: {
                           'tool_123' => instance_double(RubyLLM::ToolCall,
                                                         id: 'tool_123',

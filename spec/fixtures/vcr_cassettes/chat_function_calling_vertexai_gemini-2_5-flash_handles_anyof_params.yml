@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Pragma:
-      - no-cache
-      Date:
-      - Sun, 02 Nov 2025 21:30:53 GMT
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
+      Date:
+      - Tue, 04 Nov 2025 15:41:37 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -52,18 +52,18 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid",
+          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/sqlservice.login openid",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Sun, 02 Nov 2025 21:30:53 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:37 GMT
 - request:
     method: post
     uri: https://<GOOGLE_CLOUD_LOCATION>-aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Call the any-of params
-        tool for task \"Review PR\" with status \"pending\" and report the result."}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"any_of_params","description":"Uses
+        tool for task \"Review PR\" with status \"pending\" and report the result."}]}],"generationConfig":{"temperature":0.7},"tools":[{"functionDeclarations":[{"name":"any_of_params","description":"Uses
         params DSL any_of support","parameters":{"type":"OBJECT","properties":{"task":{"type":"STRING","description":"Task
         description"},"status":{"type":"STRING","description":"Optional task status","enum":["pending","done"],"nullable":true}},"required":["task","status"]}}]}]}'
     headers:
@@ -89,7 +89,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 02 Nov 2025 21:30:53 GMT
+      - Tue, 04 Nov 2025 15:41:38 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -119,18 +119,18 @@ http_interactions:
                         "task": "Review PR"
                       }
                     },
-                    "thoughtSignature": "CoUCAePx/17KxNVB9n+lFSD24RuHQwSsafLTjQ3rZI0HR2J743LgEtQqFfGeAEGntV+VE4yfcvrVl4A1lcFol7mEs9oQUE+0R6/jesJ4DISbvhA+IIJ7n1vwPgPCqZxcKSJtTahF9dITlpJlgLYss3+j08zZTN8TxJ4N2QukRtuUrP86tloRjFjf2OTyqb+RNg2ZWX6BgcqwQLtA4G5MW0dqBmyMAPFNhWePpPlIawCx3vFEv5PxPZFmdT39AwQICH9CYm9jMLWgkcqiYq7fjM6aDYlyiXkuBBEA1Ivm6RraMsiAqjjyucAs6mxUU0uT3gSZl5KNev87BzaiMbpUQa3MklwIsuSc"
+                    "thoughtSignature": "Co4CAePx/14llGApe6LYCp53lQ3fXyrzGWUONgCDV5ZoRVtt7wsGQ/OC5S96iw2KFLiRA017LljSdS/mH/4tPoNEo6R1R9ac29u00BrjWsuxbwGua6Zgmh0Rjq9nZt7w37fdtNOcrtDAzyqPflDDMc0cGpBBNP13EXRIAk+amp4z6iOqA1bs12k4ouUk7ZKNE4ySM2FcNH+INXgII+/LjN1XZ55X3owpsk2MMiPe5QF9a0Q6MFe4qIsoArhRM0PkdGdTtdJaVA4wrlyGZKoX4D6sZbn5sK+DRcO2/TroxNGQ29wwes1t+9gbhEgjwK+QjlZ58XXLxEPyRuRu9npenmRXdPIJrAo5wT7npmtOilXu"
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.87484760284423824
+              "avgLogprobs": -0.63992023468017578
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 50,
             "candidatesTokenCount": 10,
-            "totalTokenCount": 128,
+            "totalTokenCount": 126,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -144,11 +144,11 @@ http_interactions:
                 "tokenCount": 10
               }
             ],
-            "thoughtsTokenCount": 68
+            "thoughtsTokenCount": 66
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2025-11-02T21:30:53.295836Z",
-          "responseId": "jc0HaZyHEpu9vdIPmvPVgAc"
+          "createTime": "2025-11-04T15:41:37.957203Z",
+          "responseId": "sR4KaZO2OqrvptQP-4KcuQ0"
         }
-  recorded_at: Sun, 02 Nov 2025 21:30:53 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:38 GMT
 recorded_with: VCR 6.3.1

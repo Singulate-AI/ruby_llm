@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"anthropic/claude-haiku-4.5","messages":[{"role":"user","content":"Call
         the any-of params tool for task \"Review PR\" with status \"pending\" and
-        report the result."}],"stream":false,"tools":[{"type":"function","function":{"name":"any_of_params","description":"Uses
+        report the result."}],"stream":false,"temperature":0.7,"tools":[{"type":"function","function":{"name":"any_of_params","description":"Uses
         params DSL any_of support","parameters":{"type":"object","properties":{"task":{"type":"string","description":"Task
         description"},"status":{"description":"Optional task status","anyOf":[{"type":"string","enum":["pending","done"]},{"type":"null"}]}},"required":["task","status"],"additionalProperties":false,"strict":true}}}]}'
     headers:
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 19:50:42 GMT
+      - Tue, 04 Nov 2025 15:41:28 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -51,7 +51,7 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: "\n         \n\n         \n\n         \n{\"id\":\"gen-1762113040-fPql5QTBWsvPiZE6cGuu\",\"provider\":\"Anthropic\",\"model\":\"anthropic/claude-haiku-4.5\",\"object\":\"chat.completion\",\"created\":1762113040,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_calls\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"id\":\"toolu_01P2FkW8VLy5NXSgra9LDWXk\",\"index\":0,\"type\":\"function\",\"function\":{\"name\":\"any_of_params\",\"arguments\":\"{\\\"task\\\":
+      string: "\n         \n{\"id\":\"gen-1762270888-G4SzC4Hruqw5XsDHZFlv\",\"provider\":\"Google\",\"model\":\"anthropic/claude-haiku-4.5\",\"object\":\"chat.completion\",\"created\":1762270888,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_calls\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"id\":\"toolu_vrtx_01RJyULDQxu3i6BSimdG7R6U\",\"index\":0,\"type\":\"function\",\"function\":{\"name\":\"any_of_params\",\"arguments\":\"{\\\"task\\\":
         \\\"Review PR\\\", \\\"status\\\": \\\"pending\\\"}\"}}]}}],\"usage\":{\"prompt_tokens\":646,\"completion_tokens\":74,\"total_tokens\":720}}"
-  recorded_at: Sun, 02 Nov 2025 19:50:42 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:28 GMT
 recorded_with: VCR 6.3.1

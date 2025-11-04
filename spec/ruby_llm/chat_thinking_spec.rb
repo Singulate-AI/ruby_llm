@@ -12,7 +12,7 @@ RSpec.describe RubyLLM::Chat do
           model = model_info[:model]
           provider = model_info[:provider]
 
-          it "#{provider}/#{model} enables thinking mode successfully" do # rubocop:disable RSpec/MultipleExpectations
+          it "#{provider}/#{model} enables thinking mode successfully" do
             chat = RubyLLM.chat(model: model, provider: provider)
 
             expect { chat.with_thinking }.not_to raise_error
@@ -20,7 +20,7 @@ RSpec.describe RubyLLM::Chat do
             expect(chat.instance_variable_get(:@temperature)).to eq 1
           end
 
-          it "#{provider}/#{model} accepts custom thinking parameters" do # rubocop:disable RSpec/MultipleExpectations
+          it "#{provider}/#{model} accepts custom thinking parameters" do
             chat = RubyLLM.chat(model: model, provider: provider)
 
             chat.with_thinking(budget: 20_000, temperature: 0.8)
@@ -38,7 +38,7 @@ RSpec.describe RubyLLM::Chat do
             expect(chat.instance_variable_get(:@thinking)).to be false
           end
 
-          it "#{provider}/#{model} can chain with other methods" do # rubocop:disable RSpec/MultipleExpectations
+          it "#{provider}/#{model} can chain with other methods" do
             chat = RubyLLM.chat(model: model, provider: provider)
 
             result = chat.with_thinking.with_temperature(0.5)
@@ -62,7 +62,7 @@ RSpec.describe RubyLLM::Chat do
             expect { chat.with_thinking }.to raise_error(RubyLLM::UnsupportedThinkingError)
           end
 
-          it "#{provider}/#{model} allows disabling thinking without error" do # rubocop:disable RSpec/MultipleExpectations
+          it "#{provider}/#{model} allows disabling thinking without error" do
             chat = RubyLLM.chat(model: model, provider: provider)
 
             expect { chat.with_thinking(thinking: false) }.not_to raise_error
@@ -77,7 +77,7 @@ RSpec.describe RubyLLM::Chat do
         model = model_info[:model]
         provider = model_info[:provider]
 
-        it "#{provider}/#{model} can handle basic conversation with thinking enabled" do # rubocop:disable RSpec/MultipleExpectations, RSpec/ExampleLength
+        it "#{provider}/#{model} can handle basic conversation with thinking enabled" do
           chat = RubyLLM.chat(model: model, provider: provider)
           chat.with_thinking
 
@@ -90,7 +90,7 @@ RSpec.describe RubyLLM::Chat do
           expect(response.output_tokens).to be_positive
         end
 
-        it "#{provider}/#{model} maintains thinking mode across multiple turns" do # rubocop:disable RSpec/MultipleExpectations, RSpec/ExampleLength
+        it "#{provider}/#{model} maintains thinking mode across multiple turns" do
           chat = RubyLLM.chat(model: model, provider: provider)
           chat.with_thinking
 

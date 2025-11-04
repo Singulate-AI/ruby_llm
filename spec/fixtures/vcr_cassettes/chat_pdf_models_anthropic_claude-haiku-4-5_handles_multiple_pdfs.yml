@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.anthropic.com/v1/messages
     body:
       encoding: UTF-8
-      string: '{"model":"claude-haiku-4-5","messages":[{"role":"user","content":[{"type":"text","text":"#<RubyLLM::Content:0x00007fbeab1c84c0>"}]}],"stream":false,"max_tokens":64000}'
+      string: '{"model":"claude-haiku-4-5","messages":[{"role":"user","content":[{"type":"text","text":"#<RubyLLM::Content:0x00007f061dad7058>"}]}],"stream":false,"max_tokens":64000,"temperature":0.7}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 20:01:23 GMT
+      - Tue, 04 Nov 2025 15:26:37 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,31 +33,31 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '450000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '450000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-11-02T20:01:22Z'
+      - '2025-11-04T15:26:36Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '90000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '90000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-11-02T20:01:23Z'
+      - '2025-11-04T15:26:37Z'
       Anthropic-Ratelimit-Requests-Limit:
-      - '1000'
+      - '4000'
       Anthropic-Ratelimit-Requests-Remaining:
-      - '999'
+      - '3999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-11-02T20:01:21Z'
+      - '2025-11-04T15:26:35Z'
       Retry-After:
-      - '38'
+      - '24'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '540000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '540000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-11-02T20:01:22Z'
+      - '2025-11-04T15:26:36Z'
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
@@ -65,7 +65,7 @@ http_interactions:
       Anthropic-Organization-Id:
       - "<ANTHROPIC_ORGANIZATION_ID>"
       X-Envoy-Upstream-Service-Time:
-      - '1887'
+      - '2188'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -77,22 +77,25 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMTkyalFWbXd5dFVtSnN2M0VkVmNkNDMiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJJ2QgYmUgaGFwcHkgdG8gaGVscCB5b3Ugd2l0aCBSdWJ5IGNvZGUhIEhvd2V2ZXIsIGl0IGxvb2tzIGxpa2UgeW91ciBtZXNzYWdlIGdvdCBjdXQgb2ZmIG9yIGRpZG4ndCBpbmNsdWRlIHRoZSBhY3R1YWwgcXVlc3Rpb24gb3IgY29kZSB5b3UgbmVlZCBoZWxwIHdpdGguXG5cbkNvdWxkIHlvdSBwbGVhc2Ugc2hhcmU6XG5cbjEuICoqV2hhdCB5b3UncmUgdHJ5aW5nIHRvIGRvKiogLSBkZXNjcmliZSB0aGUgcHJvYmxlbSBvciB0YXNrXG4yLiAqKkFueSByZWxldmFudCBjb2RlKiogLSBwYXN0ZSB0aGUgY29kZSB5b3UncmUgd29ya2luZyB3aXRoXG4zLiAqKldoYXQncyBub3Qgd29ya2luZyoqIC0gZXJyb3IgbWVzc2FnZXMsIHVuZXhwZWN0ZWQgYmVoYXZpb3IsIG9yIHNwZWNpZmljIHF1ZXN0aW9uc1xuXG5PbmNlIHlvdSBwcm92aWRlIHRob3NlIGRldGFpbHMsIEknbGwgYmUgYWJsZSB0byBhc3Npc3QgeW91IGVmZmVjdGl2ZWx5ISDwn5iKIn1dLCJzdG9wX3JlYXNvbiI6ImVuZF90dXJuIiwic3RvcF9zZXF1ZW5jZSI6bnVsbCwidXNhZ2UiOnsiaW5wdXRfdG9rZW5zIjozMSwiY2FjaGVfY3JlYXRpb25faW5wdXRfdG9rZW5zIjowLCJjYWNoZV9yZWFkX2lucHV0X3Rva2VucyI6MCwiY2FjaGVfY3JlYXRpb24iOnsiZXBoZW1lcmFsXzVtX2lucHV0X3Rva2VucyI6MCwiZXBoZW1lcmFsXzFoX2lucHV0X3Rva2VucyI6MH0sIm91dHB1dF90b2tlbnMiOjExNSwic2VydmljZV90aWVyIjoic3RhbmRhcmQifX0=
-  recorded_at: Sun, 02 Nov 2025 20:01:23 GMT
+        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMTJWQ0VOVDJHYXFnNDQ3a0hqcWlRVjYiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJIHNlZSB5b3UndmUgc2hhcmVkIHdoYXQgYXBwZWFycyB0byBiZSBhIFJ1Ynkgb2JqZWN0IHJlZmVyZW5jZS4gSG93ZXZlciwgSSBkb24ndCBoYXZlIGFjY2VzcyB0byB0aGUgYWN0dWFsIGNvbnRlbnQgb2YgdGhpcyBvYmplY3Qgb3IgaXRzIHByb3BlcnRpZXMuXG5cblRvIGhlbHAgeW91IGJldHRlciwgY291bGQgeW91IHBsZWFzZTpcblxuMS4gKipTaGFyZSB0aGUgYWN0dWFsIGNvbnRlbnQqKiAtIENvcHkgYW5kIHBhc3RlIHRoZSByZWxldmFudCBjb2RlLCBkYXRhLCBvciBlcnJvciBtZXNzYWdlXG4yLiAqKkRlc2NyaWJlIHdoYXQgeW91J3JlIHRyeWluZyB0byBkbyoqIC0gV2hhdCdzIHlvdXIgZ29hbCBvciB3aGF0IHByb2JsZW0gYXJlIHlvdSBmYWNpbmc/XG4zLiAqKlByb3ZpZGUgY29udGV4dCoqIC0gV2hhdCBSdWJ5IGxpYnJhcnkgb3IgZnJhbWV3b3JrIGFyZSB5b3UgdXNpbmc/IChMb29rcyBsaWtlIGl0IG1pZ2h0IGJlIHJlbGF0ZWQgdG8gUnVieUxMTSlcblxuRm9yIGV4YW1wbGUsIGlmIHlvdSB3YW50IHRvIGluc3BlY3QgdGhpcyBvYmplY3QsIHlvdSBjb3VsZCB0cnk6XG5gYGBydWJ5XG5wdXRzIG9iamVjdC5pbnNwZWN0XG5wdXRzIG9iamVjdC50b19zXG5wdXRzIG9iamVjdC5jbGFzc1xuYGBgXG5cbkZlZWwgZnJlZSB0byBzaGFyZSB0aGUgZGV0YWlscyBhbmQgSSdsbCBiZSBoYXBweSB0byBoZWxwISDwn5qAIn1dLCJzdG9wX3JlYXNvbiI6ImVuZF90dXJuIiwic3RvcF9zZXF1ZW5jZSI6bnVsbCwidXNhZ2UiOnsiaW5wdXRfdG9rZW5zIjoyOCwiY2FjaGVfY3JlYXRpb25faW5wdXRfdG9rZW5zIjowLCJjYWNoZV9yZWFkX2lucHV0X3Rva2VucyI6MCwiY2FjaGVfY3JlYXRpb24iOnsiZXBoZW1lcmFsXzVtX2lucHV0X3Rva2VucyI6MCwiZXBoZW1lcmFsXzFoX2lucHV0X3Rva2VucyI6MH0sIm91dHB1dF90b2tlbnMiOjE4Mywic2VydmljZV90aWVyIjoic3RhbmRhcmQifX0=
+  recorded_at: Tue, 04 Nov 2025 15:26:37 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
     body:
       encoding: UTF-8
-      string: "{\"model\":\"claude-haiku-4-5\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"#<RubyLLM::Content:0x00007fbeab1c84c0>\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"I'd
-        be happy to help you with Ruby code! However, it looks like your message got
-        cut off or didn't include the actual question or code you need help with.\\n\\nCould
-        you please share:\\n\\n1. **What you're trying to do** - describe the problem
-        or task\\n2. **Any relevant code** - paste the code you're working with\\n3.
-        **What's not working** - error messages, unexpected behavior, or specific
-        questions\\n\\nOnce you provide those details, I'll be able to assist you
-        effectively! \U0001F60A\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"go
-        on\"}]}],\"stream\":false,\"max_tokens\":64000}"
+      string: "{\"model\":\"claude-haiku-4-5\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"#<RubyLLM::Content:0x00007f061dad7058>\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"I
+        see you've shared what appears to be a Ruby object reference. However, I don't
+        have access to the actual content of this object or its properties.\\n\\nTo
+        help you better, could you please:\\n\\n1. **Share the actual content** -
+        Copy and paste the relevant code, data, or error message\\n2. **Describe what
+        you're trying to do** - What's your goal or what problem are you facing?\\n3.
+        **Provide context** - What Ruby library or framework are you using? (Looks
+        like it might be related to RubyLLM)\\n\\nFor example, if you want to inspect
+        this object, you could try:\\n```ruby\\nputs object.inspect\\nputs object.to_s\\nputs
+        object.class\\n```\\n\\nFeel free to share the details and I'll be happy to
+        help! \U0001F680\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"go
+        on\"}]}],\"stream\":false,\"max_tokens\":64000,\"temperature\":0.7}"
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -112,7 +115,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 20:01:26 GMT
+      - Tue, 04 Nov 2025 15:26:40 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -120,31 +123,31 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '450000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '450000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-11-02T20:01:25Z'
+      - '2025-11-04T15:26:38Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '90000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '90000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-11-02T20:01:26Z'
+      - '2025-11-04T15:26:40Z'
       Anthropic-Ratelimit-Requests-Limit:
-      - '1000'
+      - '4000'
       Anthropic-Ratelimit-Requests-Remaining:
-      - '999'
+      - '3999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-11-02T20:01:23Z'
+      - '2025-11-04T15:26:38Z'
       Retry-After:
-      - '37'
+      - '23'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '540000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '540000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-11-02T20:01:25Z'
+      - '2025-11-04T15:26:38Z'
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
@@ -152,7 +155,7 @@ http_interactions:
       Anthropic-Organization-Id:
       - "<ANTHROPIC_ORGANIZATION_ID>"
       X-Envoy-Upstream-Service-Time:
-      - '3318'
+      - '2576'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -164,6 +167,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMUVYV2puS0FhMkJTcmhCd2N2RzljU2IiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJJ20gcmVhZHkgdG8gaGVscCwgYnV0IEkgc3RpbGwgbmVlZCB5b3UgdG8gcHJvdmlkZSB0aGUgYWN0dWFsIGNvbnRlbnQgb2YgeW91ciBxdWVzdGlvbiBvciBjb2RlIVxuXG5QbGVhc2Ugc2hhcmU6XG5cbjEuICoqWW91ciBSdWJ5IGNvZGUqKiAtIFdoYXQgYXJlIHlvdSB3b3JraW5nIG9uP1xuMi4gKipUaGUgcHJvYmxlbSoqIC0gV2hhdCdzIGhhcHBlbmluZyBvciB3aGF0IGRvIHlvdSBuZWVkIGhlbHAgd2l0aD9cbjMuICoqRXJyb3IgbWVzc2FnZXMqKiAtIEFueSBzcGVjaWZpYyBlcnJvcnMgeW91J3JlIHNlZWluZz9cblxuRm9yIGV4YW1wbGUsIHlvdSBjb3VsZCBwYXN0ZSBzb21ldGhpbmcgbGlrZTpcblxuYGBgcnVieVxuIyBNeSBjb2RlIGhlcmVcbmRlZiBoZWxsb1xuICBwdXRzIFwiZXhhbXBsZVwiXG5lbmRcbmBgYFxuXG5UaGVuIGFzayB5b3VyIHF1ZXN0aW9uIGFuZCBJJ2xsIGhlbHAgeW91IHNvbHZlIGl0ISDwn5GNIn1dLCJzdG9wX3JlYXNvbiI6ImVuZF90dXJuIiwic3RvcF9zZXF1ZW5jZSI6bnVsbCwidXNhZ2UiOnsiaW5wdXRfdG9rZW5zIjoxNTEsImNhY2hlX2NyZWF0aW9uX2lucHV0X3Rva2VucyI6MCwiY2FjaGVfcmVhZF9pbnB1dF90b2tlbnMiOjAsImNhY2hlX2NyZWF0aW9uIjp7ImVwaGVtZXJhbF81bV9pbnB1dF90b2tlbnMiOjAsImVwaGVtZXJhbF8xaF9pbnB1dF90b2tlbnMiOjB9LCJvdXRwdXRfdG9rZW5zIjoxMjUsInNlcnZpY2VfdGllciI6InN0YW5kYXJkIn19
-  recorded_at: Sun, 02 Nov 2025 20:01:26 GMT
+        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMUJlOVpZWWFjSG1yUlBBYzlFb0FwNm0iLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJIGFwcHJlY2lhdGUgeW91ciBpbnRlcmVzdCwgYnV0IEkgbmVlZCBtb3JlIGluZm9ybWF0aW9uIHRvIGFjdHVhbGx5IGhlbHAgeW91ISDwn5iKXG5cblNpbmNlIHlvdSBqdXN0IHNhaWQgXCJnbyBvbixcIiBoZXJlIGFyZSBzb21lIHRoaW5ncyB0aGF0IHdvdWxkIGhlbHAgbWUgdW5kZXJzdGFuZCB3aGF0IHlvdSBuZWVkOlxuXG4xLiAqKldoYXQncyB5b3VyIGFjdHVhbCBxdWVzdGlvbiBvciBwcm9ibGVtPyoqXG4gICAtIEFyZSB5b3UgZ2V0dGluZyBhbiBlcnJvcj9cbiAgIC0gSXMgc29tZXRoaW5nIG5vdCB3b3JraW5nIGFzIGV4cGVjdGVkP1xuICAgLSBEbyB5b3UgbmVlZCBoZWxwIHdpdGggY29kZT9cblxuMi4gKipXaGF0IGFyZSB5b3Ugd29ya2luZyBvbj8qKlxuICAgLSBBIFJ1Ynkgc2NyaXB0P1xuICAgLSBBIFJhaWxzIGFwcGxpY2F0aW9uP1xuICAgLSBTb21ldGhpbmcgdXNpbmcgUnVieUxMTT9cblxuMy4gKipXaGF0IHdvdWxkIHlvdSBsaWtlIG1lIHRvIGRvPyoqXG4gICAtIEV4cGxhaW4gYSBjb25jZXB0P1xuICAgLSBEZWJ1ZyBjb2RlP1xuICAgLSBXcml0ZSBjb2RlIGZvciB5b3U/XG4gICAtIFJldmlldyBleGlzdGluZyBjb2RlP1xuXG5QbGVhc2Ugc2hhcmU6XG4tICoqVGhlIGFjdHVhbCBjb2RlIG9yIGVycm9yIG1lc3NhZ2UqKiB5b3UncmUgZGVhbGluZyB3aXRoXG4tICoqV2hhdCB5b3UndmUgdHJpZWQgc28gZmFyKipcbi0gKipXaGF0IHlvdSBleHBlY3RlZCB2cy4gd2hhdCBoYXBwZW5lZCoqXG5cbk9uY2UgeW91IHByb3ZpZGUgdGhvc2UgZGV0YWlscywgSSdsbCBiZSBhYmxlIHRvIGdpdmUgeW91IHNwZWNpZmljLCB1c2VmdWwgaGVscCEg8J+RjSJ9XSwic3RvcF9yZWFzb24iOiJlbmRfdHVybiIsInN0b3Bfc2VxdWVuY2UiOm51bGwsInVzYWdlIjp7ImlucHV0X3Rva2VucyI6MjE2LCJjYWNoZV9jcmVhdGlvbl9pbnB1dF90b2tlbnMiOjAsImNhY2hlX3JlYWRfaW5wdXRfdG9rZW5zIjowLCJjYWNoZV9jcmVhdGlvbiI6eyJlcGhlbWVyYWxfNW1faW5wdXRfdG9rZW5zIjowLCJlcGhlbWVyYWxfMWhfaW5wdXRfdG9rZW5zIjowfSwib3V0cHV0X3Rva2VucyI6MjI1LCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCJ9fQ==
+  recorded_at: Tue, 04 Nov 2025 15:26:40 GMT
 recorded_with: VCR 6.3.1

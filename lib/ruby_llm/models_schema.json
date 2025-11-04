@@ -4,7 +4,13 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["id", "name", "provider", "context_window", "max_output_tokens"],
+    "required": [
+      "id",
+      "name",
+      "provider",
+      "context_window",
+      "max_output_tokens"
+    ],
     "properties": {
       "id": {
         "type": "string",
@@ -19,34 +25,71 @@
         "description": "Provider of the model (e.g., openai, anthropic, mistral)"
       },
       "family": {
-        "type": ["string", "null"],
+        "type": [
+          "string",
+          "null"
+        ],
         "description": "Model family (e.g., gpt-4, claude-3)"
       },
       "created_at": {
-        "type": ["null", {"type": "string", "format": "date-time"}],
+        "type": [
+          "null",
+          {
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
         "description": "Creation date of the model"
       },
       "context_window": {
-        "type": ["null", {"type": "integer", "minimum": 0}],
+        "type": [
+          "null",
+          {
+            "type": "integer",
+            "minimum": 0
+          }
+        ],
         "description": "Maximum context window size"
       },
       "max_output_tokens": {
-        "type": ["null", {"type": "integer", "minimum": 0}],
+        "type": [
+          "null",
+          {
+            "type": "integer",
+            "minimum": 0
+          }
+        ],
         "description": "Maximum output tokens"
       },
       "knowledge_cutoff": {
-        "type": ["null", {"type": "string", "format": "date"}],
+        "type": [
+          "null",
+          {
+            "type": "string",
+            "format": "date"
+          }
+        ],
         "description": "Knowledge cutoff date"
       },
       "modalities": {
         "type": "object",
-        "required": ["input", "output"],
+        "required": [
+          "input",
+          "output"
+        ],
         "properties": {
           "input": {
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["text", "image", "audio", "pdf", "video", "file"]
+              "enum": [
+                "text",
+                "image",
+                "audio",
+                "pdf",
+                "video",
+                "file"
+              ]
             },
             "uniqueItems": true,
             "description": "Supported input modalities"
@@ -55,7 +98,13 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["text", "image", "audio", "embeddings", "moderation"]
+              "enum": [
+                "text",
+                "image",
+                "audio",
+                "embeddings",
+                "moderation"
+              ]
             },
             "uniqueItems": true,
             "description": "Supported output modalities"
@@ -67,10 +116,25 @@
         "items": {
           "type": "string",
           "enum": [
-            "streaming", "function_calling", "structured_output", "predicted_outputs",
-            "distillation", "fine_tuning", "batch", "realtime", "image_generation",
-            "speech_generation", "transcription", "translation", "citations", "reasoning",
-            "caching", "moderation", "json_mode", "vision"
+            "streaming",
+            "function_calling",
+            "structured_output",
+            "predicted_outputs",
+            "distillation",
+            "fine_tuning",
+            "batch",
+            "realtime",
+            "image_generation",
+            "speech_generation",
+            "transcription",
+            "translation",
+            "citations",
+            "reasoning",
+            "caching",
+            "moderation",
+            "json_mode",
+            "vision",
+            "thinking"
           ]
         },
         "uniqueItems": true,
@@ -81,22 +145,42 @@
         "properties": {
           "text_tokens": {
             "type": "object",
-            "required": ["standard"],
+            "required": [
+              "standard"
+            ],
             "properties": {
               "standard": {
                 "type": "object",
                 "properties": {
-                  "input_per_million": {"type": "number", "minimum": 0},
-                  "cached_input_per_million": {"type": "number", "minimum": 0},
-                  "output_per_million": {"type": "number", "minimum": 0},
-                  "reasoning_output_per_million": {"type": "number", "minimum": 0}
+                  "input_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "cached_input_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "output_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "reasoning_output_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  }
                 }
               },
               "batch": {
                 "type": "object",
                 "properties": {
-                  "input_per_million": {"type": "number", "minimum": 0},
-                  "output_per_million": {"type": "number", "minimum": 0}
+                  "input_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "output_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  }
                 }
               }
             }
@@ -107,15 +191,27 @@
               "standard": {
                 "type": "object",
                 "properties": {
-                  "input": {"type": "number", "minimum": 0},
-                  "output": {"type": "number", "minimum": 0}
+                  "input": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "output": {
+                    "type": "number",
+                    "minimum": 0
+                  }
                 }
               },
               "batch": {
                 "type": "object",
                 "properties": {
-                  "input": {"type": "number", "minimum": 0},
-                  "output": {"type": "number", "minimum": 0}
+                  "input": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "output": {
+                    "type": "number",
+                    "minimum": 0
+                  }
                 }
               }
             }
@@ -126,15 +222,27 @@
               "standard": {
                 "type": "object",
                 "properties": {
-                  "input_per_million": {"type": "number", "minimum": 0},
-                  "output_per_million": {"type": "number", "minimum": 0}
+                  "input_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "output_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  }
                 }
               },
               "batch": {
                 "type": "object",
                 "properties": {
-                  "input_per_million": {"type": "number", "minimum": 0},
-                  "output_per_million": {"type": "number", "minimum": 0}
+                  "input_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "output_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  }
                 }
               }
             }
@@ -145,13 +253,19 @@
               "standard": {
                 "type": "object",
                 "properties": {
-                  "input_per_million": {"type": "number", "minimum": 0}
+                  "input_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  }
                 }
               },
               "batch": {
                 "type": "object",
                 "properties": {
-                  "input_per_million": {"type": "number", "minimum": 0}
+                  "input_per_million": {
+                    "type": "number",
+                    "minimum": 0
+                  }
                 }
               }
             }

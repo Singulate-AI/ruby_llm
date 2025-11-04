@@ -17,7 +17,7 @@ module RubyLLM
       @latest_tool_call_id = nil
     end
 
-    def add(chunk)
+    def add(chunk) # rubocop:disable Metrics/PerceivedComplexity
       RubyLLM.logger.debug chunk.inspect if RubyLLM.config.log_stream_debug
       @model_id ||= chunk.model_id
 

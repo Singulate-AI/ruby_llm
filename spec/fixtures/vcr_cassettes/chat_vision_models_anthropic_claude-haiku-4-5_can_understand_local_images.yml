@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.anthropic.com/v1/messages
     body:
       encoding: UTF-8
-      string: '{"model":"claude-haiku-4-5","messages":[{"role":"user","content":[{"type":"text","text":"#<RubyLLM::Content:0x00007fdca4bbac78>"}]}],"stream":false,"max_tokens":64000}'
+      string: '{"model":"claude-haiku-4-5","messages":[{"role":"user","content":[{"type":"text","text":"#<RubyLLM::Content:0x00007fd6d1fea2e0>"}]}],"stream":false,"max_tokens":64000,"temperature":0.7}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 19:48:31 GMT
+      - Tue, 04 Nov 2025 16:02:35 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,31 +33,31 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '450000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '450000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-11-02T19:48:29Z'
+      - '2025-11-04T16:02:34Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '90000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '90000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-11-02T19:48:31Z'
+      - '2025-11-04T16:02:35Z'
       Anthropic-Ratelimit-Requests-Limit:
-      - '1000'
+      - '4000'
       Anthropic-Ratelimit-Requests-Remaining:
-      - '999'
+      - '3999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-11-02T19:48:29Z'
+      - '2025-11-04T16:02:33Z'
       Retry-After:
-      - '32'
+      - '28'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '540000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '540000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-11-02T19:48:29Z'
+      - '2025-11-04T16:02:34Z'
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
@@ -65,7 +65,7 @@ http_interactions:
       Anthropic-Organization-Id:
       - "<ANTHROPIC_ORGANIZATION_ID>"
       X-Envoy-Upstream-Service-Time:
-      - '2626'
+      - '2012'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -76,17 +76,7 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_016Vk4MXDB7NLpQjHFEU2ex6","type":"message","role":"assistant","content":[{"type":"text","text":"I
-        see you''ve shared what appears to be a Ruby object reference. This looks
-        like an internal representation from RubyLLM (a Ruby-based language model
-        library).\n\nHowever, I''m not able to interact with or inspect actual Ruby
-        objects. What I can help with:\n\n1. **If you have a question about RubyLLM**
-        - I can help explain how to use it, troubleshoot issues, or discuss Ruby integration
-        with LLMs\n\n2. **If you want to debug this object** - You could:\n   - Call
-        `.inspect` or `.to_s` on it in your Ruby code to see its contents\n   - Print
-        its instance variables with `instance_variables`\n   - Check the RubyLLM documentation
-        for what `Content` objects contain\n\n3. **If you''re trying to share code**
-        - Feel free to paste the actual code or the contents of this object\n\nWhat
-        would you like help with?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":29,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":206,"service_tier":"standard"}}'
-  recorded_at: Sun, 02 Nov 2025 19:48:31 GMT
+      string: !binary |-
+        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMVNLemlxQVkyYUdnaEREcUs2eWQ3enIiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJJ20gbm90IHN1cmUgd2hhdCB5b3UncmUgbG9va2luZyBmb3Igd2l0aCB0aGF0IFJ1Ynkgb2JqZWN0IHJlZmVyZW5jZS4gSXQgYXBwZWFycyB0byBiZSBhbiBpbnRlcm5hbCByZXByZXNlbnRhdGlvbiBvZiBhIFJ1Ynkgb2JqZWN0LCBidXQgaXQgZG9lc24ndCBjb250YWluIGFueSBhY3R1YWwgY29udGVudCBvciBxdWVzdGlvbi5cblxuQ291bGQgeW91IHBsZWFzZTpcblxuMS4gKipTaGFyZSB3aGF0IHlvdSdkIGxpa2UgaGVscCB3aXRoKiogLSB3aGV0aGVyIGl0J3MgYSBSdWJ5IHByb2dyYW1taW5nIHF1ZXN0aW9uLCBkZWJ1Z2dpbmcgaXNzdWUsIG9yIHNvbWV0aGluZyBlbHNlXG4yLiAqKlByb3ZpZGUgcmVsZXZhbnQgY29kZSBvciBjb250ZXh0KiogLSBpZiB5b3UncmUgd29ya2luZyB3aXRoIGEgc3BlY2lmaWMgcHJvYmxlbVxuMy4gKipDbGFyaWZ5IHlvdXIgcXVlc3Rpb24qKiAtIHNvIEkgY2FuIGdpdmUgeW91IHRoZSBiZXN0IGFzc2lzdGFuY2VcblxuRmVlbCBmcmVlIHRvIHBhc3RlIHlvdXIgY29kZSwgZGVzY3JpYmUgeW91ciBpc3N1ZSwgb3IgYXNrIHlvdXIgcXVlc3Rpb24gZGlyZWN0bHksIGFuZCBJJ2xsIGJlIGhhcHB5IHRvIGhlbHAhIPCfmIoifV0sInN0b3BfcmVhc29uIjoiZW5kX3R1cm4iLCJzdG9wX3NlcXVlbmNlIjpudWxsLCJ1c2FnZSI6eyJpbnB1dF90b2tlbnMiOjMyLCJjYWNoZV9jcmVhdGlvbl9pbnB1dF90b2tlbnMiOjAsImNhY2hlX3JlYWRfaW5wdXRfdG9rZW5zIjowLCJjYWNoZV9jcmVhdGlvbiI6eyJlcGhlbWVyYWxfNW1faW5wdXRfdG9rZW5zIjowLCJlcGhlbWVyYWxfMWhfaW5wdXRfdG9rZW5zIjowfSwib3V0cHV0X3Rva2VucyI6MTQxLCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCJ9fQ==
+  recorded_at: Tue, 04 Nov 2025 16:02:35 GMT
 recorded_with: VCR 6.3.1
