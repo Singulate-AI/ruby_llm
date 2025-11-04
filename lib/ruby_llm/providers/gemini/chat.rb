@@ -66,7 +66,8 @@ module RubyLLM
 
           Message.new(
             role: :assistant,
-            content: parse_content(data),
+            thinking: parse_content(data, thoughts: true),
+            content: parse_content(data, thoughts: false),
             tool_calls: tool_calls,
             input_tokens: data.dig('usageMetadata', 'promptTokenCount'),
             output_tokens: calculate_output_tokens(data),
@@ -81,16 +82,22 @@ module RubyLLM
           GeminiSchema.new(schema).to_h
         end
 
-        def parse_content(data)
+        def parse_content(data, thoughts: false)
           candidate = data.dig('candidates', 0)
           return '' unless candidate
 
           return '' if function_call?(candidate)
 
-          parts = candidate.dig('content', 'parts')
+          parts = select_parts(candidate.dig('content', 'parts'), thoughts: thoughts)
           return '' unless parts&.any?
 
           build_response_content(parts)
+        end
+
+        def select_parts(parts, thoughts: false)
+          parts&.select do |p|
+            p['text'] if thoughts == p['thought'] || (!thoughts && p['thought'].nil?)
+          end&.compact
         end
 
         def function_call?(candidate)
