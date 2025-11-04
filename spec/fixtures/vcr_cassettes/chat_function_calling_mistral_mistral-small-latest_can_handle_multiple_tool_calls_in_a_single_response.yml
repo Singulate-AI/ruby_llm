@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","messages":[{"role":"system","content":"You
         must call the dice_roll tool exactly 3 times when asked to roll dice 3 times."},{"role":"user","content":"Roll
-        the dice 3 times"}],"stream":false,"tools":[{"type":"function","function":{"name":"dice_roll","description":"Rolls
+        the dice 3 times"}],"stream":false,"temperature":0.7,"tools":[{"type":"function","function":{"name":"dice_roll","description":"Rolls
         a single six-sided die and returns the result","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 Oct 2025 16:33:09 GMT
+      - Tue, 04 Nov 2025 15:41:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -34,29 +34,29 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - '019a35f7-44dc-7762-881a-05d7181ab676'
+      - '019a4f87-5b51-7f0c-b77c-394b3be12e64'
       X-Kong-Request-Id:
-      - '019a35f7-44dc-7762-881a-05d7181ab676'
+      - '019a4f87-5b51-7f0c-b77c-394b3be12e64'
       X-Envoy-Upstream-Service-Time:
-      - '232'
+      - '203'
       X-Ratelimit-Limit-Tokens-Minute:
       - '500000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '496859'
+      - '498799'
       X-Ratelimit-Limit-Tokens-Month:
       - '1000000000'
       X-Ratelimit-Remaining-Tokens-Month:
-      - '999993670'
+      - '999993845'
       X-Ratelimit-Tokens-Query-Cost:
       - '116'
       X-Ratelimit-Limit-Req-Minute:
       - '60'
       X-Ratelimit-Remaining-Req-Minute:
-      - '47'
+      - '55'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '233'
+      - '204'
       X-Kong-Proxy-Latency:
       - '6'
       Cf-Cache-Status:
@@ -65,7 +65,9 @@ http_interactions:
       - "<COOKIE>"
       - "<COOKIE>"
       Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Server:
       - cloudflare
       Cf-Ray:
@@ -74,8 +76,8 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"0716737f8f7440a8a79bbe0b0ee27321","created":1761841988,"model":"mistral-small-latest","usage":{"prompt_tokens":97,"total_tokens":116,"completion_tokens":19},"object":"chat.completion","choices":[{"index":0,"finish_reason":"tool_calls","message":{"role":"assistant","tool_calls":[{"id":"LdqrVSxCa","function":{"name":"dice_roll","arguments":"{}"},"index":0},{"id":"Xb0uBHrp8","function":{"name":"dice_roll","arguments":"{}"},"index":1},{"id":"b6bvtyYxm","function":{"name":"dice_roll","arguments":"{}"},"index":2}],"content":""}}]}'
-  recorded_at: Thu, 30 Oct 2025 16:33:09 GMT
+      string: '{"id":"6ef66fbf84c04299a29d672dd3d2d5e3","created":1762270862,"model":"mistral-small-latest","usage":{"prompt_tokens":97,"total_tokens":116,"completion_tokens":19},"object":"chat.completion","choices":[{"index":0,"finish_reason":"tool_calls","message":{"role":"assistant","tool_calls":[{"id":"jtDsizumS","function":{"name":"dice_roll","arguments":"{}"},"index":0},{"id":"mS7aNELzN","function":{"name":"dice_roll","arguments":"{}"},"index":1},{"id":"QgY6KtNnH","function":{"name":"dice_roll","arguments":"{}"},"index":2}],"content":""}}]}'
+  recorded_at: Tue, 04 Nov 2025 15:41:02 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
@@ -83,9 +85,9 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","messages":[{"role":"system","content":"You
         must call the dice_roll tool exactly 3 times when asked to roll dice 3 times."},{"role":"user","content":"Roll
-        the dice 3 times"},{"role":"assistant","content":"","tool_calls":[{"id":"LdqrVSxCa","type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"Xb0uBHrp8","type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"b6bvtyYxm","type":"function","function":{"name":"dice_roll","arguments":"{}"}}]},{"role":"tool","content":"{roll:
-        1}","tool_call_id":"LdqrVSxCa"},{"role":"tool","content":"{roll: 2}","tool_call_id":"Xb0uBHrp8"},{"role":"tool","content":"{roll:
-        3}","tool_call_id":"b6bvtyYxm"}],"stream":false,"tools":[{"type":"function","function":{"name":"dice_roll","description":"Rolls
+        the dice 3 times"},{"role":"assistant","content":"","tool_calls":[{"id":"jtDsizumS","type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"mS7aNELzN","type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"QgY6KtNnH","type":"function","function":{"name":"dice_roll","arguments":"{}"}}]},{"role":"tool","content":"{roll:
+        1}","tool_call_id":"jtDsizumS"},{"role":"tool","content":"{roll: 2}","tool_call_id":"mS7aNELzN"},{"role":"tool","content":"{roll:
+        3}","tool_call_id":"QgY6KtNnH"}],"stream":false,"temperature":0.7,"tools":[{"type":"function","function":{"name":"dice_roll","description":"Rolls
         a single six-sided die and returns the result","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
@@ -104,7 +106,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 Oct 2025 16:33:09 GMT
+      - Tue, 04 Nov 2025 15:41:03 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -112,29 +114,29 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - '019a35f7-4600-7f47-a398-8927a91adc37'
+      - '019a4f87-5d09-7fa4-9b84-adeca38727de'
       X-Kong-Request-Id:
-      - '019a35f7-4600-7f47-a398-8927a91adc37'
+      - '019a4f87-5d09-7fa4-9b84-adeca38727de'
       X-Envoy-Upstream-Service-Time:
-      - '478'
+      - '395'
       X-Ratelimit-Limit-Tokens-Minute:
       - '500000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '496630'
+      - '498574'
       X-Ratelimit-Limit-Tokens-Month:
       - '1000000000'
       X-Ratelimit-Remaining-Tokens-Month:
-      - '999993441'
+      - '999993620'
       X-Ratelimit-Tokens-Query-Cost:
-      - '229'
+      - '225'
       X-Ratelimit-Limit-Req-Minute:
       - '60'
       X-Ratelimit-Remaining-Req-Minute:
-      - '46'
+      - '54'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '479'
+      - '396'
       X-Kong-Proxy-Latency:
       - '5'
       Cf-Cache-Status:
@@ -143,7 +145,9 @@ http_interactions:
       - "<COOKIE>"
       - "<COOKIE>"
       Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Server:
       - cloudflare
       Cf-Ray:
@@ -152,8 +156,8 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"7eb5ca5afc764a62a98359004fcd5e8f","created":1761841989,"model":"mistral-small-latest","usage":{"prompt_tokens":190,"total_tokens":229,"completion_tokens":39},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Here
-        are the results of rolling the dice 3 times:\n\n1. Roll 1: 1\n2. Roll 2: 2\n3.
+      string: '{"id":"7a7276a6a38d43efafbeea556433aaf4","created":1762270862,"model":"mistral-small-latest","usage":{"prompt_tokens":188,"total_tokens":225,"completion_tokens":37},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Here
+        are the results of your three dice rolls:\n\n1. Roll 1: 1\n2. Roll 2: 2\n3.
         Roll 3: 3"}}]}'
-  recorded_at: Thu, 30 Oct 2025 16:33:09 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:03 GMT
 recorded_with: VCR 6.3.1

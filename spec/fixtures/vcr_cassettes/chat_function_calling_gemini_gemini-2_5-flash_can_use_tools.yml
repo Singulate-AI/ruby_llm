@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What''s the weather in
-        Berlin? (52.5200, 13.4050)"}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
+        Berlin? (52.5200, 13.4050)"}]}],"generationConfig":{"temperature":0.7},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"OBJECT","properties":{"latitude":{"type":"STRING","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"STRING","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"]}}]}]}'
@@ -33,7 +33,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 02 Nov 2025 21:30:05 GMT
+      - Tue, 04 Nov 2025 15:36:40 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -43,7 +43,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=948
+      - gfet4t7; dur=2514
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -60,11 +60,11 @@ http_interactions:
                     "functionCall": {
                       "name": "weather",
                       "args": {
-                        "longitude": "13.4050",
-                        "latitude": "52.5200"
+                        "latitude": "52.5200",
+                        "longitude": "13.4050"
                       }
                     },
-                    "thoughtSignature": "Cp8CAdHtim8uzJluELoA8FtrcEuFF5z+B6ERad1NRdj8NdmfjRoKd6J/7/mIZX3mLnjSO4IjKCnKe+eyvelE8FBf0rTA4pFzQmzjAK4dG+Qf4NePH5auuN/ZA7WoAjeeyirZqQyBTAlBeLShx5yHdkoyQkW5RN5reJGicc+n2SE6oqU5f2t/oAqcgwXMswynUDBXHZR/TV7RMWDiZVg2RJMKfSl7izeSjFnEqnD2HOpuD0qjtAVi5ieX0m+RGNjCgrnJKR8zMt48ZpJAptehIVCgjcb2xcnRZopZOQSNJEjGt/8jh6igXgSmrPdAhKEAkgIr9MLZsj2rBVgB8ZOmHzDFGYcEnaB8GuiaCPVc759rMzB8kwSuNUtr77UbiPWopL0="
+                    "thoughtSignature": "Cs4EAdHtim9B8LL1o2IasNkgXf9OPhD7vFcM8Uwj238pl0qVYGM86L3XnSYhzn48uBO0wBfgI4EWlpSywR2zoJpkk2Ot6GF6zLnjIinbieTAOfr/SWjpuj4eBDJ3K9X1hjSsCNMgiMVT7UVouXMjFqs3yQnIZI/LSocfxdpCV5jNR7saWPQXYIP11HufVhWbOOr0Lt1eYg/OIbT8Jb/y+2649LEpa68x3fsQejFzAFCNsChcCIcKMqJJEuel5+BTbvinXytV3gmbJcaVNAiryT0KJApX9+Z7ZkAHXvTHRZEVhdmmeGyJ1wABKMAWqxa0MJKKdS9YtPijm9eWrjMVL7qt7cK70Dmf7u8fIlwERhkkcSfykBzNAhGnah6VDCToYOQuZkPGthliQoitcelgbYEdsxVR2Uwc89gdYygiW4WFvJtz2t/kwTHSeMIeOenjZSg05AtQIas3gk0Mr1w/wOiwGWEa0hhbfSilgTnxSWWYxj371+2R+DTDFavLjICG1hJJBayWH4IErOqhqKUrMMWn/dTfZxYF1w2tIqBj+Q2C2+iw5k3F6y830ZkfIUgn3qWMq1wMZ5EN1u4s/2K5lvWeirAVk+NGM4/hOeYl/GPv5gIH4p1LgzPyA9z6+XhQA/Fpo72gXC1qrB7uPWr9oD3ujb7XK01pAS69GKBRZGDEZTX35YD1jgtMkoXxxVfQbQALFAzheMNFG0AfY6jkkbch0Q9Dqb7BsH0/RtvQzbDLpSjtx72VcgL9BPQyJwffP1Ov17UEckyByXQcV9wdeYI="
                   }
                 ],
                 "role": "model"
@@ -77,27 +77,27 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 103,
             "candidatesTokenCount": 30,
-            "totalTokenCount": 186,
+            "totalTokenCount": 261,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 103
               }
             ],
-            "thoughtsTokenCount": 53
+            "thoughtsTokenCount": 128
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "Xc0HaZWvHu2akdUPx_XosQo"
+          "responseId": "iB0Kaa7pJa_9nsEPitfHkQY"
         }
-  recorded_at: Sun, 02 Nov 2025 21:30:05 GMT
+  recorded_at: Tue, 04 Nov 2025 15:36:40 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What''s the weather in
-        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"longitude":"13.4050","latitude":"52.5200"}}}]},{"role":"function","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
+        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"52.5200","longitude":"13.4050"}}}]},{"role":"function","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}}]}],"generationConfig":{"temperature":0.7},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"OBJECT","properties":{"latitude":{"type":"STRING","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"STRING","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"]}}]}]}'
@@ -124,7 +124,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 02 Nov 2025 21:30:06 GMT
+      - Tue, 04 Nov 2025 15:36:42 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -134,7 +134,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=812
+      - gfet4t7; dur=1301
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -142,6 +142,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIlRoZSB3ZWF0aGVyIGluIEJlcmxpbiBpcyAxNcKwQyB3aXRoIGEgd2luZCBvZiAxMCBrbS9oLiIKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJyb2xlIjogIm1vZGVsIgogICAgICB9LAogICAgICAiZmluaXNoUmVhc29uIjogIlNUT1AiLAogICAgICAiaW5kZXgiOiAwCiAgICB9CiAgXSwKICAidXNhZ2VNZXRhZGF0YSI6IHsKICAgICJwcm9tcHRUb2tlbkNvdW50IjogMTkwLAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogMjEsCiAgICAidG90YWxUb2tlbkNvdW50IjogMjExLAogICAgInByb21wdFRva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiAxOTAKICAgICAgfQogICAgXQogIH0sCiAgIm1vZGVsVmVyc2lvbiI6ICJnZW1pbmktMi41LWZsYXNoIiwKICAicmVzcG9uc2VJZCI6ICJYczBIYWJ1T0ZhaXp4TjhQN19ySTRBayIKfQo=
-  recorded_at: Sun, 02 Nov 2025 21:30:06 GMT
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIlRoZSB3ZWF0aGVyIGluIEJlcmxpbiBpcyAxNcKwQyB3aXRoIGEgd2luZCBzcGVlZCBvZiAxMCBrbS9oLiIKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJyb2xlIjogIm1vZGVsIgogICAgICB9LAogICAgICAiZmluaXNoUmVhc29uIjogIlNUT1AiLAogICAgICAiaW5kZXgiOiAwCiAgICB9CiAgXSwKICAidXNhZ2VNZXRhZGF0YSI6IHsKICAgICJwcm9tcHRUb2tlbkNvdW50IjogMTkwLAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogMjIsCiAgICAidG90YWxUb2tlbkNvdW50IjogMjEyLAogICAgInByb21wdFRva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiAxOTAKICAgICAgfQogICAgXQogIH0sCiAgIm1vZGVsVmVyc2lvbiI6ICJnZW1pbmktMi41LWZsYXNoIiwKICAicmVzcG9uc2VJZCI6ICJpaDBLYWY3VUE4T0cyOG9Qbkt5NHdBZyIKfQo=
+  recorded_at: Tue, 04 Nov 2025 15:36:42 GMT
 recorded_with: VCR 6.3.1

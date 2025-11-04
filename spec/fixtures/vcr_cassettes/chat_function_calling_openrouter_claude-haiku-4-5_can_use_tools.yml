@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"model":"anthropic/claude-haiku-4.5","messages":[{"role":"user","content":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        the weather in Berlin? (52.5200, 13.4050)"}],"stream":false,"temperature":0.7,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 19:49:58 GMT
+      - Tue, 04 Nov 2025 15:36:32 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -51,17 +51,17 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: "\n         \n{\"id\":\"gen-1762112998-eccXi51mxDSjf1rPczGn\",\"provider\":\"Google\",\"model\":\"anthropic/claude-haiku-4.5\",\"object\":\"chat.completion\",\"created\":1762112998,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_calls\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"id\":\"toolu_vrtx_01EBGVBAuZ1xpM3nVuk2g6et\",\"index\":0,\"type\":\"function\",\"function\":{\"name\":\"weather\",\"arguments\":\"{\\\"latitude\\\":
+      string: "\n         \n{\"id\":\"gen-1762270592-zi2ndfd10zG1wAbPnQR4\",\"provider\":\"Google\",\"model\":\"anthropic/claude-haiku-4.5\",\"object\":\"chat.completion\",\"created\":1762270592,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_calls\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"id\":\"toolu_vrtx_01FUPyBj4f3RwRJrM9szCeDF\",\"index\":0,\"type\":\"function\",\"function\":{\"name\":\"weather\",\"arguments\":\"{\\\"latitude\\\":
         \\\"52.5200\\\", \\\"longitude\\\": \\\"13.4050\\\"}\"}}]}}],\"usage\":{\"prompt_tokens\":633,\"completion_tokens\":75,\"total_tokens\":708}}"
-  recorded_at: Sun, 02 Nov 2025 19:49:59 GMT
+  recorded_at: Tue, 04 Nov 2025 15:36:32 GMT
 - request:
     method: post
     uri: https://openrouter.ai/api/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"anthropic/claude-haiku-4.5","messages":[{"role":"user","content":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"toolu_vrtx_01EBGVBAuZ1xpM3nVuk2g6et","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"toolu_vrtx_01EBGVBAuZ1xpM3nVuk2g6et"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"toolu_vrtx_01FUPyBj4f3RwRJrM9szCeDF","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"toolu_vrtx_01FUPyBj4f3RwRJrM9szCeDF"}],"stream":false,"temperature":0.7,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
@@ -82,7 +82,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 19:49:59 GMT
+      - Tue, 04 Nov 2025 15:36:33 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -107,6 +107,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        CiAgICAgICAgIAoKICAgICAgICAgCnsiaWQiOiJnZW4tMTc2MjExMjk5OS1IQ0gxMUlCbkFSM2xVelppb3dnQSIsInByb3ZpZGVyIjoiQW50aHJvcGljIiwibW9kZWwiOiJhbnRocm9waWMvY2xhdWRlLWhhaWt1LTQuNSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3NjIxMTI5OTksImNob2ljZXMiOlt7ImxvZ3Byb2JzIjpudWxsLCJmaW5pc2hfcmVhc29uIjoic3RvcCIsIm5hdGl2ZV9maW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGN1cnJlbnQgd2VhdGhlciBpbiBCZXJsaW4gaXM6XG4tICoqVGVtcGVyYXR1cmU6KiogMTXCsENcbi0gKipXaW5kOioqIDEwIGttL2hcblxuSXQncyBhIG1pbGQgZGF5IHdpdGggYSBnZW50bGUgYnJlZXplISIsInJlZnVzYWwiOm51bGwsInJlYXNvbmluZyI6bnVsbH19XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6NzQ4LCJjb21wbGV0aW9uX3Rva2VucyI6NDIsInRvdGFsX3Rva2VucyI6NzkwfX0=
-  recorded_at: Sun, 02 Nov 2025 19:50:00 GMT
+        CiAgICAgICAgIAoKICAgICAgICAgCnsiaWQiOiJnZW4tMTc2MjI3MDU5My00d3ZwUjl1QW9RWkZPN2E5OTBXRyIsInByb3ZpZGVyIjoiR29vZ2xlIiwibW9kZWwiOiJhbnRocm9waWMvY2xhdWRlLWhhaWt1LTQuNSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3NjIyNzA1OTMsImNob2ljZXMiOlt7ImxvZ3Byb2JzIjpudWxsLCJmaW5pc2hfcmVhc29uIjoic3RvcCIsIm5hdGl2ZV9maW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIHdlYXRoZXIgaW4gQmVybGluIGlzIGN1cnJlbnRseTpcbi0gKipUZW1wZXJhdHVyZToqKiAxNcKwQyAoNTnCsEYpXG4tICoqV2luZDoqKiAxMCBrbS9oICg2IG1waClcblxuSXQncyBhIG1pbGQgZGF5IHdpdGggYSBnZW50bGUgYnJlZXplLiBZb3UgbWlnaHQgd2FudCB0byBicmluZyBhIGxpZ2h0IGphY2tldCBpZiB5b3UncmUgaGVhZGluZyBvdXQhIiwicmVmdXNhbCI6bnVsbCwicmVhc29uaW5nIjpudWxsfX1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjo3NDgsImNvbXBsZXRpb25fdG9rZW5zIjo2NiwidG90YWxfdG9rZW5zIjo4MTR9fQ==
+  recorded_at: Tue, 04 Nov 2025 15:36:33 GMT
 recorded_with: VCR 6.3.1

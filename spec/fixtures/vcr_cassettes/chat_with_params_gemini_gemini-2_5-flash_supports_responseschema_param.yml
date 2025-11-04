@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What is the square root
-        of 64? Answer with a JSON object with the key `result`."}]}],"generationConfig":{"responseMimeType":"application/json","responseSchema":{"type":"OBJECT","properties":{"result":{"type":"NUMBER"}}}}}'
+        of 64? Answer with a JSON object with the key `result`."}]}],"generationConfig":{"temperature":0.7,"responseMimeType":"application/json","responseSchema":{"type":"OBJECT","properties":{"result":{"type":"NUMBER"}}}}}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -30,7 +30,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 02 Nov 2025 21:55:56 GMT
+      - Tue, 04 Nov 2025 15:32:27 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -40,7 +40,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=817
+      - gfet4t7; dur=1322
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -66,17 +66,17 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 22,
             "candidatesTokenCount": 6,
-            "totalTokenCount": 88,
+            "totalTokenCount": 117,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 22
               }
             ],
-            "thoughtsTokenCount": 60
+            "thoughtsTokenCount": 89
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "bNMHaa2NG--Gxs0Pv7OToQs"
+          "responseId": "ixwKadLaFeTcnsEP4Z3n4Q4"
         }
-  recorded_at: Sun, 02 Nov 2025 21:55:56 GMT
+  recorded_at: Tue, 04 Nov 2025 15:32:27 GMT
 recorded_with: VCR 6.3.1

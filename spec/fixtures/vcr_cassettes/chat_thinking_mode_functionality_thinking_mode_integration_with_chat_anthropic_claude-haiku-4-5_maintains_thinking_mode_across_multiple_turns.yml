@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.anthropic.com/v1/messages
     body:
       encoding: UTF-8
-      string: '{"model":"claude-opus-4-20250514","messages":[{"role":"user","content":[{"type":"text","text":"What''s
-        5 + 3?"}]}],"stream":false,"max_tokens":4096,"temperature":1,"thinking":{"type":"enabled","budget_tokens":2048}}'
+      string: '{"model":"claude-haiku-4-5","messages":[{"role":"user","content":[{"type":"text","text":"What''s
+        5 + 3?"}]}],"stream":false,"max_tokens":64000,"temperature":1,"thinking":{"type":"enabled","budget_tokens":2048}}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Nov 2025 15:36:28 GMT
+      - Tue, 04 Nov 2025 16:36:06 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -34,31 +34,31 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '2000000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '2000000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-11-04T15:36:27Z'
+      - '2025-11-04T16:36:06Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '400000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '400000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-11-04T15:36:28Z'
+      - '2025-11-04T16:36:06Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '4000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '3999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-11-04T15:36:26Z'
+      - '2025-11-04T16:36:06Z'
       Retry-After:
-      - '35'
+      - '58'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '2400000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '2400000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-11-04T15:36:27Z'
+      - '2025-11-04T16:36:06Z'
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
@@ -66,7 +66,7 @@ http_interactions:
       Anthropic-Organization-Id:
       - "<ANTHROPIC_ORGANIZATION_ID>"
       X-Envoy-Upstream-Service-Time:
-      - '2113'
+      - '752'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -77,18 +77,18 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-opus-4-20250514","id":"msg_017JfSxjBqFncuHvUz1HRDdH","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"This
-        is a simple arithmetic question. 5 + 3 = 8.","signature":"EtgBCkYICRgCKkCyqtg4YSovHjJWjT5xWNBV0HDNY0NkeiSISwchPehu+JHqF14GKTlprSnmlk1ohL26KlGnQRhwg33jqkxTjsJiEgw0nO5ONJeUhuPACvgaDOl/7vyVazJB70YhSiIwsnbT/zGPlWuimAI9dQSpXIhWI6av2YcFvQzjMt4ebHlzpitYiz0taAvSYU99RnmxKkDGO/1ANPZ6sj8RLTWV8JmWTQF/xNxc2PmtoF2rihMnerMXWaA4EgO3rvorhnc4uEWSnqs+P+8AFU5qHOSiQo2/GAE="},{"type":"text","text":"5
-        + 3 = 8"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":44,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":39,"service_tier":"standard"}}'
-  recorded_at: Tue, 04 Nov 2025 15:36:28 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_01DsMbY2VX4joxUMs2BmyTNd","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"This
+        is a straightforward arithmetic question. 5 + 3 = 8.","signature":"EuEBCkYICRgCKkBNoBUsIeao5QOptzZ/+JjmS9yEd2WlUqJGTCW36sIFoIsH5slzFpxPkoXUHBnEQ/BvtR1Z+DE5FGvU9UVoPcCCEgxqVbqbFiIUOqYHf7AaDKZibsCyRQHMYmTzhSIw3jNDAkYaoxWyV+4IPU8ub3HonMYU+DTsv8pp6rUeTWSla2F70WPBjdI44qD3xtVpKkmCNqRnJ3gnw8NYI6VvUCTu88ZjQ2NlxxuVRT0F/RoPjkZ5dCcH550WeHpMky5bt1I0Uib9jg6EjGLK1+8QtDMgePwqIsW74QwHGAE="},{"type":"text","text":"5
+        + 3 = 8"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":44,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":40,"service_tier":"standard"}}'
+  recorded_at: Tue, 04 Nov 2025 16:36:06 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
     body:
       encoding: UTF-8
-      string: '{"model":"claude-opus-4-20250514","messages":[{"role":"user","content":[{"type":"text","text":"What''s
+      string: '{"model":"claude-haiku-4-5","messages":[{"role":"user","content":[{"type":"text","text":"What''s
         5 + 3?"}]},{"role":"assistant","content":[{"type":"text","text":"5 + 3 = 8"}]},{"role":"user","content":[{"type":"text","text":"Now
-        multiply that result by 2"}]}],"stream":false,"max_tokens":4096,"temperature":1,"thinking":{"type":"enabled","budget_tokens":2048}}'
+        multiply that result by 2"}]}],"stream":false,"max_tokens":64000,"temperature":1,"thinking":{"type":"enabled","budget_tokens":2048}}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -108,7 +108,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Nov 2025 15:36:31 GMT
+      - Tue, 04 Nov 2025 16:36:08 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -116,31 +116,31 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '2000000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '2000000'
+      - '4000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-11-04T15:36:30Z'
+      - '2025-11-04T16:36:07Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '400000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '400000'
+      - '800000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-11-04T15:36:31Z'
+      - '2025-11-04T16:36:08Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '4000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '3999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-11-04T15:36:29Z'
+      - '2025-11-04T16:36:07Z'
       Retry-After:
-      - '31'
+      - '53'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '2400000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '2400000'
+      - '4800000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-11-04T15:36:30Z'
+      - '2025-11-04T16:36:07Z'
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
@@ -148,7 +148,7 @@ http_interactions:
       Anthropic-Organization-Id:
       - "<ANTHROPIC_ORGANIZATION_ID>"
       X-Envoy-Upstream-Service-Time:
-      - '3031'
+      - '1058'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -160,6 +160,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJtb2RlbCI6ImNsYXVkZS1vcHVzLTQtMjAyNTA1MTQiLCJpZCI6Im1zZ18wMTVRQ1FpS1lvWWQzN2VTRWhMQVUzMU0iLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGhpbmtpbmciLCJ0aGlua2luZyI6IlRoZSBwcmV2aW91cyByZXN1bHQgd2FzIDggKGZyb20gNSArIDMgPSA4KSwgYW5kIG5vdyBJIG5lZWQgdG8gbXVsdGlwbHkgdGhhdCBieSAyLlxuOCDDlyAyID0gMTYiLCJzaWduYXR1cmUiOiJFb1VDQ2tZSUNSZ0NLa0FxWGF3QnlLV0ZESW1XM01Lc0VLclNZZk5qR1hRUUpIenQ3RFVmeE5lNktIL0FxMVNNMFhEVTdQRGRqbThpUXJxZ2lSdXdBVEZrU0dkWWlxOWtPTjFERWd4dkNINWc1TzVITm5tcmZlc2FETGs0eDh4cEhucnFOU1ljRnlJd0l0YTBlUFFRN08wT0drQ0ZYWGphUncyVUN5RTdCZ3hsQzQwZUxLSXk0L2ErNTRqZkd0ZmdWQ0dzQTFPMGhTa1BLbTM0c0I2Q3BoNmNqWUJKc1hOQWx6aVl3b0FJaHpvSkkxSUh3Sy9FZnJONkxaYWloalBaOEU0aFFuUGhDT2xFTDl1YXlERVFNaHh6am9ZY0lnZ09CTFhUK2E4cUVNYy90c0pYdFlOWkJLdUd3V1ovTGJweWlVaUpBSk40TGxqZEUydWlQZHE1L2padXo2VmVHVWdoR0FFPSJ9LHsidHlwZSI6InRleHQiLCJ0ZXh0IjoiOCDDlyAyID0gMTYifV0sInN0b3BfcmVhc29uIjoiZW5kX3R1cm4iLCJzdG9wX3NlcXVlbmNlIjpudWxsLCJ1c2FnZSI6eyJpbnB1dF90b2tlbnMiOjY3LCJjYWNoZV9jcmVhdGlvbl9pbnB1dF90b2tlbnMiOjAsImNhY2hlX3JlYWRfaW5wdXRfdG9rZW5zIjowLCJjYWNoZV9jcmVhdGlvbiI6eyJlcGhlbWVyYWxfNW1faW5wdXRfdG9rZW5zIjowLCJlcGhlbWVyYWxfMWhfaW5wdXRfdG9rZW5zIjowfSwib3V0cHV0X3Rva2VucyI6NjIsInNlcnZpY2VfdGllciI6InN0YW5kYXJkIn19
-  recorded_at: Tue, 04 Nov 2025 15:36:31 GMT
+        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMTc1dG5FdkFmVkppMmhWdGZIR21zSlAiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGhpbmtpbmciLCJ0aGlua2luZyI6IlRoZSB1c2VyIGlzIGFza2luZyBtZSB0byBtdWx0aXBseSB0aGUgcHJldmlvdXMgcmVzdWx0ICg4KSBieSAyLlxuXG44IMOXIDIgPSAxNiIsInNpZ25hdHVyZSI6IkV2UUJDa1lJQ1JnQ0trRHB1SGNCck9OSW1VM3dpQ0k5SWttWStkNzdWUWhvc1JtajRaQ3VCZU96Nnd5ZUNDb05Sd3VPVVFLSDl3Tk91d2ZQT0VBSDFqRUhuN1FXRDhGQy9kT3ZFZ3laVHFPa1R5bzcyYXZyRno0YURJM3FjQVNVTEEzMGh5anhiU0l3OG94RXdsVlZha3dWdTVtZmhFbFZLaVdwcFM0Vng1MS9LTkd6emg0dG0weXpMakowY3NGeUhtT1g4c3BsM1ZZZ0tsemRQak1tck84enY3b0RhQW95QVdpNDNvU0ZOU0ErYk0xZTJHN0I3U2ZmYzEvVzlsTXpzOTNneHBjQ0VLSE9DMDhnclV5bGczTW5iNXdSdE16L2VkRHhVK1lSdFcvNXI3cmVMalZiRkhuNlE0dStlazE1ZXk0b3lHL0FvaGdCIn0seyJ0eXBlIjoidGV4dCIsInRleHQiOiI4IMOXIDIgPSAxNiJ9XSwic3RvcF9yZWFzb24iOiJlbmRfdHVybiIsInN0b3Bfc2VxdWVuY2UiOm51bGwsInVzYWdlIjp7ImlucHV0X3Rva2VucyI6NjcsImNhY2hlX2NyZWF0aW9uX2lucHV0X3Rva2VucyI6MCwiY2FjaGVfcmVhZF9pbnB1dF90b2tlbnMiOjAsImNhY2hlX2NyZWF0aW9uIjp7ImVwaGVtZXJhbF81bV9pbnB1dF90b2tlbnMiOjAsImVwaGVtZXJhbF8xaF9pbnB1dF90b2tlbnMiOjB9LCJvdXRwdXRfdG9rZW5zIjo0OCwic2VydmljZV90aWVyIjoic3RhbmRhcmQifX0=
+  recorded_at: Tue, 04 Nov 2025 16:36:08 GMT
 recorded_with: VCR 6.3.1

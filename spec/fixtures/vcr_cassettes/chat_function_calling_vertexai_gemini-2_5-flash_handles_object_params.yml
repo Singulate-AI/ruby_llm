@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Date:
-      - Sun, 02 Nov 2025 21:30:55 GMT
       Pragma:
       - no-cache
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Tue, 04 Nov 2025 15:41:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -52,18 +52,18 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/sqlservice.login openid",
+          "scope": "https://www.googleapis.com/auth/cloud-platform openid https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Sun, 02 Nov 2025 21:30:55 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:49 GMT
 - request:
     method: post
     uri: https://<GOOGLE_CLOUD_LOCATION>-aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Call the object params
-        tool with window start 2025-01-01 and end 2025-01-02 and include the result."}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"object_params","description":"Uses
+        tool with window start 2025-01-01 and end 2025-01-02 and include the result."}]}],"generationConfig":{"temperature":0.7},"tools":[{"functionDeclarations":[{"name":"object_params","description":"Uses
         params DSL object support","parameters":{"type":"OBJECT","properties":{"window":{"type":"OBJECT","description":"Time
         window to schedule","properties":{"start":{"type":"STRING","description":"ISO
         start"},"end":{"type":"STRING","description":"ISO end"}},"required":["start","end"]}},"required":["window"]}}]}]}'
@@ -90,7 +90,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 02 Nov 2025 21:30:56 GMT
+      - Tue, 04 Nov 2025 15:41:51 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -117,23 +117,23 @@ http_interactions:
                       "name": "object_params",
                       "args": {
                         "window": {
-                          "end": "2025-01-02",
-                          "start": "2025-01-01"
+                          "start": "2025-01-01",
+                          "end": "2025-01-02"
                         }
                       }
                     },
-                    "thoughtSignature": "CvoDAePx/15+PKYRaT0tCr72didKNEHC7GGk52AkK4vwa0Cbn397SEAOYv7y8uIFvT6jrDmF/vunna+sHlQN2NIhwziT4MQoQwHKUL/uiEJ8/jasCg8BF//KzMJqcSCl/miZh9IQZR94ZwAExWbMs177n2+eJ68aWuD/Po2jfCK4kYtyCnfU2rOPjS3jkXryW+HvcmFFpKKRCbt5CIc+WbQs4TD2+8kyL6JZkiFcD+mw4OwIfssrTiLn0AFrq/ALIvQQEOEa46DpNaouABdJA05iEmw8ywB31yryFDBtB1uVEgSnUnOP2t0GQBDRUMxwKz8Tj9rDCFgEwXdlAsFJaW+ZkhuBH+aeKhfDg0YA/duf1yXnX1BqIxbgJHJ8kmXcflox/cZWec6eTykdgssFyp1ZUpRFKtZtEmVW/UCT6W2aU64CYkmm/+bonpA2wFx0jv9PMmfR8oQ6VHB1YeJ+poi0GDSmtWKfMIkh0vQQXWbApVRXCk5/sK7akhjDhptY9ANFxoCHm9zoPyc4rBOvdFRlUojPRH5GKsLxWmDuUHFwWlXAc3IRqM2hGBJHDGbcbxy67SgIjMrzfg/MOj2Yw+c0z33PD8fnxezlc0Xks9YwY++Tdahs+1EOv1alYtkZMdevEI36dlm4GKQSpUL7bv8u1LJE29b+Jxlsddo="
+                    "thoughtSignature": "CsEDAePx/14Pdw4VCQPOVqofFFEUd/HbJ1R1B5MdVH4eNChDN4UDBa4hKqmyfOy/etZFnXgUmO92mItITkIresnxbzjbKoRMZnLFx2iNt6b5ub/LmWKJ0ZVJa4iox7NVsa/I2NYK2zm6xH9u3f249fzYnbRV9/aHZFIyO59P0xJm8mfHGq3FFgf/LE4H6dM0q8V2B5rFTLvbZtD/L0UgBbw++tzEj2U3BdTZkvKAD+FZPpwmlZt8gdZLqIfBSp32jkt4XlY+I3XvDV9FbS6DUR1xPu8HRqS6dIoRsDS3vJ0U04yK1H6sozNjRmFZNGd2SvPghoYyS9mEXoX1J+MawjJWRGWo3Q4d3EyDfYey1rhUZzsjS8+1pRNOsiiN2kPCM5FgPaYgDMb2p+/7bsV668w15bhXx7/eMlGNJjW4FWM4fA6DeNdP9gpQYRrXEnZRkdIRqVJIwn584Ki8H6TJjfvcCE1QXjCZH+4De1GIZPmoP8cew9abM3X77qb8LC3zgPzCcl1Q2dfK/jMFcVqLWtaPY4MpZOezIIOfh39dD53MXkXfdcpze2/KouTaM4FEa0RlgSFzzqTeetCzpAPx1db+/eo="
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.36562453783475435
+              "avgLogprobs": -0.26747606350825381
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 63,
             "candidatesTokenCount": 26,
-            "totalTokenCount": 232,
+            "totalTokenCount": 216,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -147,11 +147,11 @@ http_interactions:
                 "tokenCount": 26
               }
             ],
-            "thoughtsTokenCount": 143
+            "thoughtsTokenCount": 127
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2025-11-02T21:30:55.972627Z",
-          "responseId": "j80HadOuO5u9vdIPmvPVgAc"
+          "createTime": "2025-11-04T15:41:50.358191Z",
+          "responseId": "vh4Kaa_uFZXEptQP27fDuAY"
         }
-  recorded_at: Sun, 02 Nov 2025 21:30:56 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:51 GMT
 recorded_with: VCR 6.3.1

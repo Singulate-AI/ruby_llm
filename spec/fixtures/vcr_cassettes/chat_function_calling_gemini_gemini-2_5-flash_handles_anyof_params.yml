@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Call the any-of params
-        tool for task \"Review PR\" with status \"pending\" and report the result."}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"any_of_params","description":"Uses
+        tool for task \"Review PR\" with status \"pending\" and report the result."}]}],"generationConfig":{"temperature":0.7},"tools":[{"functionDeclarations":[{"name":"any_of_params","description":"Uses
         params DSL any_of support","parameters":{"type":"OBJECT","properties":{"task":{"type":"STRING","description":"Task
         description"},"status":{"type":"STRING","description":"Optional task status","enum":["pending","done"],"nullable":true}},"required":["task","status"]}}]}]}'
     headers:
@@ -32,7 +32,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 02 Nov 2025 21:30:52 GMT
+      - Tue, 04 Nov 2025 15:41:34 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -42,7 +42,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1142
+      - gfet4t7; dur=1064
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -63,7 +63,7 @@ http_interactions:
                         "task": "Review PR"
                       }
                     },
-                    "thoughtSignature": "CqYCAdHtim/M5YgytJV7tidaQK+KxZ0sz7YYIFnOf9HqtkCwALnT278+1k0E7iwhIHR5LJs13LRomyxZn1DYxX32v1bFhJNwg+gS+TcPe18QkFhs68lT+q/koEwPN/Iy3WbK1qYSGQkJyGB1ZwZl5SI0LtHukHBzsaQx1+0Z6yxtPUPps+u4o9gwarx20YKjdzZ3ayENYzLvVuzssmOocwfD6B2J9isToFn7HJwSU0buVgZK0ASvIjWwwm3mO9DhsqRevzSScuO94/eVwZewxK87pyznyYUELVFbcFjIWBJ0eGnkrC+QU+8nnJTzPQmY1XxqyPjYZXlwa4mIm4GzTjMvC4+uCe03oTTeOTDWF7OP4aJaDWdYFlc0g4W5/JdLf/UEMdw0++68"
+                    "thoughtSignature": "CtwBAdHtim851itRmDphPMaseW3McZ3064ACqFR5ks/Vq8OUfpy8td2SbjB44paTjWs/dIjUZP0Pxsyw5El70XxGb1JQqWBaPfNSQUTO7N8T3VYNejgL6GZLmwc/1kjTqJkDwhMf1gbj6psT/EV/LhnM822ri2qtDLjOhQWHZBT7CQg+Hz7nTgXuC9Yih1c2I0O+aoGlEyxxU4AMTN9A55PRQYVI1sJrgdrLh2cgKeXDQ+ZY0YD0MquLvL3vJ5jCbq3WiS66QJoVQi7mf2aeouP0Z4XYaEFYj0ZhtVjwrg=="
                   }
                 ],
                 "role": "model"
@@ -76,17 +76,17 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 84,
             "candidatesTokenCount": 23,
-            "totalTokenCount": 177,
+            "totalTokenCount": 159,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 84
               }
             ],
-            "thoughtsTokenCount": 70
+            "thoughtsTokenCount": 52
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "jM0HaYqLBer5kdUP_sfYYA"
+          "responseId": "rh4KabfbL-3_nsEPye2JsQQ"
         }
-  recorded_at: Sun, 02 Nov 2025 21:30:52 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:34 GMT
 recorded_with: VCR 6.3.1

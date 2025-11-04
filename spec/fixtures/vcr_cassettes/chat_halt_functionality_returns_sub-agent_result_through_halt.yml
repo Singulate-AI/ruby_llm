@@ -6,12 +6,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"model":"gpt-4.1-nano","messages":[{"role":"user","content":"Please
-        handle this query: What is Ruby?"}],"stream":false,"tools":[{"type":"function","function":{"name":"handoff","description":"Delegates
+        handle this query: What is Ruby?"}],"stream":false,"temperature":0.7,"tools":[{"type":"function","function":{"name":"handoff","description":"Delegates
         to a sub-agent and halts","parameters":{"type":"object","properties":{"query":{"type":"string","description":"Query
-        to pass to sub-agent"}},"required":["query"]}}}]}'
+        to pass to sub-agent"}},"required":["query"],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
-      - Faraday v2.13.4
+      - Faraday v2.14.0
       Authorization:
       - Bearer <OPENAI_API_KEY>
       Content-Type:
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 24 Sep 2025 15:02:54 GMT
+      - Tue, 04 Nov 2025 15:42:14 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,25 +38,25 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '677'
+      - '491'
       Openai-Project:
-      - proj_61L3Oqt640dKU0CASS2iOj8Q
+      - proj_D3c5oI4D1ZT0GRioOs1GRp7F
       Openai-Version:
       - '2020-10-01'
       X-Envoy-Upstream-Service-Time:
-      - '690'
+      - '508'
       X-Ratelimit-Limit-Requests:
-      - '500'
+      - '30000'
       X-Ratelimit-Limit-Tokens:
-      - '200000'
+      - '150000000'
       X-Ratelimit-Remaining-Requests:
-      - '499'
+      - '29999'
       X-Ratelimit-Remaining-Tokens:
-      - '199988'
+      - '149999987'
       X-Ratelimit-Reset-Requests:
-      - 120ms
+      - 2ms
       X-Ratelimit-Reset-Tokens:
-      - 3ms
+      - 0s
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Openai-Proxy-Wasm:
@@ -80,9 +80,9 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-CJLJ86QdoYuHg1O4Imn6IYgkJu9WD",
+          "id": "chatcmpl-CYDSfPExHJTSyWguIzMR7fG2GNh1a",
           "object": "chat.completion",
-          "created": 1758726174,
+          "created": 1762270933,
           "model": "gpt-4.1-nano-2025-04-14",
           "choices": [
             {
@@ -92,7 +92,7 @@ http_interactions:
                 "content": null,
                 "tool_calls": [
                   {
-                    "id": "call_HcaHQgxmUcMjjN8jhBFFT9LO",
+                    "id": "call_cbH9nFNlrXdhzMA4LQGmCgiH",
                     "type": "function",
                     "function": {
                       "name": "handoff",
@@ -123,7 +123,7 @@ http_interactions:
             }
           },
           "service_tier": "default",
-          "system_fingerprint": "fp_7c233bf9d1"
+          "system_fingerprint": "fp_950f36939b"
         }
-  recorded_at: Wed, 24 Sep 2025 15:02:54 GMT
+  recorded_at: Tue, 04 Nov 2025 15:42:14 GMT
 recorded_with: VCR 6.3.1
