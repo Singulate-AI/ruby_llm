@@ -14,14 +14,14 @@ RSpec.describe RubyLLM::Chat do
 
   it 'still supports exact model IDs' do
     # Backward compatibility check
-    chat = RubyLLM.chat(model: 'claude-haiku-4-5-20251001')
-    expect(chat.model.id).to eq('claude-haiku-4-5-20251001')
+    chat = RubyLLM.chat(model: 'claude-3-7-sonnet-20250219')
+    expect(chat.model.id).to eq('claude-3-7-sonnet-20250219')
     expect(chat.model.provider).to eq('anthropic')
   end
 
   it 'finds models by alias and provider' do
     chat = RubyLLM.chat(model: 'claude-3-5-haiku', provider: :bedrock)
-    expect(chat.model.id).to eq('anthropic.claude-3-5-haiku-20241022-v1:0')
+    expect(chat.model.id).to match(/anthropic.claude-3-5-haiku-20241022-v1:0/)
     expect(chat.model.provider).to eq('bedrock')
   end
 

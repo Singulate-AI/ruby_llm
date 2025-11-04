@@ -45,6 +45,8 @@ RSpec.describe RubyLLM::Providers::Anthropic::Chat do
           [user_message],
           tools: {},
           temperature: nil,
+          thinking: nil,
+          thinking_budget: nil,
           model: model,
           stream: false,
           schema: '{"name":"TestSchema"}'
