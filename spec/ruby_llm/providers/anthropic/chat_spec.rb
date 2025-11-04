@@ -21,6 +21,8 @@ RSpec.describe RubyLLM::Providers::Anthropic::Chat do
         temperature: nil,
         model: model,
         stream: false,
+        thinking: nil,
+        thinking_budget: nil,
         schema: nil
       )
 
