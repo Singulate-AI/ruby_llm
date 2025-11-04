@@ -5,10 +5,10 @@ http_interactions:
     uri: https://api.mistral.ai/v1/chat/completions
     body:
       encoding: UTF-8
-      string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"Hi"}],"stream":false}'
+      string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"<MASSIVE_TEXT>"},{"role":"assistant","content":"<MASSIVE_TEXT>"},{"role":"user","content":"Hi"}],"stream":false,"temperature":0.7}'
     headers:
       User-Agent:
-      - Faraday v2.13.4
+      - Faraday v2.14.0
       Authorization:
       - Bearer <MISTRAL_API_KEY>
       Content-Type:
@@ -23,7 +23,7 @@ http_interactions:
       message: Internal Server Error
     headers:
       Date:
-      - Wed, 24 Sep 2025 14:49:42 GMT
+      - Tue, 04 Nov 2025 15:31:33 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -33,24 +33,26 @@ http_interactions:
       Cf-Ray:
       - "<CF_RAY>"
       Mistral-Correlation-Id:
-      - '01997c33-9ae9-71f9-b29c-631a93990c07'
+      - '019a4f7e-a600-7b0f-8895-e1e0820d05fc'
       X-Kong-Request-Id:
-      - '01997c33-9ae9-71f9-b29c-631a93990c07'
+      - '019a4f7e-a600-7b0f-8895-e1e0820d05fc'
       X-Envoy-Upstream-Service-Time:
-      - '1063'
+      - '1409'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1076'
+      - '1419'
       X-Kong-Proxy-Latency:
-      - '347'
+      - '260'
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
       - "<COOKIE>"
       - "<COOKIE>"
       Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Server:
       - cloudflare
       Alt-Svc:
@@ -58,5 +60,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"object":"error","message":"Service unavailable.","type":"internal_server_error","param":null,"code":"1000"}'
-  recorded_at: Wed, 24 Sep 2025 14:49:42 GMT
+  recorded_at: Tue, 04 Nov 2025 15:31:33 GMT
 recorded_with: VCR 6.3.1

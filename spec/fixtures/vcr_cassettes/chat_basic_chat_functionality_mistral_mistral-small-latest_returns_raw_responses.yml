@@ -6,10 +6,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"What
-        is the capital of France?"}],"stream":false}'
+        is the capital of France?"}],"stream":false,"temperature":0.7}'
     headers:
       User-Agent:
-      - Faraday v2.13.4
+      - Faraday v2.14.0
       Authorization:
       - Bearer <MISTRAL_API_KEY>
       Content-Type:
@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 24 Sep 2025 14:53:48 GMT
+      - Tue, 04 Nov 2025 15:34:22 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -32,21 +32,21 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - '01997c37-617b-75bb-9f92-e2777deafd55'
+      - '019a4f81-3c3e-77b5-9c9f-98dcd52b2738'
       X-Kong-Request-Id:
-      - '01997c37-617b-75bb-9f92-e2777deafd55'
+      - '019a4f81-3c3e-77b5-9c9f-98dcd52b2738'
       X-Envoy-Upstream-Service-Time:
-      - '669'
+      - '1146'
       X-Ratelimit-Limit-Tokens-Minute:
       - '500000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '499860'
+      - '499828'
       X-Ratelimit-Limit-Tokens-Month:
       - '1000000000'
       X-Ratelimit-Remaining-Tokens-Month:
-      - '999971259'
+      - '999998030'
       X-Ratelimit-Tokens-Query-Cost:
-      - '75'
+      - '86'
       X-Ratelimit-Limit-Req-Minute:
       - '60'
       X-Ratelimit-Remaining-Req-Minute:
@@ -54,7 +54,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '670'
+      - '1147'
       X-Kong-Proxy-Latency:
       - '7'
       Cf-Cache-Status:
@@ -63,7 +63,9 @@ http_interactions:
       - "<COOKIE>"
       - "<COOKIE>"
       Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Server:
       - cloudflare
       Cf-Ray:
@@ -73,6 +75,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6IjJmZjMzOWU2MmZlNjRiMDc4MThmZWIxMTFlYmQ2MGIxIiwiY3JlYXRlZCI6MTc1ODcyNTYyOCwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjEwLCJ0b3RhbF90b2tlbnMiOjc1LCJjb21wbGV0aW9uX3Rva2VucyI6NjV9LCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJ0b29sX2NhbGxzIjpudWxsLCJjb250ZW50IjoiVGhlIGNhcGl0YWwgb2YgRnJhbmNlIGlzICoqUGFyaXMqKi5cblxuUGFyaXMgaXMga25vd24gZm9yIGl0cyBpY29uaWMgbGFuZG1hcmtzIHN1Y2ggYXMgdGhlIEVpZmZlbCBUb3dlciwgTm90cmUtRGFtZSBDYXRoZWRyYWwsIGFuZCB0aGUgTG91dnJlIE11c2V1bS4gSXQgaXMgYWxzbyBhIG1ham9yIGdsb2JhbCBjZW50ZXIgZm9yIGFydCwgZmFzaGlvbiwgZ2FzdHJvbm9teSwgYW5kIGN1bHR1cmUuXG5cbldvdWxkIHlvdSBsaWtlIHRvIGtub3cgbW9yZSBhYm91dCBQYXJpcyBvciBGcmFuY2U/IPCfmIoifX1dfQ==
-  recorded_at: Wed, 24 Sep 2025 14:53:48 GMT
+        eyJpZCI6Ijc0ZjIxNThkYzNjYzRlMTZhZDZkY2ZmZDEwNjYxYjEwIiwiY3JlYXRlZCI6MTc2MjI3MDQ2MSwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjEwLCJ0b3RhbF90b2tlbnMiOjg2LCJjb21wbGV0aW9uX3Rva2VucyI6NzZ9LCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJ0b29sX2NhbGxzIjpudWxsLCJjb250ZW50IjoiVGhlIGNhcGl0YWwgb2YgRnJhbmNlIGlzICoqUGFyaXMqKi5cblxuUGFyaXMgaXMga25vd24gZm9yIGl0cyBpY29uaWMgbGFuZG1hcmtzIHN1Y2ggYXMgdGhlICoqRWlmZmVsIFRvd2VyKiosICoqTG91dnJlIE11c2V1bSoqLCBhbmQgKipOb3RyZS1EYW1lIENhdGhlZHJhbCoqLCBhcyB3ZWxsIGFzIGl0cyByaWNoIGhpc3RvcnksIGN1bHR1cmUsIGFuZCBjdWlzaW5lLiBJdCBpcyBvbmUgb2YgdGhlIG1vc3QgdmlzaXRlZCBjaXRpZXMgaW4gdGhlIHdvcmxkLlxuXG5Xb3VsZCB5b3UgbGlrZSB0byBrbm93IG1vcmUgYWJvdXQgUGFyaXMgb3IgRnJhbmNlPyDwn5iKIn19XX0=
+  recorded_at: Tue, 04 Nov 2025 15:34:22 GMT
 recorded_with: VCR 6.3.1

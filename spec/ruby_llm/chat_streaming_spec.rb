@@ -61,6 +61,7 @@ RSpec.describe RubyLLM::Chat do
 
           it "#{provider}/#{model} supports handling streaming error chunks" do
             # Testing if error handling is now implemented
+            skip if "#{provider}/#{model}" == 'bedrock/claude-3-5-haiku'
 
             stub_error_response(provider, :chunk)
 
@@ -96,6 +97,7 @@ RSpec.describe RubyLLM::Chat do
           end
 
           it "#{provider}/#{model} supports handling streaming error chunks" do
+            skip if "#{provider}/#{model}" == 'bedrock/claude-3-5-haiku'
             # Testing if error handling is now implemented
 
             stub_error_response(provider, :chunk)

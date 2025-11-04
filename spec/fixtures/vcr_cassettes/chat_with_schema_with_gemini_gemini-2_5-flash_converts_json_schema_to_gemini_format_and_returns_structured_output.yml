@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Generate a person named
-        Jane who is 25 years old"}]}],"generationConfig":{"responseMimeType":"application/json","responseJsonSchema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"integer"}},"required":["name","age"],"additionalProperties":false}}}'
+        Jane who is 25 years old"}]}],"generationConfig":{"temperature":0.7,"responseMimeType":"application/json","responseJsonSchema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"integer"}},"required":["name","age"],"additionalProperties":false}}}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -30,7 +30,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 02 Nov 2025 21:56:01 GMT
+      - Tue, 04 Nov 2025 15:32:38 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -40,7 +40,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=758
+      - gfet4t7; dur=1923
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -54,7 +54,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "{\"name\":\"Jane\",\"age\":25}"
+                    "text": "{\"name\": \"Jane\", \"age\": 25}"
                   }
                 ],
                 "role": "model"
@@ -65,18 +65,18 @@ http_interactions:
           ],
           "usageMetadata": {
             "promptTokenCount": 13,
-            "candidatesTokenCount": 10,
-            "totalTokenCount": 88,
+            "candidatesTokenCount": 13,
+            "totalTokenCount": 105,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 13
               }
             ],
-            "thoughtsTokenCount": 65
+            "thoughtsTokenCount": 79
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "cdMHafzACrXqkdUP6d_dgQE"
+          "responseId": "lhwKadbpIZyUkdUPy9DXoQI"
         }
-  recorded_at: Sun, 02 Nov 2025 21:56:01 GMT
+  recorded_at: Tue, 04 Nov 2025 15:32:38 GMT
 recorded_with: VCR 6.3.1

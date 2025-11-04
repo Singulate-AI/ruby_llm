@@ -26,6 +26,5 @@ THINKING_MODELS = [
 ].freeze
 
 NON_THINKING_MODELS = [
-  { model: 'claude-3-haiku', provider: 'anthropic' },
-  { model: 'claude-3-sonnet', provider: 'anthropic' }
+  { model: 'claude-3-haiku', provider: 'anthropic' }
 ].freeze

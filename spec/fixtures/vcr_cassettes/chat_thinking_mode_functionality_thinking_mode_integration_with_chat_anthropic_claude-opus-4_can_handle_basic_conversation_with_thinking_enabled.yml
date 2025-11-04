@@ -6,10 +6,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"model":"claude-opus-4-20250514","messages":[{"role":"user","content":[{"type":"text","text":"What''s
-        2 + 2? Think through this step by step."}]}],"temperature":1,"stream":false,"max_tokens":32000,"thinking":{"type":"enabled","budget_tokens":2048}}'
+        2 + 2? Think through this step by step."}]}],"stream":false,"max_tokens":4096,"temperature":1,"thinking":{"type":"enabled","budget_tokens":2048}}'
     headers:
       User-Agent:
-      - Faraday v2.13.2
+      - Faraday v2.14.0
       X-Api-Key:
       - "<ANTHROPIC_API_KEY>"
       Anthropic-Version:
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 18 Jul 2025 05:39:23 GMT
+      - Tue, 04 Nov 2025 15:36:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -34,37 +34,39 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '20000'
+      - '2000000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '20000'
+      - '2000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-07-18T05:39:17Z'
+      - '2025-11-04T15:36:20Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '4000'
+      - '400000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '4000'
+      - '400000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-07-18T05:39:27Z'
+      - '2025-11-04T15:36:25Z'
       Anthropic-Ratelimit-Requests-Limit:
-      - '50'
+      - '4000'
       Anthropic-Ratelimit-Requests-Remaining:
-      - '49'
+      - '3999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-07-18T05:39:16Z'
+      - '2025-11-04T15:36:18Z'
+      Retry-After:
+      - '40'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '24000'
+      - '2400000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '24000'
+      - '2400000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-07-18T05:39:17Z'
+      - '2025-11-04T15:36:20Z'
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
-      - a2bc4b1c-6bf0-4b62-b1f6-a1d9821a5e3a
-      Via:
-      - 1.1 google
+      - "<ANTHROPIC_ORGANIZATION_ID>"
+      X-Envoy-Upstream-Service-Time:
+      - '7158'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -75,7 +77,15 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6Im1zZ18wMTlDMnA3cVdudzQ3RFpBeXNyc2JlUGkiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJtb2RlbCI6ImNsYXVkZS1vcHVzLTQtMjAyNTA1MTQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGhpbmtpbmciLCJ0aGlua2luZyI6IlRoaXMgaXMgYSB2ZXJ5IHNpbXBsZSBhcml0aG1ldGljIHF1ZXN0aW9uLiBUaGUgdXNlciBpcyBhc2tpbmcgbWUgdG8gYWRkIDIgKyAyLCBidXQgdGhleSd2ZSBhbHNvIGFza2VkIG1lIHRvIHRoaW5rIHRocm91Z2ggaXQgc3RlcCBieSBzdGVwLiBFdmVuIHRob3VnaCB0aGlzIGlzIGVsZW1lbnRhcnksIEkgc2hvdWxkIGhvbm9yIHRoZWlyIHJlcXVlc3QgdG8gc2hvdyB0aGUgc3RlcHMuXG5cbjIgKyAyID0gNFxuXG5JIGNhbiBleHBsYWluIHRoaXMgaW4gYSBmZXcgd2F5czpcbi0gQ291bnRpbmcgdXA6IFN0YXJ0aW5nIGF0IDIsIGNvdW50IHVwIDIgbW9yZTogMywgNFxuLSBHcm91cGluZzogSWYgeW91IGhhdmUgMiBpdGVtcyBhbmQgYWRkIDIgbW9yZSBpdGVtcywgeW91IGhhdmUgNCBpdGVtcyB0b3RhbFxuLSBOdW1iZXIgbGluZTogU3RhcnRpbmcgYXQgMiBvbiBhIG51bWJlciBsaW5lLCBtb3ZlIDIgc3BhY2VzIHRvIHRoZSByaWdodCwgbGFuZGluZyBvbiA0Iiwic2lnbmF0dXJlIjoiRW9vRkNrWUlCUmdDS2tBWEpSVXVJdTlXT00za1NySTl0WHFJRkxwZEhudHg2NWxuc1N3cmIzRU0vbjZpTFd2MmZTVDlFSERvWU1seEtaLzlWZGx3bm04bnhLSHFtYVVwb0NOakVnekJIWVREYlBzajNVQTZ5STRhRExhL2IxSGtaWE5QVmU3U2Z5SXc5OTlucm0zazN1azZkczlES3dSMmhQOFdrbHpGZnBoWHptOFZYdkNJK1AySHRLUmJmYncwc0hrNlFVTGdhQXVoS3ZFRHFITVovd3I0OTFEMHh4Y1hyL2JmRUxuYXFyUkhlbVZvZ2NMc2hlTWxWeDVNdUJURThLM3pYekZQZ1B1ZU9XeFNZb1FFcnVCUnQ4QzN1VjQwTTArMjFsZE5zYndwbEl4QWJhQ2s3dTdteHR2eTRPeFhzVllRTU05UVYwZzlyWFBEY1lFZzR1YTJ1N1B5RXZZTkNhRDZHWVZ2MFp2TU9mSGxxTm11T1FuZGRIYlRac1EreGhJeE5Cb1pwbWVQeU9uSFQwRXkvbUxxN0ppOWdBVlZ2QThlejcwODdlMjIxdW5sS0NMZFVGSjFPNlFWd2ZZTGRIZjBqYzNRR3l4ODlOWXVZamE2MUlRTTlReEJkekx5dUFaYmV4QjBTK3hreWVKdk9xNFA5N05CdjBWT29Zblc5bklPZW1rdDc2Sis5U3RBVnJjT01CRzdaa1ZtNWNPa0ZVS0VsT0o5SVI3SzFPWTZHd2dLbDJpcUFCLzBpcVB1Y01qZnhaQkV4OFRIcjVpMmtLeUtUbHFRK3k5WUpmeWlKcS9BRXMrRW5wTUJDNUxRK2I1dERud0lTeEV2eDNGcnpUNnE0WVcxMU8yVWgvVkdGS0RUUEY4NkZyUDVFaUJBNXFPVW9LUW55NWtlK2trbTM5MWo3Q0dXY1FHWmxkSkpEZnNhUHQ0a0x0WGdvcXR6ZWZjcE9FR1R5dGFRRWxidGhBWjFyaS91ZHh1Rk9FRnZyWm41VExnY0Zpd0lnd2xKamIrb2dnbHkxWmRJUGcrRFI3blVrSEllbHB4L2gvamhZR1dlM3drYXFUMEpINzZ5L3JGTkd0NHpZZ0dVMElwM2xydXdFS0NVbEtYVC90Q1lCZzhBL1N1TkNMNk9IUGFOVFRVaFZORVlBUT09In0seyJ0eXBlIjoidGV4dCIsInRleHQiOiJJJ2xsIHdvcmsgdGhyb3VnaCB0aGlzIGFkZGl0aW9uIHN0ZXAgYnkgc3RlcC5cblxuU3RhcnRpbmcgd2l0aDogMiArIDJcblxuU3RlcCAxOiBUYWtlIHRoZSBmaXJzdCBudW1iZXIsIHdoaWNoIGlzIDJcblN0ZXAgMjogQWRkIHRoZSBzZWNvbmQgbnVtYmVyLCB3aGljaCBpcyBhbHNvIDJcblN0ZXAgMzogQ291bnQgdXAgZnJvbSAyOiBcbi0gU3RhcnQgYXQgMlxuLSBBZGQgMSDihpIgZ2V0IDNcbi0gQWRkIDEgbW9yZSDihpIgZ2V0IDRcblxuVGhlcmVmb3JlOiAyICsgMiA9IDRcblxuQW5vdGhlciB3YXkgdG8gdGhpbmsgYWJvdXQgaXQ6IElmIHlvdSBoYXZlIDIgb2JqZWN0cyBhbmQgc29tZW9uZSBnaXZlcyB5b3UgMiBtb3JlIG9iamVjdHMsIHlvdSBub3cgaGF2ZSA0IG9iamVjdHMgdG90YWwuIn1dLCJzdG9wX3JlYXNvbiI6ImVuZF90dXJuIiwic3RvcF9zZXF1ZW5jZSI6bnVsbCwidXNhZ2UiOnsiaW5wdXRfdG9rZW5zIjo1MSwiY2FjaGVfY3JlYXRpb25faW5wdXRfdG9rZW5zIjowLCJjYWNoZV9yZWFkX2lucHV0X3Rva2VucyI6MCwib3V0cHV0X3Rva2VucyI6Mjk4LCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCJ9fQ==
-  recorded_at: Fri, 18 Jul 2025 05:39:23 GMT
+      string: '{"model":"claude-opus-4-20250514","id":"msg_011RqV5fC2W2Ukz9MeC13sxu","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"This
+        is a simple arithmetic question. The user is asking me to add 2 + 2, but they''ve
+        also asked me to think through it step by step. Even though this is a very
+        basic calculation, I should honor their request to show the thinking process.\n\n2
+        + 2 = 4\n\nI''ll present this in a step-by-step manner as requested.","signature":"EtwDCkYICRgCKkD8/LVwliR6zkesPWUqpM/kxdQ8eikhSq17TkpmJ08sF/3BO1cDqpGQrsbKge7XUQkSLvAnX30KBfA29SQJ/j88EgzgQ6D04jgYsy4d8xcaDP3MjacJVI0Bcu9LQyIwUNB6ZigLBKzYsjx1FVqBAOildSQ/kKuVlEsX0roDc5rAmNRkZRACQFElkzuFtFEqKsMC5deHqHolS5X1fanakt5rATL0uGdCHNKk76C0RT40Rm8LfMSdIu8/G045wi0E954FBGwl20NhKn0czcevN5a73HNqJOi68w3vZRIAA/mRxG2MMFQZcoH1PUFDObBmLOplaU0CwTqKH4VcYSBk1+D25A0MgWsbrFkQ+fWlR2ZYf/C4vkIPfrUzd1qWTKNAp7sZndoLSv0ywgxC2uXxmrLIQzSM0/JZ4BvMAzTxaLoxCMwX41fd45LdZfd2kNNV+9o6to7hFBp1TLExoZK9GDSrPQFOBMRsJkP+302NxTPqB/24fiNyWn6fatrMqssCIwvqWxhEdfrcQaoYf63d2MXWWd1ZA9hrhTnfy+ftDRLVTkoUbU4FGm6ZblPAaeeOQkB6ZUQSYFTevKmCWLTMeZhCodRbvGn3LB0U2kUeiAPYS8NnG2gYAQ=="},{"type":"text","text":"I''ll
+        work through this addition step by step.\n\nStarting with the number 2:\n-
+        I have 2 units\n\nThen adding another 2:\n- I need to add 2 more units to
+        the original 2\n- Counting up from 2: 3, 4\n\nTherefore, 2 + 2 = 4\n\nWe can
+        also think of it as:\n- Two groups of 2 items\n- When combined together, they
+        make 4 items total\n\nThe answer is **4**."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":51,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":207,"service_tier":"standard"}}'
+  recorded_at: Tue, 04 Nov 2025 15:36:26 GMT
 recorded_with: VCR 6.3.1
