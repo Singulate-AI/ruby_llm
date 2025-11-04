@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"What''s
-        2 + 2?"}],"stream":false}'
+        2 + 2?"}],"stream":false,"temperature":0.7}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 03 Nov 2025 14:43:09 GMT
+      - Tue, 04 Nov 2025 15:34:20 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -32,29 +32,29 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - '019a4a2b-fc43-7fbe-9981-0b597fb746d8'
+      - '019a4f81-38e5-711b-9db8-497db6f5e926'
       X-Kong-Request-Id:
-      - '019a4a2b-fc43-7fbe-9981-0b597fb746d8'
+      - '019a4f81-38e5-711b-9db8-497db6f5e926'
       X-Envoy-Upstream-Service-Time:
-      - '1240'
+      - '651'
       X-Ratelimit-Limit-Tokens-Minute:
       - '500000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '499898'
+      - '499914'
       X-Ratelimit-Limit-Tokens-Month:
       - '1000000000'
       X-Ratelimit-Remaining-Tokens-Month:
-      - '999987139'
+      - '999998116'
       X-Ratelimit-Tokens-Query-Cost:
-      - '99'
+      - '86'
       X-Ratelimit-Limit-Req-Minute:
       - '60'
       X-Ratelimit-Remaining-Req-Minute:
-      - '57'
+      - '59'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1241'
+      - '651'
       X-Kong-Proxy-Latency:
       - '4'
       Cf-Cache-Status:
@@ -74,7 +74,9 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6IjI4ZmEzNmIzZjg3NjQ5NDhhZTg0ZjgzMzgwMzVmZDk3IiwiY3JlYXRlZCI6MTc2MjE4MDk4NywibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjExLCJ0b3RhbF90b2tlbnMiOjk5LCJjb21wbGV0aW9uX3Rva2VucyI6ODh9LCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJ0b29sX2NhbGxzIjpudWxsLCJjb250ZW50IjoiVGhlIHN1bSBvZiAyICsgMiBpcyAqKjQqKi5cblxuVGhpcyBpcyBhIGJhc2ljIGFyaXRobWV0aWMgb3BlcmF0aW9uIHdoZXJlIHlvdSBhZGQgdHdvIG51bWJlcnMgdG9nZXRoZXIuIEhlcmUncyB0aGUgYnJlYWtkb3duOlxuXG4tICoqMioqIChmaXJzdCBudW1iZXIpXG4tICoqKyAyKiogKHNlY29uZCBudW1iZXIgYWRkZWQgdG8gdGhlIGZpcnN0KVxuLSAqKj0gNCoqICh0aGUgcmVzdWx0KS5cblxuVGhpcyBpcyBvbmUgb2YgdGhlIHNpbXBsZXN0IGFuZCBtb3N0IGZ1bmRhbWVudGFsIG1hdGggcHJvYmxlbXMhIExldCBtZSBrbm93IGlmIHlvdSdkIGxpa2UgdG8gZXhwbG9yZSBtb3JlLiDwn5iKIn19XX0=
-  recorded_at: Mon, 03 Nov 2025 14:43:09 GMT
+      string: '{"id":"40e31e200a1942a39cb0da0ca52ed3d1","created":1762270460,"model":"mistral-small-latest","usage":{"prompt_tokens":11,"total_tokens":86,"completion_tokens":75},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+        sum of 2 + 2 is **4**.\n\nThis is a basic arithmetic operation where you''re
+        adding two numbers together. Here''s how it works:\n\n- **2** (the first addend)\n-
+        **+ 2** (the second addend)\n- **= 4** (the sum)\n\nSo, 2 + 2 = 4."}}]}'
+  recorded_at: Tue, 04 Nov 2025 15:34:20 GMT
 recorded_with: VCR 6.3.1

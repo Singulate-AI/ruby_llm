@@ -37,6 +37,13 @@ namespace :aliases do
   task generate: ['models:aliases']
 end
 
+def configure_bedrock(config)
+  config.bedrock_api_key = ENV.fetch('AWS_ACCESS_KEY_ID', nil)
+  config.bedrock_secret_key = ENV.fetch('AWS_SECRET_ACCESS_KEY', nil)
+  config.bedrock_region = ENV.fetch('AWS_REGION', nil)
+  config.bedrock_session_token = ENV.fetch('AWS_SESSION_TOKEN', nil)
+end
+
 def configure_from_env
   RubyLLM.configure do |config|
     config.openai_api_key = ENV.fetch('OPENAI_API_KEY', nil)
@@ -51,13 +58,6 @@ def configure_from_env
     configure_bedrock(config)
     config.request_timeout = 30
   end
-end
-
-def configure_bedrock(config)
-  config.bedrock_api_key = ENV.fetch('AWS_ACCESS_KEY_ID', nil)
-  config.bedrock_secret_key = ENV.fetch('AWS_SECRET_ACCESS_KEY', nil)
-  config.bedrock_region = ENV.fetch('AWS_REGION', nil)
-  config.bedrock_session_token = ENV.fetch('AWS_SESSION_TOKEN', nil)
 end
 
 def refresh_models

@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.openai.com/v1/chat/completions
     body:
       encoding: UTF-8
-      string: '{"model":"gpt-4.1-nano","messages":[{"role":"user","content":"Hello"}],"stream":false}'
+      string: '{"model":"gpt-4.1-nano","messages":[{"role":"user","content":"Hello"}],"stream":false,"temperature":0.7}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 03 Nov 2025 13:46:40 GMT
+      - Tue, 04 Nov 2025 15:22:32 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -35,25 +35,25 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '443'
+      - '655'
       Openai-Project:
-      - proj_61L3Oqt640dKU0CASS2iOj8Q
+      - proj_D3c5oI4D1ZT0GRioOs1GRp7F
       Openai-Version:
       - '2020-10-01'
       X-Envoy-Upstream-Service-Time:
-      - '457'
+      - '687'
       X-Ratelimit-Limit-Requests:
-      - '500'
+      - '30000'
       X-Ratelimit-Limit-Tokens:
-      - '200000'
+      - '150000000'
       X-Ratelimit-Remaining-Requests:
-      - '499'
+      - '29999'
       X-Ratelimit-Remaining-Tokens:
-      - '199996'
+      - '149999997'
       X-Ratelimit-Reset-Requests:
-      - 120ms
+      - 2ms
       X-Ratelimit-Reset-Tokens:
-      - 1ms
+      - 0s
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Openai-Proxy-Wasm:
@@ -77,9 +77,9 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-CXpBIHaYGabOl93jpXi1pBigAEqtF",
+          "id": "chatcmpl-CYD9b312UkKeY9h595YIxuhvi1zBS",
           "object": "chat.completion",
-          "created": 1762177600,
+          "created": 1762269751,
           "model": "gpt-4.1-nano-2025-04-14",
           "choices": [
             {
@@ -112,5 +112,5 @@ http_interactions:
           "service_tier": "default",
           "system_fingerprint": "fp_950f36939b"
         }
-  recorded_at: Mon, 03 Nov 2025 13:46:40 GMT
+  recorded_at: Tue, 04 Nov 2025 15:22:32 GMT
 recorded_with: VCR 6.3.1

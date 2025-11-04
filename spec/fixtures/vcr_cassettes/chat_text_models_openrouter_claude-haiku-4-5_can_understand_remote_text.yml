@@ -33,33 +33,33 @@ http_interactions:
       Etag:
       - W/"69004ced-9c6"
       Expires:
-      - Sun, 02 Nov 2025 19:58:16 GMT
+      - Tue, 04 Nov 2025 12:47:29 GMT
       Cache-Control:
       - max-age=600
       X-Proxy-Cache:
       - MISS
       X-Github-Request-Id:
-      - ED69:3E3D9A:29E806C:2A80F80:6907B580
+      - 693F:3F657:E1CBA2:E4DC13:6909F389
       Accept-Ranges:
       - bytes
       Age:
       - '0'
       Date:
-      - Sun, 02 Nov 2025 19:48:16 GMT
+      - Tue, 04 Nov 2025 15:22:47 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-fra-etou8220143-FRA
+      - cache-lis1490035-LIS
       X-Cache:
-      - MISS
+      - HIT
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1762112896.312126,VS0,VE96
+      - S1762269767.875740,VS0,VE138
       Vary:
       - Accept-Encoding
       X-Fastly-Request-Id:
-      - 93ac04787f868cb854b85d26a17e020fc919ca49
+      - eee25a29755baa72293ea077995d072a8b11e22a
     body:
       encoding: ASCII-8BIT
       string: "Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.jp>.\nYou
@@ -95,7 +95,7 @@ http_interactions:
         \"AS IS\" AND WITHOUT ANY EXPRESS OR\n     IMPLIED WARRANTIES, INCLUDING,
         WITHOUT LIMITATION, THE IMPLIED\n     WARRANTIES OF MERCHANTABILITY AND FITNESS
         FOR A PARTICULAR\n     PURPOSE.\n"
-  recorded_at: Sun, 02 Nov 2025 19:48:16 GMT
+  recorded_at: Tue, 04 Nov 2025 15:22:47 GMT
 - request:
     method: post
     uri: https://openrouter.ai/api/v1/chat/completions
@@ -135,7 +135,7 @@ http_interactions:
         aggregated with this\n     software.\n\n  6. THIS SOFTWARE IS PROVIDED \"AS
         IS\" AND WITHOUT ANY EXPRESS OR\n     IMPLIED WARRANTIES, INCLUDING, WITHOUT
         LIMITATION, THE IMPLIED\n     WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-        A PARTICULAR\n     PURPOSE.\n</file>"}]}],"stream":false}'
+        A PARTICULAR\n     PURPOSE.\n</file>"}]}],"stream":false,"temperature":0.7}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -153,7 +153,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 19:48:19 GMT
+      - Tue, 04 Nov 2025 15:22:47 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -178,24 +178,23 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: "\n         \n\n         \n\n         \n\n         \n\n         \n\n
-        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
-        \        \n\n         \n\n         \n{\"id\":\"gen-1762112896-1q5SVBGPqDdwcIXxVjbs\",\"provider\":\"Amazon
-        Bedrock\",\"model\":\"anthropic/claude-haiku-4.5\",\"object\":\"chat.completion\",\"created\":1762112897,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"#
-        Contents of license.txt\\n\\nThis file contains the **Ruby programming language
-        license** - specifically, the license terms for Ruby copyrighted by Yukihiro
-        Matsumoto (Ruby's creator).\\n\\n## Key Points:\\n\\n**License Options:**\\n-
-        Ruby can be used under either the **2-clause BSD License (BSDL)** or the custom
-        terms outlined in this document\\n\\n**Main Permissions:**\\n1. **Free redistribution**
-        of source code (must preserve copyright notices)\\n2. **Modification rights**
-        with conditions (make modifications public, use privately within organization,
-        give non-standard names, or arrange with author)\\n3. **Binary distribution**
-        allowed if source availability is ensured or instructions to get original
-        are provided\\n4. **Integration into other software** is permitted (even commercial)\\n5.
-        **Scripts and output** generated from Ruby don't automatically inherit its
-        copyright\\n\\n**Important Disclaimer:**\\n- The software is provided **\\\"AS
-        IS\\\"** with no warranties (liability disclaimer)\\n- Some files in Ruby's
-        distribution may have different licenses (see LEGAL file)\\n\\nThis is essentially
-        a **permissive, developer-friendly open-source license** that allows broad
-        use while protecting the original author's rights.\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":588,\"completion_tokens\":265,\"total_tokens\":853}}"
-  recorded_at: Sun, 02 Nov 2025 19:48:23 GMT
+        \        \n\n         \n\n         \n{\"id\":\"gen-1762269767-1Bgdi1q5UvBEgutel7cl\",\"provider\":\"Google\",\"model\":\"anthropic/claude-haiku-4.5\",\"object\":\"chat.completion\",\"created\":1762269767,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"#
+        Ruby License Summary\\n\\nThis file contains the **license terms for the Ruby
+        programming language**, created by Yukihiro Matsumoto (matz).\\n\\n## Key
+        Points:\\n\\n**License Options:**\\n- 2-clause BSD License (BSDL), OR\\n-
+        Custom terms outlined in this file\\n\\n**Main Permissions:**\\n1. **Free
+        redistribution** - You can copy and distribute the source code freely, as
+        long as you keep original copyright notices\\n2. **Modifications allowed**
+        - You can modify Ruby if you:\\n   - Release modifications publicly/freely,
+        OR\\n   - Use them only within your organization, OR\\n   - Distribute modified
+        binaries under different names with source availability info, OR\\n   - Make
+        other arrangements with the author\\n\\n3. **Binary distribution** - You can
+        distribute compiled versions if you provide source code or clear instructions
+        on where to get it\\n\\n4. **Commercial use** - You can include Ruby in other
+        software (including commercial products)\\n\\n5. **Scripts and output** -
+        Code you write using Ruby belongs to you and can be sold commercially\\n\\n**Disclaimer:**\\n-
+        The software is provided \\\"AS IS\\\" with no warranties (standard liability
+        waiver)\\n\\nThis is a **permissive open-source license** that allows significant
+        freedom for use, modification, and distribution, including commercial applications.\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":588,\"completion_tokens\":285,\"total_tokens\":873}}"
+  recorded_at: Tue, 04 Nov 2025 15:22:51 GMT
 recorded_with: VCR 6.3.1

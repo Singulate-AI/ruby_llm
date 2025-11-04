@@ -12,6 +12,8 @@ group :development do # rubocop:disable Metrics/BlockLength
   gem 'dotenv'
   gem 'ferrum'
   gem 'flay'
+  gem 'guard', '~> 2.19'
+  gem 'guard-rspec', '~> 4.7'
   gem 'image_processing', '~> 1.2'
   gem 'irb'
   gem 'json-schema'

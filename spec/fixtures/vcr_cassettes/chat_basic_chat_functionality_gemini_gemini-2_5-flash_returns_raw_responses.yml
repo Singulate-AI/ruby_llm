@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What is the capital of
-        France?"}]}],"generationConfig":{}}'
+        France?"}]}],"generationConfig":{"temperature":0.7}}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -30,7 +30,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 03 Nov 2025 13:56:10 GMT
+      - Tue, 04 Nov 2025 15:33:50 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -40,7 +40,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=513
+      - gfet4t7; dur=870
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -66,17 +66,17 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 8,
             "candidatesTokenCount": 8,
-            "totalTokenCount": 36,
+            "totalTokenCount": 40,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 8
               }
             ],
-            "thoughtsTokenCount": 20
+            "thoughtsTokenCount": 24
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "erQIaeT4J7rtkdUPsN-8sAY"
+          "responseId": "3hwKaazIHNXMnsEPq5fg2Q4"
         }
-  recorded_at: Mon, 03 Nov 2025 13:56:10 GMT
+  recorded_at: Tue, 04 Nov 2025 15:33:50 GMT
 recorded_with: VCR 6.3.1

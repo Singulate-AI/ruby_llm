@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"Who
-        is the creator of the programming language Ruby?"}],"stream":false}'
+        is the creator of the programming language Ruby?"}],"stream":false,"temperature":0.7}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 20:02:34 GMT
+      - Tue, 04 Nov 2025 15:34:23 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -32,31 +32,31 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - '019a462a-1390-767a-9c76-1ee8bd3ecd01'
+      - '019a4f81-41b0-70ed-9fd4-59fe36c6ddc2'
       X-Kong-Request-Id:
-      - '019a462a-1390-767a-9c76-1ee8bd3ecd01'
+      - '019a4f81-41b0-70ed-9fd4-59fe36c6ddc2'
       X-Envoy-Upstream-Service-Time:
-      - '740'
+      - '855'
       X-Ratelimit-Limit-Tokens-Minute:
       - '500000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '499868'
+      - '499694'
       X-Ratelimit-Limit-Tokens-Month:
       - '1000000000'
       X-Ratelimit-Remaining-Tokens-Month:
-      - '999989771'
+      - '999997896'
       X-Ratelimit-Tokens-Query-Cost:
-      - '132'
+      - '134'
       X-Ratelimit-Limit-Req-Minute:
       - '60'
       X-Ratelimit-Remaining-Req-Minute:
-      - '59'
+      - '57'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '741'
+      - '856'
       X-Kong-Proxy-Latency:
-      - '4'
+      - '5'
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
@@ -74,25 +74,32 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6IjczZjllNTQxYWIzOTQxYzg5NzkwZjE1YzQ3YTU4MTRlIiwiY3JlYXRlZCI6MTc2MjExMzc1NCwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjEzLCJ0b3RhbF90b2tlbnMiOjEzMiwiY29tcGxldGlvbl90b2tlbnMiOjExOX0sIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNob2ljZXMiOlt7ImluZGV4IjowLCJmaW5pc2hfcmVhc29uIjoic3RvcCIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsInRvb2xfY2FsbHMiOm51bGwsImNvbnRlbnQiOiJUaGUgY3JlYXRvciBvZiB0aGUgKipSdWJ5KiogcHJvZ3JhbW1pbmcgbGFuZ3VhZ2UgaXMgKipZdWtpaGlybyBcIk1hdHpcIiBNYXRzdW1vdG8qKiwgYSBKYXBhbmVzZSBjb21wdXRlciBzY2llbnRpc3QgYW5kIHNvZnR3YXJlIHByb2dyYW1tZXIuXG5cbk1hdHogZGVzaWduZWQgUnVieSBpbiB0aGUgbWlkLTE5OTBzLCB3aXRoIHRoZSBmaXJzdCBwdWJsaWMgcmVsZWFzZSBpbiAqKjE5OTUqKi4gSGUgYWltZWQgdG8gY3JlYXRlIGEgbGFuZ3VhZ2UgdGhhdCBiYWxhbmNlcyBzaW1wbGljaXR5IGFuZCBwcm9kdWN0aXZpdHkgd2hpbGUgYmVpbmcgZnVuIHRvIHVzZS4gUnVieSdzIHBoaWxvc29waHkgZW1waGFzaXplcyBkZXZlbG9wZXIgaGFwcGluZXNzIGFuZCBleHByZXNzaXZlIHN5bnRheCwgd2hpY2ggbGF0ZXIgaW5mbHVlbmNlZCB0aGUgcG9wdWxhcml0eSBvZiBmcmFtZXdvcmtzIGxpa2UgKipSdWJ5IG9uIFJhaWxzKiouXG5cbk1hdHogcmVtYWlucyBhY3RpdmVseSBpbnZvbHZlZCBpbiBSdWJ5J3MgZGV2ZWxvcG1lbnQgYW5kIGlzIGEga2V5IGZpZ3VyZSBpbiBpdHMgY29tbXVuaXR5LiDwn5qAIn19XX0=
-  recorded_at: Sun, 02 Nov 2025 20:02:34 GMT
+      string: '{"id":"44e3f17c6478483ea6671d22d6dd7a1c","created":1762270462,"model":"mistral-small-latest","usage":{"prompt_tokens":13,"total_tokens":134,"completion_tokens":121},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+        creator of the **Ruby** programming language is **Yukihiro \"Matz\" Matsumoto**,
+        a Japanese computer scientist and software programmer.\n\nMatz designed Ruby
+        in the mid-1990s with the goal of creating a language that balances simplicity
+        and productivity while being fun to use. Ruby emphasizes developer happiness,
+        readability, and expressive syntax.\n\nRuby gained widespread popularity with
+        the **Ruby on Rails** web framework, which was developed by **David Heinemeier
+        Hansson** and became a major influence in web development.\n\nWould you like
+        more details about Ruby''s history or features?"}}]}'
+  recorded_at: Tue, 04 Nov 2025 15:34:23 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
     body:
       encoding: UTF-8
-      string: "{\"model\":\"mistral-small-latest\",\"messages\":[{\"role\":\"user\",\"content\":\"Who
-        is the creator of the programming language Ruby?\"},{\"role\":\"assistant\",\"content\":\"The
-        creator of the **Ruby** programming language is **Yukihiro \\\"Matz\\\" Matsumoto**,
-        a Japanese computer scientist and software programmer.\\n\\nMatz designed
-        Ruby in the mid-1990s, with the first public release in **1995**. He aimed
-        to create a language that balances simplicity and productivity while being
-        fun to use. Ruby's philosophy emphasizes developer happiness and expressive
-        syntax, which later influenced the popularity of frameworks like **Ruby on
-        Rails**.\\n\\nMatz remains actively involved in Ruby's development and is
-        a key figure in its community. \U0001F680\"},{\"role\":\"user\",\"content\":\"What
-        year did he create Ruby?\"}],\"stream\":false}"
+      string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"Who
+        is the creator of the programming language Ruby?"},{"role":"assistant","content":"The
+        creator of the **Ruby** programming language is **Yukihiro \"Matz\" Matsumoto**,
+        a Japanese computer scientist and software programmer.\n\nMatz designed Ruby
+        in the mid-1990s with the goal of creating a language that balances simplicity
+        and productivity while being fun to use. Ruby emphasizes developer happiness,
+        readability, and expressive syntax.\n\nRuby gained widespread popularity with
+        the **Ruby on Rails** web framework, which was developed by **David Heinemeier
+        Hansson** and became a major influence in web development.\n\nWould you like
+        more details about Ruby''s history or features?"},{"role":"user","content":"What
+        year did he create Ruby?"}],"stream":false,"temperature":0.7}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -110,7 +117,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 20:02:35 GMT
+      - Tue, 04 Nov 2025 15:34:25 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -118,29 +125,29 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - '019a462a-16ea-7672-a33a-8159b9b9f87f'
+      - '019a4f81-45c7-7951-8739-09c3737e08e6'
       X-Kong-Request-Id:
-      - '019a462a-16ea-7672-a33a-8159b9b9f87f'
+      - '019a4f81-45c7-7951-8739-09c3737e08e6'
       X-Envoy-Upstream-Service-Time:
-      - '903'
+      - '1631'
       X-Ratelimit-Limit-Tokens-Minute:
       - '500000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '499624'
+      - '499384'
       X-Ratelimit-Limit-Tokens-Month:
       - '1000000000'
       X-Ratelimit-Remaining-Tokens-Month:
-      - '999989527'
+      - '999997586'
       X-Ratelimit-Tokens-Query-Cost:
-      - '244'
+      - '310'
       X-Ratelimit-Limit-Req-Minute:
       - '60'
       X-Ratelimit-Remaining-Req-Minute:
-      - '58'
+      - '56'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '904'
+      - '1632'
       X-Kong-Proxy-Latency:
       - '4'
       Cf-Cache-Status:
@@ -160,7 +167,15 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6ImJlODBlYWE1N2FiNTQ0OTE4NmNlODIwYTIyYzc5ZmIzIiwiY3JlYXRlZCI6MTc2MjExMzc1NCwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjE0MSwidG90YWxfdG9rZW5zIjoyNDQsImNvbXBsZXRpb25fdG9rZW5zIjoxMDN9LCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJ0b29sX2NhbGxzIjpudWxsLCJjb250ZW50IjoiWXVraWhpcm8gXCJNYXR6XCIgTWF0c3Vtb3RvICoqY3JlYXRlZCBSdWJ5IGluIDE5OTMqKiBhbmQgcHVibGljbHkgcmVsZWFzZWQgaXQgaW4gKioxOTk1KiouXG5cbi0gKipEZXZlbG9wbWVudCBzdGFydGVkOioqIEZlYnJ1YXJ5IDI0LCAxOTkzXG4tICoqRmlyc3QgcHVibGljIHJlbGVhc2U6KiogRGVjZW1iZXIgMjEsIDE5OTVcblxuUnVieSdzIGRlc2lnbiB3YXMgaW5mbHVlbmNlZCBieSBsYW5ndWFnZXMgbGlrZSAqKlBlcmwsIFNtYWxsdGFsaywgRWlmZmVsLCBBZGEsIGFuZCBMaXNwKiosIHdpdGggYSBmb2N1cyBvbiBzaW1wbGljaXR5IGFuZCBkZXZlbG9wZXIgcHJvZHVjdGl2aXR5LiDwn5qAIn19XX0=
-  recorded_at: Sun, 02 Nov 2025 20:02:35 GMT
+      string: '{"id":"797872fbf0ff4eb4a8ff24547ea376f7","created":1762270463,"model":"mistral-small-latest","usage":{"prompt_tokens":143,"total_tokens":310,"completion_tokens":167},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Yukihiro
+        \"Matz\" Matsumoto began developing **Ruby** in **1993** and publicly released
+        the first version (**Ruby 0.95**) in **December 1995**.\n\n- **1993**: Matz
+        started working on Ruby as a personal project.\n- **1995**: The first public
+        release (Ruby 0.95) was announced on Japanese newsgroups.\n- **1997**: Ruby
+        1.0 was released, marking its first stable version.\n\nRuby''s design philosophy
+        emphasizes simplicity, productivity, and developer happiness, which helped
+        it gain popularity over time, especially with the rise of **Ruby on Rails**
+        in the mid-2000s.\n\nWould you like details on Ruby''s evolution or its key
+        features?"}}]}'
+  recorded_at: Tue, 04 Nov 2025 15:34:25 GMT
 recorded_with: VCR 6.3.1

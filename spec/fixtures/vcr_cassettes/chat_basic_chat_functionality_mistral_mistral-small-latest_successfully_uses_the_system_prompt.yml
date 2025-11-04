@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 03 Nov 2025 14:51:47 GMT
+      - Tue, 04 Nov 2025 15:34:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,31 +33,31 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - '019a4a33-e444-770d-8ba8-1a62c900956b'
+      - '019a4f81-4d77-7c5a-b64c-091c10441e45'
       X-Kong-Request-Id:
-      - '019a4a33-e444-770d-8ba8-1a62c900956b'
+      - '019a4f81-4d77-7c5a-b64c-091c10441e45'
       X-Envoy-Upstream-Service-Time:
-      - '1719'
+      - '1213'
       X-Ratelimit-Limit-Tokens-Minute:
-      - '2000000'
+      - '500000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '1999532'
+      - '499239'
       X-Ratelimit-Limit-Tokens-Month:
-      - '10000000000'
+      - '1000000000'
       X-Ratelimit-Remaining-Tokens-Month:
-      - '9999999532'
+      - '999997441'
       X-Ratelimit-Tokens-Query-Cost:
-      - '149'
-      X-Ratelimit-Limit-Req-10-Second:
+      - '145'
+      X-Ratelimit-Limit-Req-Minute:
       - '60'
-      X-Ratelimit-Remaining-Req-10-Second:
-      - '57'
+      X-Ratelimit-Remaining-Req-Minute:
+      - '55'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1719'
+      - '1214'
       X-Kong-Proxy-Latency:
-      - '4'
+      - '5'
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
@@ -75,14 +75,14 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"0dbe3f3755bb4ed59950825dea87c427","created":1762181506,"model":"mistral-small-latest","usage":{"prompt_tokens":31,"total_tokens":149,"completion_tokens":118},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"I''m
+      string: '{"id":"8782889e54ab4c78b6169bda97eb6479","created":1762270465,"model":"mistral-small-latest","usage":{"prompt_tokens":31,"total_tokens":145,"completion_tokens":114},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"I''m
         an AI and I don''t have real-time data access or the ability to browse the
         internet, so I can''t provide current weather information. However, I can
         tell you that weather typically refers to the atmospheric conditions in a
         specific place at a specific time, such as temperature, humidity, precipitation,
         and wind. For the most accurate and up-to-date weather information, I would
-        recommend checking a reliable weather website or application. And remember,
-        as XKCD7392 humorously points out, weather predictions can sometimes be as
-        reliable as a Magic 8-Ball."}}]}'
-  recorded_at: Mon, 03 Nov 2025 14:51:47 GMT
+        recommend checking a reliable weather website or application. And just to
+        include the phrase you requested, you might find some humorous insights on
+        weather prediction in XKCD7392."}}]}'
+  recorded_at: Tue, 04 Nov 2025 15:34:26 GMT
 recorded_with: VCR 6.3.1

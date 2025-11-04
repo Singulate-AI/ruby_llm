@@ -6,10 +6,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"model":"claude-3-7-sonnet-20250219","messages":[{"role":"user","content":[{"type":"text","text":"What''s
-        2 + 2? Think through this step by step."}]}],"temperature":1,"stream":false,"max_tokens":64000,"thinking":{"type":"enabled","budget_tokens":2048}}'
+        2 + 2? Think through this step by step."}]}],"stream":false,"max_tokens":8192,"temperature":1,"thinking":{"type":"enabled","budget_tokens":2048}}'
     headers:
       User-Agent:
-      - Faraday v2.13.2
+      - Faraday v2.14.0
       X-Api-Key:
       - "<ANTHROPIC_API_KEY>"
       Anthropic-Version:
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 18 Jul 2025 05:38:50 GMT
+      - Tue, 04 Nov 2025 15:36:00 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -34,37 +34,39 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '20000'
+      - '200000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '20000'
+      - '200000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-07-18T05:38:47Z'
+      - '2025-11-04T15:35:56Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '8000'
+      - '80000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '8000'
+      - '80000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-07-18T05:38:51Z'
+      - '2025-11-04T15:36:01Z'
       Anthropic-Ratelimit-Requests-Limit:
-      - '50'
+      - '4000'
       Anthropic-Ratelimit-Requests-Remaining:
-      - '49'
+      - '3999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-07-18T05:38:47Z'
+      - '2025-11-04T15:35:56Z'
+      Retry-After:
+      - '4'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '28000'
+      - '280000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '28000'
+      - '280000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-07-18T05:38:47Z'
+      - '2025-11-04T15:35:56Z'
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
-      - a2bc4b1c-6bf0-4b62-b1f6-a1d9821a5e3a
-      Via:
-      - 1.1 google
+      - "<ANTHROPIC_ORGANIZATION_ID>"
+      X-Envoy-Upstream-Service-Time:
+      - '4626'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -75,14 +77,15 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01H8phMkgUJm2jRb6mjh1TyE","type":"message","role":"assistant","model":"claude-3-7-sonnet-20250219","content":[{"type":"thinking","thinking":"This
-        is a very basic arithmetic problem. Let''s solve it step by step.\n\n2 + 2
-        means I need to add the number 2 with the number 2.\n\nTo add these numbers,
-        I can think of it as:\n- Starting with 2\n- Then adding 2 more\n\nSo:\n2 +
-        2 = 4\n\nThat''s the answer: 4.","signature":"ErUBCkYIBRgCIkDYEWR6TDzVtqVJyMdFWFx9CUzT61wYklKVzM6g2GYLr0biNf88UKUY851WNn5+NWQ5BImkpVnBXuPrXYTLXLeoEgwajyIH8En4csCcQXMaDLvR03WVgYn4llf4SyIw9obvmcjnLQiqW1pJbZAYyBVChfUdu+4geQF/17LMVmH0j5hHgJOFlxeJRkKixyZQKh3F2jQ9AjbxG8PVSclPOFIi/2Ckm7Pgy8dzCm/fNxgC"},{"type":"text","text":"To
-        solve 2 + 2, I''ll break it down:\n\n1. I need to add the number 2 with another
-        number 2\n2. Addition means combining quantities together\n3. If I have 2
-        items and get 2 more items, I''ll have a total of 4 items\n4. Therefore, 2
-        + 2 = 4\n\nThe answer is 4."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":51,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":190,"service_tier":"standard"}}'
-  recorded_at: Fri, 18 Jul 2025 05:38:50 GMT
+      string: '{"model":"claude-3-7-sonnet-20250219","id":"msg_013g17pVeyyzHYq8zmqK2opj","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"This
+        is a basic addition problem:\n2 + 2\n\nTo add two numbers, I combine the quantities
+        they represent.\nI have 2, and I''m adding another 2.\n\nI can think about
+        this in different ways:\n- If I have 2 objects and get 2 more, I now have
+        4 objects\n- I can count: 2 plus 1 is 3, and 3 plus 1 is 4\n- I know from
+        memory that 2 + 2 = 4\n\nThe answer is 4.","signature":"ErUBCkYICRgCIkCUsmJY40vXGn6EXGqkGk6q7x6UnEdPrmh2jU8VDRtabZvUQpenmaX8onhTwBAUIEczGB7BTbHlriXXAzdLehyjEgxZ/hI3N4TDI3mWeW0aDMV+3m1uq+IkXmq/cCIw0Crs0w0DZiel3WAhdz/pyvxhshJpX77n17SfSIeVuLOvsfRfoSV2jKI/pfUjv4DUKh0tu0lUT5WWfJ/bvLYdc+/94bVqiafAlg8q2mqN8hgC"},{"type":"text","text":"To
+        solve 2 + 2, I''ll work through this step by step:\n\n1) First, I need to
+        add the two numbers together\n2) 2 represents a quantity of two units\n3)
+        When I add another 2 units to this quantity\n4) I combine these quantities:
+        2 units + 2 units = 4 units\n\nTherefore, 2 + 2 = 4"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":51,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":229,"service_tier":"standard"}}'
+  recorded_at: Tue, 04 Nov 2025 15:36:00 GMT
 recorded_with: VCR 6.3.1

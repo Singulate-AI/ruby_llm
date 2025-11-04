@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Generate a response with
-        2 users and metadata with version 1"}]}],"generationConfig":{"responseMimeType":"application/json","responseJsonSchema":{"type":"object","properties":{"users":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"role":{"type":"string","enum":["admin","user","guest"]}},"required":["name","role"],"additionalProperties":false}},"metadata":{"type":"object","properties":{"created_at":{"type":"string"},"version":{"type":"integer"}},"required":["created_at","version"],"additionalProperties":false}},"required":["users","metadata"],"additionalProperties":false}}}'
+        2 users and metadata with version 1"}]}],"generationConfig":{"temperature":0.7,"responseMimeType":"application/json","responseJsonSchema":{"type":"object","properties":{"users":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"role":{"type":"string","enum":["admin","user","guest"]}},"required":["name","role"],"additionalProperties":false}},"metadata":{"type":"object","properties":{"created_at":{"type":"string"},"version":{"type":"integer"}},"required":["created_at","version"],"additionalProperties":false}},"required":["users","metadata"],"additionalProperties":false}}}'
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -30,7 +30,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 02 Nov 2025 21:56:02 GMT
+      - Tue, 04 Nov 2025 15:32:42 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -40,7 +40,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1335
+      - gfet4t7; dur=2918
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -66,17 +66,17 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 14,
             "candidatesTokenCount": 51,
-            "totalTokenCount": 173,
+            "totalTokenCount": 219,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 14
               }
             ],
-            "thoughtsTokenCount": 108
+            "thoughtsTokenCount": 154
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "ctMHadb1JpSokdUPw6r0cQ"
+          "responseId": "mRwKaZXQN8HUvdIP-ebCkQ8"
         }
-  recorded_at: Sun, 02 Nov 2025 21:56:02 GMT
+  recorded_at: Tue, 04 Nov 2025 15:32:42 GMT
 recorded_with: VCR 6.3.1

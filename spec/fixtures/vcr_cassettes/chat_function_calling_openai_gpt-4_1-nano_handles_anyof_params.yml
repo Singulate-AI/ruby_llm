@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"gpt-4.1-nano","messages":[{"role":"user","content":"Call
         the any-of params tool for task \"Review PR\" with status \"pending\" and
-        report the result."}],"stream":false,"tools":[{"type":"function","function":{"name":"any_of_params","description":"Uses
+        report the result."}],"stream":false,"temperature":0.7,"tools":[{"type":"function","function":{"name":"any_of_params","description":"Uses
         params DSL any_of support","parameters":{"type":"object","properties":{"task":{"type":"string","description":"Task
         description"},"status":{"description":"Optional task status","anyOf":[{"type":"string","enum":["pending","done"]},{"type":"null"}]}},"required":["task","status"],"additionalProperties":false,"strict":true}}}]}'
     headers:
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 03 Nov 2025 14:00:35 GMT
+      - Tue, 04 Nov 2025 15:41:36 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,25 +39,25 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '1343'
+      - '601'
       Openai-Project:
-      - proj_61L3Oqt640dKU0CASS2iOj8Q
+      - proj_D3c5oI4D1ZT0GRioOs1GRp7F
       Openai-Version:
       - '2020-10-01'
       X-Envoy-Upstream-Service-Time:
-      - '1374'
+      - '619'
       X-Ratelimit-Limit-Requests:
-      - '500'
+      - '30000'
       X-Ratelimit-Limit-Tokens:
-      - '200000'
+      - '150000000'
       X-Ratelimit-Remaining-Requests:
-      - '499'
+      - '29999'
       X-Ratelimit-Remaining-Tokens:
-      - '199974'
+      - '149999975'
       X-Ratelimit-Reset-Requests:
-      - 120ms
+      - 2ms
       X-Ratelimit-Reset-Tokens:
-      - 7ms
+      - 0s
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Openai-Proxy-Wasm:
@@ -81,9 +81,9 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-CXpOkge5CTXGwT9TWm4XDvD77c6C8",
+          "id": "chatcmpl-CYDS3ucuIxz22I4mQVVvBZXV7HZFz",
           "object": "chat.completion",
-          "created": 1762178434,
+          "created": 1762270895,
           "model": "gpt-4.1-nano-2025-04-14",
           "choices": [
             {
@@ -93,7 +93,7 @@ http_interactions:
                 "content": null,
                 "tool_calls": [
                   {
-                    "id": "call_yMgokF7J3uQLsJlEP0m3U4g3",
+                    "id": "call_xxv7WkmvqG45waWxgl7gEP1E",
                     "type": "function",
                     "function": {
                       "name": "any_of_params",
@@ -126,5 +126,5 @@ http_interactions:
           "service_tier": "default",
           "system_fingerprint": "fp_950f36939b"
         }
-  recorded_at: Mon, 03 Nov 2025 14:00:35 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:36 GMT
 recorded_with: VCR 6.3.1

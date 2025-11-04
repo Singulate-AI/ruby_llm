@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 02 Nov 2025 21:30:50 GMT
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
+      - Tue, 04 Nov 2025 15:41:25 GMT
       Pragma:
       - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
       Content-Type:
@@ -52,18 +52,18 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email openid",
+          "scope": "openid https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Sun, 02 Nov 2025 21:30:50 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:25 GMT
 - request:
     method: post
     uri: https://<GOOGLE_CLOUD_LOCATION>-aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Call the array params
-        tool with tags [\"red\",\"blue\"] and tell me the combined tags."}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"array_params","description":"Uses
+        tool with tags [\"red\",\"blue\"] and tell me the combined tags."}]}],"generationConfig":{"temperature":0.7},"tools":[{"functionDeclarations":[{"name":"array_params","description":"Uses
         params DSL array support","parameters":{"type":"OBJECT","properties":{"tags":{"type":"ARRAY","description":"List
         of tags to combine","items":{"type":"STRING"}}},"required":["tags"]}}]}]}'
     headers:
@@ -89,7 +89,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 02 Nov 2025 21:30:50 GMT
+      - Tue, 04 Nov 2025 15:41:27 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -121,18 +121,18 @@ http_interactions:
                         ]
                       }
                     },
-                    "thoughtSignature": "CpYCAePx/16Zpsv0qP+MZ2sk3ggYFMkQXa6IQh1dKLA0f1sInL/+1JhnYfZgm4zq0aFTZJjtqNozEEnfIcY6wrXmsNeLX1EEVdHrdqtL/NnbvtCuGN8PTP2fpSBcdQ00cb0lbptTndujws1qGbgaTyxC/fYaE/Z9syOemzmXin0qHtJsATFpulEIYj6Z3TSbnmD0FjumdEM/qY+I+qPYnbSVjxh5PftYSKpmnL7CKHbcExEA5nhcOmPqYFjLXHvQ67GwjY/eApEn8hNq1JVQ7N4VntH+Y5bVuUDulzwkLM8Our61FMPyuqGhI+LcUxbG6wENCNmhFwtVn2SKMCcl+N0DVNtFDWVQ5/Xjn9HWiaXCMfHXuTZuY18="
+                    "thoughtSignature": "Cq4CAePx/16ShVrVx2F5WI7TAPgF32gt+QTUznF6DqBFeK+tr7ijC9aDtaHDpIATdlBBJJt1ua+6Qtecc8qGAb/hRbf4PPUEFnDulJLl+4b9VUAXYJ0UFzcPR+4ce1zi5Z5he56oQIsMj6l/bvyGX6lgjjBx5CZc670BGYm2Q5CaXtkKGJ276vjC8bxlRSAvMY78Ew0Xz5bhmCDcXF8BYQyU19wws/CwrkghOuxgUimOb3CRJcCTMMvoHTpwEl7T0HSxYhpsMCVz6YwGRtWs8TFmX8xmLmvHFdeQRl6C2tfORkstLEAH2VIqAyiXSReoU/OQ/onos+bKi/KPh05UlMj92OgzWhLDkA3e0JDZ/W5oNd4vw6yDXeQQq3HKphKoOK8yfx+JtuCWCZZt2WE03PM="
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -1.2903280258178711
+              "avgLogprobs": -2.1828360557556152
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 37,
             "candidatesTokenCount": 6,
-            "totalTokenCount": 110,
+            "totalTokenCount": 114,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -146,11 +146,11 @@ http_interactions:
                 "tokenCount": 6
               }
             ],
-            "thoughtsTokenCount": 67
+            "thoughtsTokenCount": 71
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2025-11-02T21:30:50.474383Z",
-          "responseId": "is0HaY_6HMGgmPUPjurOqAQ"
+          "createTime": "2025-11-04T15:41:26.321861Z",
+          "responseId": "ph4KacXSE--81tEPt_CGMA"
         }
-  recorded_at: Sun, 02 Nov 2025 21:30:50 GMT
+  recorded_at: Tue, 04 Nov 2025 15:41:27 GMT
 recorded_with: VCR 6.3.1
