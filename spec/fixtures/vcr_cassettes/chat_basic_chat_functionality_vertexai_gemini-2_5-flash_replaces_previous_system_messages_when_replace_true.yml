@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://oauth2.googleapis.com/token
+    uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=refresh_token&refresh_token=<GOOGLE_REFRESH_TOKEN>&client_id=<GOOGLE_CLIENT_ID>&client_secret=<GOOGLE_CLIENT_SECRET>
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkZXZlbG9wbWVudC1lbnZpcm9ubWVudEBzaW5ndWxhdGUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92NC90b2tlbiIsImV4cCI6MTc3MTc5NTU3NiwiaWF0IjoxNzcxNzk1NDU2LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0gaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nZW5lcmF0aXZlLWxhbmd1YWdlLnJldHJpZXZlciJ9.Dg6GpOPSkaVBV8UxUK9JOIAWVD0XEFLxZZN4Cn5DnE8XvccOkS5Yg1pjMLoo0XyRiVvYGbRy5tnLbvnufG1YQE2H1f97lryp9btyOa9O9xPyZEwfvUhMWWiKblBWXxD5ECUM2w3gaPLKawLcHXaplWj-mdHqbxgzYfKB1laECSTEg5jqZp2qACNA2LuDy1hvO8QdC5M7jio7ZUOiLIRNABMzw96AGVNGSH5dW-Vnt1G7mOipX3tsxUjxfxPaisODi1SDA8roNmsoumHc4ujKtZdT4P09Z_Wexex5ZS65BuZ5TLa4vnC6r7F1mw4pdObq1Mbh3auYaZBLQWqrxIWSBg
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -20,20 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Fri, 16 Jan 2026 15:17:08 GMT
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Date:
+      - Sun, 22 Feb 2026 21:25:16 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -48,15 +42,8 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |-
-        {
-          "access_token": "<GOOGLE_ACCESS_TOKEN>",
-          "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/sqlservice.login openid https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email",
-          "token_type": "Bearer",
-          "id_token": "<GOOGLE_ID_TOKEN>"
-        }
-  recorded_at: Fri, 16 Jan 2026 15:17:08 GMT
+      string: '{"access_token":"<GOOGLE_ACCESS_TOKEN>","expires_in":3599,"token_type":"Bearer"}'
+  recorded_at: Sun, 22 Feb 2026 21:25:16 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -88,7 +75,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 15:17:16 GMT
+      - Sun, 22 Feb 2026 21:25:22 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -139,10 +126,10 @@ http_interactions:
             "thoughtsTokenCount": 741
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-01-16T15:17:08.919413Z",
-          "responseId": "dFZqafWOOIyK7PIP447pwAc"
+          "createTime": "2026-02-22T21:25:16.498667Z",
+          "responseId": "PHSbaeu3Ho-wmPUPjfizuA0"
         }
-  recorded_at: Fri, 16 Jan 2026 15:17:16 GMT
+  recorded_at: Sun, 22 Feb 2026 21:25:22 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -192,7 +179,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 15:17:22 GMT
+      - Sun, 22 Feb 2026 21:25:27 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -243,8 +230,8 @@ http_interactions:
             "thoughtsTokenCount": 136
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-01-16T15:17:16.812965Z",
-          "responseId": "fFZqaaXPMdCBn9kP3PaPyQc"
+          "createTime": "2026-02-22T21:25:22.612611Z",
+          "responseId": "QnSbaYOyJdmYmPUPh6PY0Ag"
         }
-  recorded_at: Fri, 16 Jan 2026 15:17:23 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Sun, 22 Feb 2026 21:25:27 GMT
+recorded_with: VCR 6.3.1

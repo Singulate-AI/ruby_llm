@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://oauth2.googleapis.com/token
+    uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=refresh_token&refresh_token=<GOOGLE_REFRESH_TOKEN>&client_id=<GOOGLE_CLIENT_ID>&client_secret=<GOOGLE_CLIENT_SECRET>
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkZXZlbG9wbWVudC1lbnZpcm9ubWVudEBzaW5ndWxhdGUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92NC90b2tlbiIsImV4cCI6MTc3MTc5NTM4MSwiaWF0IjoxNzcxNzk1MjYxLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0gaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nZW5lcmF0aXZlLWxhbmd1YWdlLnJldHJpZXZlciJ9.Vyao15MvxAdhslc66h_1E6FGEx55ute2ipZOLd1NJ1F0TFOWTzuSmQR_JcOcql_50HxO9bWQ3aPjL0UUYlbbebjYCTVjBN6ABAlOYWG6-5Q1jfk9Ay2hpNbjfF2uFzgcAWKLOpKgqWNIUEWIRua93Op-25HK4KWRgoq25yJymChvqXLS_FOkdxMT-Pxx3dS6VjryVRVumt8ebm8BifrAYbJW9MhxQAl1mW6Z-xnKed2c1Ln5-63gTzbyJ4KjmSeemRYONou8iox9EJctrOEVx0f4K_ud5p_ka6yb5oCfyrn9xFLFK2Rubnlj-_wN3vxy8RVyXPt6JHgspjEV7uCKZA
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -20,20 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Pragma:
-      - no-cache
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Date:
-      - Fri, 16 Jan 2026 15:18:15 GMT
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Date:
+      - Sun, 22 Feb 2026 21:22:02 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -48,13 +42,6 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |-
-        {
-          "access_token": "<GOOGLE_ACCESS_TOKEN>",
-          "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/cloud-platform",
-          "token_type": "Bearer",
-          "id_token": "<GOOGLE_ID_TOKEN>"
-        }
-  recorded_at: Fri, 16 Jan 2026 15:18:15 GMT
-recorded_with: VCR 6.4.0
+      string: '{"access_token":"<GOOGLE_ACCESS_TOKEN>","expires_in":3599,"token_type":"Bearer"}'
+  recorded_at: Sun, 22 Feb 2026 21:22:02 GMT
+recorded_with: VCR 6.3.1

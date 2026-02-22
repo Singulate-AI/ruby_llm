@@ -33,7 +33,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 17:10:57 GMT
+      - Sun, 22 Feb 2026 21:20:06 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -43,7 +43,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1142
+      - gfet4t7; dur=1265
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -61,12 +61,12 @@ http_interactions:
                       "name": "object_params",
                       "args": {
                         "window": {
-                          "start": "2025-01-01",
-                          "end": "2025-01-02"
+                          "end": "2025-01-02",
+                          "start": "2025-01-01"
                         }
                       }
                     },
-                    "thoughtSignature": "CrEDAXLI2nyro3ywicFepQI5I4/VUZGfUdf1FpeloMEcGB2b1YzLXjVeyB+2T8H5xa8z+ac2Etiami8BuXeOaONW+Znxje1bRkhP7tz9lIEOCYTk5IJL5KnUEh/ZUZ7+LuOYmJnKgJ6sR7FCWsnpKSio6Qo0J+JTverxU7M/P5cTwy7KxjD+0s/eLBs83EsceERBmZaNlLvCLhWmr9xAGV1D0m0v5gZkMtqTPxMw9Wgi8Q6vQ4LlfZQzs0k+MlG45PqNaNfKSCHd+KDifMYRwF3Y7ogyN0/A4lSmmNq75E7WG5slPV7zsibVzBmiUGc1AbUafkv+iIyjcgzkCVI27WXNCgWz0e7Ws0dQ8QMz1orfZDBJV4S2uHgeXRdJyhQPSKjIwvIiFYIGIQ5fVHWwh1rnQC00dq0q5zMhfeuCVPGRKKL+DF+Dl1ghEpELZMpQ8o0KoGT71DYAApIftU/e948lsGJkbozd1Ba+bGTcL2IkSB4xJkUckAt7cAcYjlCFjTLKmRXFPYUqLD4uJDajpfSjK1wr1rnLayRkGgGefsVZ8F+XLxu9vyKO6NrJFAODE8/PVg=="
+                    "thoughtSignature": "CrIDAb4+9vuME+sUGkiVI9l0GOhHKLzkHlEBtplMu7kCiADPMfBb0sngKBvtRKpbAXduFxUCQPIBhPd2qPKASoIUTRmsjjeoxPRf/m9JcfnHcDbNtcCjAyD8gd1B97tMKOoyHR9dDtakUENsaie3gHSSLbPrGfdU5EFIkXWT5W8ZOVlgAmySMCsrsshBtWC3qLXiCo9PRMstg2QzSjZ5iRDe9y0tvQUx0woqSKwR0qwtAfr01HXbXXDndD+VHe6KPViDg9jOGJBwuxA7fHmthsTHSlF+m2CoiADEYMc8UGz0krCCRIvsrt28V4a/G6k9plXyzwxiljMDvaOzb11WgWfkTFSa6PmrHTZ9CU31qRi63mHNhWbEdZHUGEra4ahBguSPwWG9b8cBiaE80bvy/KnQZB2l7QtNhwr1Q1K9HyrubeFqvPaFi2SckUd3g3c7pHvqNmXOeCNBTfROTaECpwN6tvY3uSDIF64CuVUC9UY3MBETgica81Hyw69jBhsHNSKuJpGsjZJYV2qQkrC+08mH2oGRJFrhc+e2psu5RGLEP/UGpPsoVEbFoRYhnBcKGaXtWyM="
                   }
                 ],
                 "role": "model"
@@ -79,17 +79,17 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 136,
             "candidatesTokenCount": 43,
-            "totalTokenCount": 299,
+            "totalTokenCount": 302,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 136
               }
             ],
-            "thoughtsTokenCount": 120
+            "thoughtsTokenCount": 123
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "IXFqadOdGYON28oP9Oi-0AY"
+          "responseId": "BXObaYzbI4jgnsEP-YmOCA"
         }
-  recorded_at: Fri, 16 Jan 2026 17:10:57 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Sun, 22 Feb 2026 21:20:06 GMT
+recorded_with: VCR 6.3.1

@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://oauth2.googleapis.com/token
+    uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=refresh_token&refresh_token=<GOOGLE_REFRESH_TOKEN>&client_id=<GOOGLE_CLIENT_ID>&client_secret=<GOOGLE_CLIENT_SECRET>
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkZXZlbG9wbWVudC1lbnZpcm9ubWVudEBzaW5ndWxhdGUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92NC90b2tlbiIsImV4cCI6MTc3MTc5NTU2NSwiaWF0IjoxNzcxNzk1NDQ1LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0gaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nZW5lcmF0aXZlLWxhbmd1YWdlLnJldHJpZXZlciJ9.KkNB1Qq5_MCFBt4WdFmPC3KLiJXDF9Psap9jNV-brasB_MgnTtp65CgfY2KECYuWPu-I4kJkjPK20uebICEhBK3WtG8qqRXeXLjIRl83aks03fkeIXMXcci7f2iJCAKFYLRqDTjChIuV-c5mhqD7ESOJ9BTyeI8OJOFCl0ae0-Ipk2BX6qBQfcuIPftNA0FhQMHKJsGzF9YKwsAIvbCWGMTUD3QqW1qVre3Hv-l9v5mo7R8O34KF4XmVoUekr0MNSPhfBWysYNM1QzIZP089zIbwMNvvEavo0anKZUPhCs4ov_LgyAqUM5mm4HNrn4D_n6zMCIot2SbNafvzFkkS4A
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -20,20 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Pragma:
-      - no-cache
-      Date:
-      - Fri, 16 Jan 2026 15:16:56 GMT
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Date:
+      - Sun, 22 Feb 2026 21:25:05 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -48,15 +42,8 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |-
-        {
-          "access_token": "<GOOGLE_ACCESS_TOKEN>",
-          "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/cloud-platform",
-          "token_type": "Bearer",
-          "id_token": "<GOOGLE_ID_TOKEN>"
-        }
-  recorded_at: Fri, 16 Jan 2026 15:16:56 GMT
+      string: '{"access_token":"<GOOGLE_ACCESS_TOKEN>","expires_in":3599,"token_type":"Bearer"}'
+  recorded_at: Sun, 22 Feb 2026 21:25:05 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -87,7 +74,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 15:16:57 GMT
+      - Sun, 22 Feb 2026 21:25:07 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -110,18 +97,18 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "The creator of the programming language Ruby is **Yukihiro \"Matz\" Matsumoto**."
+                    "text": "The creator of the programming language Ruby is **Yukihiro Matsumoto**, often referred to by his nickname **\"Matz\"**."
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -1.5396088494194879
+              "avgLogprobs": -2.5620815570537863
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 10,
-            "candidatesTokenCount": 18,
-            "totalTokenCount": 172,
+            "candidatesTokenCount": 26,
+            "totalTokenCount": 205,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -132,16 +119,16 @@ http_interactions:
             "candidatesTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 18
+                "tokenCount": 26
               }
             ],
-            "thoughtsTokenCount": 144
+            "thoughtsTokenCount": 169
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-01-16T15:16:56.704322Z",
-          "responseId": "aFZqacL-Krme7PIPwMKb0Ac"
+          "createTime": "2026-02-22T21:25:05.915408Z",
+          "responseId": "MXSbadDvN_LpmLAPmt3EYQ"
         }
-  recorded_at: Fri, 16 Jan 2026 15:16:58 GMT
+  recorded_at: Sun, 22 Feb 2026 21:25:07 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -149,7 +136,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Who is the creator of
         the programming language Ruby?"}]},{"role":"model","parts":[{"text":"The creator
-        of the programming language Ruby is **Yukihiro \"Matz\" Matsumoto**."}]},{"role":"user","parts":[{"text":"What
+        of the programming language Ruby is **Yukihiro Matsumoto**, often referred
+        to by his nickname **\"Matz\"**."}]},{"role":"user","parts":[{"text":"What
         year did he create Ruby?"}]}],"generationConfig":{}}'
     headers:
       User-Agent:
@@ -174,7 +162,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 15:16:59 GMT
+      - Sun, 22 Feb 2026 21:25:09 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -197,36 +185,36 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "Yukihiro \"Matz\" Matsumoto started working on Ruby in **1993**, and he publicly released the first version (Ruby 0.95) in **1995**."
+                    "text": "Yukihiro Matsumoto (Matz) started designing and developing Ruby in **1993**.\n\nThe first public release of Ruby was in **1995** (specifically, December 21, 1995). So, while the initial work began in 1993, 1995 is generally cited as the year it became available to the public."
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.88614282375428732
+              "avgLogprobs": -0.93633581090856477
             }
           ],
           "usageMetadata": {
-            "promptTokenCount": 35,
-            "candidatesTokenCount": 41,
-            "totalTokenCount": 176,
+            "promptTokenCount": 43,
+            "candidatesTokenCount": 81,
+            "totalTokenCount": 318,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 35
+                "tokenCount": 43
               }
             ],
             "candidatesTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 41
+                "tokenCount": 81
               }
             ],
-            "thoughtsTokenCount": 100
+            "thoughtsTokenCount": 194
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-01-16T15:16:58.174763Z",
-          "responseId": "alZqaavVCrzn-eQP5u2ZoAk"
+          "createTime": "2026-02-22T21:25:07.828218Z",
+          "responseId": "M3SbabrGMrS3mPUPouK_-Qs"
         }
-  recorded_at: Fri, 16 Jan 2026 15:16:59 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Sun, 22 Feb 2026 21:25:09 GMT
+recorded_with: VCR 6.3.1

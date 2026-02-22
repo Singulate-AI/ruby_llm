@@ -31,7 +31,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 17:07:16 GMT
+      - Sun, 22 Feb 2026 21:19:38 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -41,7 +41,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=662
+      - gfet4t7; dur=536
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -59,7 +59,7 @@ http_interactions:
                       "name": "best_language_to_learn",
                       "args": {}
                     },
-                    "thoughtSignature": "Cu8BAXLI2nyF0NHERk2l9KA/KoxT3Kw2/jh9X+yz/uDIAGGBscZdO/NTLHaPWEEH9LNxmTxMdeZ9zBPDP0HeIdryA2aL7FYw2qJWA0mQmF3D0Ln26yvbwQVgJ1siPaObQicgQJoZSqcyAedl29VpFpRjtC9tJfosRaUaQbQs7eR+bQljeW3CfwEFal5mBD3g5dehsuf0hPaW9UoA7JIMXVYQhA9RlrmWVMp2uX/ZxbkitboS18e2709EiukIwdnOfq/cGWvBJIkNM2AaRs5sREhqbWR5mBzI3fTDQv4HuHGMq5jvjKYLu6q3B5T5vSRbReQ="
+                    "thoughtSignature": "Ct0BAb4+9vtdJ6rPR8bKYK34of24ZtZ6L8KG1aLaHV9zirZWxPxi/WAX6DAdpPSbfpQQ1FV4zCB+/MgcPmEhCUvlK0EMixRB7vtTjS89HfwSzh3yk05vTe4sg2whAOVS9a8gQ6pHr+C44bCDcUC9yuDmB1im0AjVN4hlsuR5feAWqiV0er0egKsuEQr92ni1zfCoZJoh/2B7LNQzf0b7f78zR5kz/dB4602Pzb+lRe+3S1TxRD25LZQFPvp3JCfxd8JGZHEfQzvpw6P0cLedLviwXQDdX0iuZJ00CTMPdj8="
                   }
                 ],
                 "role": "model"
@@ -72,26 +72,26 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 41,
             "candidatesTokenCount": 14,
-            "totalTokenCount": 102,
+            "totalTokenCount": 98,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 41
               }
             ],
-            "thoughtsTokenCount": 47
+            "thoughtsTokenCount": 43
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "RHBqaf3jDO3xvdIP1dbF6Ac"
+          "responseId": "6nKbabX8HdyKvdIPl9aRCQ"
         }
-  recorded_at: Fri, 16 Jan 2026 17:07:16 GMT
+  recorded_at: Sun, 22 Feb 2026 21:19:39 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What''s the best language
-        to learn?"}]},{"role":"model","parts":[{"functionCall":{"name":"best_language_to_learn","args":{}},"thoughtSignature":"Cu8BAXLI2nyF0NHERk2l9KA/KoxT3Kw2/jh9X+yz/uDIAGGBscZdO/NTLHaPWEEH9LNxmTxMdeZ9zBPDP0HeIdryA2aL7FYw2qJWA0mQmF3D0Ln26yvbwQVgJ1siPaObQicgQJoZSqcyAedl29VpFpRjtC9tJfosRaUaQbQs7eR+bQljeW3CfwEFal5mBD3g5dehsuf0hPaW9UoA7JIMXVYQhA9RlrmWVMp2uX/ZxbkitboS18e2709EiukIwdnOfq/cGWvBJIkNM2AaRs5sREhqbWR5mBzI3fTDQv4HuHGMq5jvjKYLu6q3B5T5vSRbReQ="}]},{"role":"function","parts":[{"functionResponse":{"name":"best_language_to_learn","response":{"name":"best_language_to_learn","content":[{"text":"Ruby"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"best_language_to_learn","description":"Gets
+        to learn?"}]},{"role":"model","parts":[{"functionCall":{"name":"best_language_to_learn","args":{}},"thoughtSignature":"Ct0BAb4+9vtdJ6rPR8bKYK34of24ZtZ6L8KG1aLaHV9zirZWxPxi/WAX6DAdpPSbfpQQ1FV4zCB+/MgcPmEhCUvlK0EMixRB7vtTjS89HfwSzh3yk05vTe4sg2whAOVS9a8gQ6pHr+C44bCDcUC9yuDmB1im0AjVN4hlsuR5feAWqiV0er0egKsuEQr92ni1zfCoZJoh/2B7LNQzf0b7f78zR5kz/dB4602Pzb+lRe+3S1TxRD25LZQFPvp3JCfxd8JGZHEfQzvpw6P0cLedLviwXQDdX0iuZJ00CTMPdj8="}]},{"role":"function","parts":[{"functionResponse":{"name":"best_language_to_learn","response":{"name":"best_language_to_learn","content":[{"text":"Ruby"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"best_language_to_learn","description":"Gets
         the best language to learn"}]}]}'
     headers:
       User-Agent:
@@ -116,7 +116,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 17:07:16 GMT
+      - Sun, 22 Feb 2026 21:19:39 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -126,7 +126,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=414
+      - gfet4t7; dur=715
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -161,7 +161,7 @@ http_interactions:
             ]
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "RHBqae-qL8nyvdIPw7OAkA0"
+          "responseId": "63Kbac-TDouknsEPiIHf8Ao"
         }
-  recorded_at: Fri, 16 Jan 2026 17:07:16 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Sun, 22 Feb 2026 21:19:39 GMT
+recorded_with: VCR 6.3.1

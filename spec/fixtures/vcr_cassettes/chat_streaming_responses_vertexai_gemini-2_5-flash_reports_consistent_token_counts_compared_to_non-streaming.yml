@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://oauth2.googleapis.com/token
+    uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=refresh_token&refresh_token=<GOOGLE_REFRESH_TOKEN>&client_id=<GOOGLE_CLIENT_ID>&client_secret=<GOOGLE_CLIENT_SECRET>
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkZXZlbG9wbWVudC1lbnZpcm9ubWVudEBzaW5ndWxhdGUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92NC90b2tlbiIsImV4cCI6MTc3MTc5NTU4OSwiaWF0IjoxNzcxNzk1NDY5LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0gaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nZW5lcmF0aXZlLWxhbmd1YWdlLnJldHJpZXZlciJ9.B-vsrHii6J5ZXyx07W7xWAJ8RRm9pIbpzUPePIZUE0JZBP95aIi5M_nlIqwRNMDcT0f4iqDL3lDc9SpProz-ulTwGm-ZOR2D44OGEZZlHNJKDQgFxB-HgFv9aSi4fwsqGVSXMjZII6D8YGJ-4I-m2y2maeAREqKXYRH-8No1AKSAki0j0uSQ3JdYlc-zIOPN1pWkbqiaDA9dTsv6LjrXQglgjRDLI9p7lXaou-mMeGcfLPuCWODmtjq09x_t2bsYji38nqMWQ5U3ShHr_U5_nYqN6KMXDVFbrqNcYsnkHEyKQPr1r_m11GJZ6puFfVhlJhBkH4QAXI9YoGkdXcvI-g
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -20,20 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Fri, 16 Jan 2026 15:18:02 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Date:
+      - Sun, 22 Feb 2026 21:25:29 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -48,15 +42,8 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |-
-        {
-          "access_token": "<GOOGLE_ACCESS_TOKEN>",
-          "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid",
-          "token_type": "Bearer",
-          "id_token": "<GOOGLE_ID_TOKEN>"
-        }
-  recorded_at: Fri, 16 Jan 2026 15:18:02 GMT
+      string: '{"access_token":"<GOOGLE_ACCESS_TOKEN>","expires_in":3599,"token_type":"Bearer"}'
+  recorded_at: Sun, 22 Feb 2026 21:25:29 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:streamGenerateContent?alt=sse
@@ -90,7 +77,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 16 Jan 2026 15:18:03 GMT
+      - Sun, 22 Feb 2026 21:25:29 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -109,15 +96,15 @@ http_interactions:
         33,\"trafficType\": \"ON_DEMAND\",\"promptTokensDetails\": [{\"modality\":
         \"TEXT\",\"tokenCount\": 7}],\"candidatesTokensDetails\": [{\"modality\":
         \"TEXT\",\"tokenCount\": 5}],\"thoughtsTokenCount\": 21},\"modelVersion\":
-        \"gemini-2.5-flash\",\"createTime\": \"2026-01-16T15:18:02.960735Z\",\"responseId\":
-        \"qlZqad_ROqSr7PIPtpOriAw\"}\r\n\r\n"
-  recorded_at: Fri, 16 Jan 2026 15:18:03 GMT
+        \"gemini-2.5-flash\",\"createTime\": \"2026-02-22T21:25:29.446925Z\",\"responseId\":
+        \"SXSbac2jG7-EtfAPxIKUuQs\"}\r\n\r\n"
+  recorded_at: Sun, 22 Feb 2026 21:25:29 GMT
 - request:
     method: post
-    uri: https://oauth2.googleapis.com/token
+    uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=refresh_token&refresh_token=<GOOGLE_REFRESH_TOKEN>&client_id=<GOOGLE_CLIENT_ID>&client_secret=<GOOGLE_CLIENT_SECRET>
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkZXZlbG9wbWVudC1lbnZpcm9ubWVudEBzaW5ndWxhdGUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92NC90b2tlbiIsImV4cCI6MTc3MTc5NTU4OSwiaWF0IjoxNzcxNzk1NDY5LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0gaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nZW5lcmF0aXZlLWxhbmd1YWdlLnJldHJpZXZlciJ9.B-vsrHii6J5ZXyx07W7xWAJ8RRm9pIbpzUPePIZUE0JZBP95aIi5M_nlIqwRNMDcT0f4iqDL3lDc9SpProz-ulTwGm-ZOR2D44OGEZZlHNJKDQgFxB-HgFv9aSi4fwsqGVSXMjZII6D8YGJ-4I-m2y2maeAREqKXYRH-8No1AKSAki0j0uSQ3JdYlc-zIOPN1pWkbqiaDA9dTsv6LjrXQglgjRDLI9p7lXaou-mMeGcfLPuCWODmtjq09x_t2bsYji38nqMWQ5U3ShHr_U5_nYqN6KMXDVFbrqNcYsnkHEyKQPr1r_m11GJZ6puFfVhlJhBkH4QAXI9YoGkdXcvI-g
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -132,20 +119,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Pragma:
-      - no-cache
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Date:
-      - Fri, 16 Jan 2026 15:18:04 GMT
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Date:
+      - Sun, 22 Feb 2026 21:25:30 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -160,15 +141,8 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |-
-        {
-          "access_token": "<GOOGLE_ACCESS_TOKEN>",
-          "expires_in": 3599,
-          "scope": "openid https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email",
-          "token_type": "Bearer",
-          "id_token": "<GOOGLE_ID_TOKEN>"
-        }
-  recorded_at: Fri, 16 Jan 2026 15:18:04 GMT
+      string: '{"access_token":"<GOOGLE_ACCESS_TOKEN>","expires_in":3599,"token_type":"Bearer"}'
+  recorded_at: Sun, 22 Feb 2026 21:25:30 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -198,7 +172,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 15:18:04 GMT
+      - Sun, 22 Feb 2026 21:25:30 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -249,8 +223,8 @@ http_interactions:
             "thoughtsTokenCount": 21
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-01-16T15:18:04.393036Z",
-          "responseId": "rFZqacz-F7me7PIPwMKb0Ac"
+          "createTime": "2026-02-22T21:25:30.311371Z",
+          "responseId": "SnSbacuAE562mPUPhJTPsQc"
         }
-  recorded_at: Fri, 16 Jan 2026 15:18:05 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Sun, 22 Feb 2026 21:25:30 GMT
+recorded_with: VCR 6.3.1

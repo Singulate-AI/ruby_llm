@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://oauth2.googleapis.com/token
+    uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=refresh_token&refresh_token=<GOOGLE_REFRESH_TOKEN>&client_id=<GOOGLE_CLIENT_ID>&client_secret=<GOOGLE_CLIENT_SECRET>
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkZXZlbG9wbWVudC1lbnZpcm9ubWVudEBzaW5ndWxhdGUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92NC90b2tlbiIsImV4cCI6MTc3MTc5NTcwNywiaWF0IjoxNzcxNzk1NTg3LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0gaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nZW5lcmF0aXZlLWxhbmd1YWdlLnJldHJpZXZlciJ9.R23pX6N6DmZjztGHE0Z6pXpb1-sFYZ1Bc8EVyFWZXCTitPB6aDtpbmGEnnGDlVx_G1T4RRQ9upS96zgQ0DSXTUFCyu5cyNMaTgNaJLbzutcfFIyiey16M6HVrc4nvZ0kip9uYLbeijgZBZ2TnDOOCf9OiDib786IINNFiNoSnalr1BBQJi77IcZNI2fbEg3lLVN9V8n-5kdWNkJ4k3x13-iWHRhtd0mzZ-M9Gu_-k8jZ8rJMqNB0BCfoI70c-vrTRo5U-QL6V-D3X3kMd4yn8roB89nAZ0cevCSrzjaXZE8mYkpHcW1nAf2iMrLNtOhp9XmVdqmDqdBCo0D61sa05A
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -20,20 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Date:
-      - Fri, 16 Jan 2026 15:21:13 GMT
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Date:
+      - Sun, 22 Feb 2026 21:27:27 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -48,15 +42,8 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |-
-        {
-          "access_token": "<GOOGLE_ACCESS_TOKEN>",
-          "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform openid https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email",
-          "token_type": "Bearer",
-          "id_token": "<GOOGLE_ID_TOKEN>"
-        }
-  recorded_at: Fri, 16 Jan 2026 15:21:13 GMT
+      string: '{"access_token":"<GOOGLE_ACCESS_TOKEN>","expires_in":3599,"token_type":"Bearer"}'
+  recorded_at: Sun, 22 Feb 2026 21:27:27 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -87,7 +74,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 15:21:14 GMT
+      - Sun, 22 Feb 2026 21:27:28 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -110,18 +97,18 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "Gruby"
+                    "text": "New Ruby."
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -9.3712666829427089
+              "avgLogprobs": -4.1386966705322266
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 63,
             "candidatesTokenCount": 3,
-            "totalTokenCount": 95,
+            "totalTokenCount": 86,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -139,11 +126,11 @@ http_interactions:
                 "tokenCount": 3
               }
             ],
-            "thoughtsTokenCount": 29
+            "thoughtsTokenCount": 20
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-01-16T15:21:13.683919Z",
-          "responseId": "aVdqaY_fKdWwmNAP-Nrv8QY"
+          "createTime": "2026-02-22T21:27:27.827706Z",
+          "responseId": "v3SbabrCMsL42fMPtZCqiQQ"
         }
-  recorded_at: Fri, 16 Jan 2026 15:21:14 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Sun, 22 Feb 2026 21:27:28 GMT
+recorded_with: VCR 6.3.1

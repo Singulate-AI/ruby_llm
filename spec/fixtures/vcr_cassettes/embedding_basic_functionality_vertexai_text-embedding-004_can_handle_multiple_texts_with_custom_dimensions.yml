@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://oauth2.googleapis.com/token
+    uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=refresh_token&refresh_token=<GOOGLE_REFRESH_TOKEN>&client_id=<GOOGLE_CLIENT_ID>&client_secret=<GOOGLE_CLIENT_SECRET>
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkZXZlbG9wbWVudC1lbnZpcm9ubWVudEBzaW5ndWxhdGUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92NC90b2tlbiIsImV4cCI6MTc3MTc5NTYxNywiaWF0IjoxNzcxNzk1NDk3LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0gaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nZW5lcmF0aXZlLWxhbmd1YWdlLnJldHJpZXZlciJ9.ls1lgC0un1KqY0WqjMeyPdXgODah-AruTLwIHGRH5FH7wVXe6Oua3B4SUM--S7G4oIuVP5wcwIKyw-qf78_AMIY8gPm_cDlvsDWXYafvYcPXVWS4q-BwEE_kWjy-hhp8HuxpAYWjUbX65oHleF8_4IqwXGZrqBCL_ZlIVzNmxWfuXDpiCX7pgEw3-lXM7N-06KXC89ejkjGaaPqqGaIxQUEfdkMGomsKiK-meiu69M-slSHdwHy8iMqJ4QBya-SDjrkpxJx2m4PwMN6zoP9XuWAv7pco63bul5l441DZJvUxqUf9NwC7zQ3kt9CitIOSaYjRxFBbX3LhwODtsNqlVg
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -20,20 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Date:
-      - Fri, 16 Jan 2026 15:20:49 GMT
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Date:
+      - Sun, 22 Feb 2026 21:25:57 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -48,15 +42,8 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |-
-        {
-          "access_token": "<GOOGLE_ACCESS_TOKEN>",
-          "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/cloud-platform",
-          "token_type": "Bearer",
-          "id_token": "<GOOGLE_ID_TOKEN>"
-        }
-  recorded_at: Fri, 16 Jan 2026 15:20:49 GMT
+      string: '{"access_token":"<GOOGLE_ACCESS_TOKEN>","expires_in":3599,"token_type":"Bearer"}'
+  recorded_at: Sun, 22 Feb 2026 21:25:57 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/text-embedding-004:predict
@@ -86,7 +73,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 15:21:00 GMT
+      - Sun, 22 Feb 2026 21:26:08 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -106,10 +93,6 @@ http_interactions:
           "predictions": [
             {
               "embeddings": {
-                "statistics": {
-                  "truncated": false,
-                  "token_count": 1
-                },
                 "values": [
                   -0.0071573383174836636,
                   0.01143405307084322,
@@ -879,11 +862,19 @@ http_interactions:
                   0.02526424266397953,
                   0.0099949613213539124,
                   -0.016448808833956718
-                ]
+                ],
+                "statistics": {
+                  "truncated": false,
+                  "token_count": 1
+                }
               }
             },
             {
               "embeddings": {
+                "statistics": {
+                  "token_count": 1,
+                  "truncated": false
+                },
                 "values": [
                   0.020355613902211189,
                   -0.049273330718278885,
@@ -1653,18 +1644,14 @@ http_interactions:
                   0.0027606498915702105,
                   0.018295800313353539,
                   -0.034528099000453949
-                ],
-                "statistics": {
-                  "truncated": false,
-                  "token_count": 1
-                }
+                ]
               }
             },
             {
               "embeddings": {
                 "statistics": {
-                  "token_count": 2,
-                  "truncated": false
+                  "truncated": false,
+                  "token_count": 2
                 },
                 "values": [
                   -0.0097851529717445374,
@@ -2443,5 +2430,5 @@ http_interactions:
             "billableCharacterCount": 20
           }
         }
-  recorded_at: Fri, 16 Jan 2026 15:21:00 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Sun, 22 Feb 2026 21:26:08 GMT
+recorded_with: VCR 6.3.1

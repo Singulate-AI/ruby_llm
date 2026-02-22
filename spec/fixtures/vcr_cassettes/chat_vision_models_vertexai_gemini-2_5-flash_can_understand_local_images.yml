@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://oauth2.googleapis.com/token
+    uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=refresh_token&refresh_token=<GOOGLE_REFRESH_TOKEN>&client_id=<GOOGLE_CLIENT_ID>&client_secret=<GOOGLE_CLIENT_SECRET>
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkZXZlbG9wbWVudC1lbnZpcm9ubWVudEBzaW5ndWxhdGUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92NC90b2tlbiIsImV4cCI6MTc3MTc5NTQ2NywiaWF0IjoxNzcxNzk1MzQ3LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0gaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nZW5lcmF0aXZlLWxhbmd1YWdlLnJldHJpZXZlciJ9.Hatct4J1QzvYW0Ttd-82WQL0sTuuUECAIq-khQHOm-tvMJaMCMLS6dC_3N5LpxoB7XGnzKouV9Qm20tNBAP6vEfZze3_Tmj5DtcyfNUmZLesWWWjuqp3yamHwQDZdJY_Tv5aEIcpC4jixk4t0kq2RDdWopQ3zDQh25tjn_WPyxzS9nyT4ife6jsROwfX1BfI8mVRZv0BSE8ocJAnv3eMQ3ijLqV4K0piQyM6nXO0MYAvafFRiVlfSVbO3rWiTXifyutXTfZV76X143tVS-8lxdKPGUzDzw7TlVpjgbBoR7GPn0fm3dQ3tmfGi0bQI3hlQaWaGP8PAqTGaA8WN0PHMA
     headers:
       User-Agent:
       - Faraday v2.14.0
@@ -20,20 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Pragma:
-      - no-cache
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Date:
-      - Fri, 16 Jan 2026 15:15:00 GMT
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Date:
+      - Sun, 22 Feb 2026 21:23:27 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -48,15 +42,8 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |-
-        {
-          "access_token": "<GOOGLE_ACCESS_TOKEN>",
-          "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid",
-          "token_type": "Bearer",
-          "id_token": "<GOOGLE_ID_TOKEN>"
-        }
-  recorded_at: Fri, 16 Jan 2026 15:15:00 GMT
+      string: '{"access_token":"<GOOGLE_ACCESS_TOKEN>","expires_in":3599,"token_type":"Bearer"}'
+  recorded_at: Sun, 22 Feb 2026 21:23:27 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -87,7 +74,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 15:15:11 GMT
+      - Sun, 22 Feb 2026 21:23:33 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -110,40 +97,40 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "This image shows a **stylized red gemstone**, which is widely recognized as the **logo for the Ruby programming language**.\n\nHere's a more detailed description:\n*   **Color:** It is predominantly a deep, rich red, with variations in shade that create depth and dimension.\n*   **Shape:** It's a faceted gem, resembling a cut ruby. It has a prominent, somewhat oval-shaped top facet, and numerous smaller triangular and trapezoidal facets around its sides and bottom.\n*   **Lighting & Shine:** The gem is depicted with bright white highlights and reflections across its surface, particularly on the top and along its edges, giving it a glossy, polished, and sparkling appearance. This suggests it's reflecting light.\n*   **Dimensionality:** The rendering creates a 3D effect, making the gem appear solid and cut, rather than flat.\n\nIn essence, it's a vibrant, shiny, red ruby logo."
+                    "text": "I see a **stylized red gemstone**, specifically resembling a **ruby**.\n\nHere are some details:\n*   It's a vibrant, deep red color with varying shades that give it a three-dimensional appearance.\n*   It has multiple facets, typical of a cut jewel, causing light to reflect off its surfaces.\n*   There are bright white highlights, particularly a prominent crescent-shaped highlight along the top edge and smaller sharp glints on other facets, suggesting a polished and reflective surface.\n*   The overall shape is somewhat rounded or oval on top, tapering down to a point or base with many triangular cuts.\n\nThis image is widely recognized as the **logo for the Ruby programming language**."
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -1.8755310992805325
+              "avgLogprobs": -2.3827609358162714
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 266,
-            "candidatesTokenCount": 196,
-            "totalTokenCount": 1239,
+            "candidatesTokenCount": 145,
+            "totalTokenCount": 1196,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
-                "modality": "IMAGE",
-                "tokenCount": 258
-              },
-              {
                 "modality": "TEXT",
                 "tokenCount": 8
+              },
+              {
+                "modality": "IMAGE",
+                "tokenCount": 258
               }
             ],
             "candidatesTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 196
+                "tokenCount": 145
               }
             ],
-            "thoughtsTokenCount": 777
+            "thoughtsTokenCount": 785
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-01-16T15:15:01.031815Z",
-          "responseId": "9VVqacf4AYyK7PIP447pwAc"
+          "createTime": "2026-02-22T21:23:27.620130Z",
+          "responseId": "z3ObaeLsJZSv2fMPoYyK2QM"
         }
-  recorded_at: Fri, 16 Jan 2026 15:15:11 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Sun, 22 Feb 2026 21:23:33 GMT
+recorded_with: VCR 6.3.1

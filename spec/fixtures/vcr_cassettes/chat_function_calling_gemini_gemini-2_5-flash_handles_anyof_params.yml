@@ -32,7 +32,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 17:10:41 GMT
+      - Sun, 22 Feb 2026 21:20:04 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -42,7 +42,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=777
+      - gfet4t7; dur=936
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -59,11 +59,11 @@ http_interactions:
                     "functionCall": {
                       "name": "any_of_params",
                       "args": {
-                        "status": "pending",
-                        "task": "Review PR"
+                        "task": "Review PR",
+                        "status": "pending"
                       }
                     },
-                    "thoughtSignature": "Cu8BAXLI2nxBEE8ORDDDHdogXHmUomWh3b1BwlKfqJhXCGFqOQ/MWPqNmwPeF/btaLq3qdajWHPtdeCR94QB7jSGXlNENZv/7crt+IhHsJCWznvBZ5N9iD7GO/qaeaqn9SePGBB8qP8I57V/uXcgPvAFEkJjjmsNtsPv4Akc+iZdgH/qrcuFICI3EWW5HVxtJ6xOUHJ7nj43MDty3DBFNRdIcE4JFLUOSGolAm3KRL+EgOJiMemN8R3YeRW62og4WZYil9ZOHtcpxctSjuibZfub+RiKjlCC8K5oXf8UfpmuWUERU8eDa2c4mw/i5mrLnAs="
+                    "thoughtSignature": "CogCAb4+9vv0++pezRIebnjP3HLRvBxfVfrI5jwSU6mSeLxaqI2ZNf05fAWX57lw0bRFzzPSX9f4N9GvD/bFa88YNSQTI5r/TQ/RLe1lTS26iFM9FQx7fIYjh8iGy+RbxtLc0gwxFKVRg+etvnhU4IS1ugLoKEdnUY+oijL0yx/zw2A1yQiw4Dn2zcfttBLSZ0ZCNWvW3o1H8U0DGkZQN3kJRziHx//J6saYCgtp8GJg1v1OvjJFpy5jxj+MXx7U+U/1q+S8Hm+m3RsIN1KEp+JC2BisoCHlcbsWkfTPoogFwDFYwtiaACjVJ4EKsoK3PCy8KobesSMRegHRCp4fXNzKDm3vzDAq9CMp"
                   }
                 ],
                 "role": "model"
@@ -76,17 +76,17 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 84,
             "candidatesTokenCount": 23,
-            "totalTokenCount": 169,
+            "totalTokenCount": 166,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 84
               }
             ],
-            "thoughtsTokenCount": 62
+            "thoughtsTokenCount": 59
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "EXFqadqdItzNvdIPuIzfiQI"
+          "responseId": "A3ObaeiBIYK4kdUPnru_2Qg"
         }
-  recorded_at: Fri, 16 Jan 2026 17:10:41 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Sun, 22 Feb 2026 21:20:04 GMT
+recorded_with: VCR 6.3.1

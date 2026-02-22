@@ -29,7 +29,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 17:00:28 GMT
+      - Sun, 22 Feb 2026 21:22:05 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -39,28 +39,62 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1775
+      - gfet4t7; dur=1889
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIkhlcmUncyB0aGUgc3VtbWFyeTpcblxuKipUaGUgU2ltcGxlc3Qgb2YgQ2FsY3VsYXRpb25zKipcblxuQWxyaWdodCwgbGV0J3Mgc2VlLiBTb21lb25lJ3MgbG9va2luZyBmb3IgYSB2ZXJ5IGJhc2ljIGFkZGl0aW9uIHByb2JsZW0gc29sdmVkLiBJdCBzZWVtcyB0aGV5IHdhbnQgdG8ga25vdyB0aGUgcmVzdWx0IG9mIGFkZGluZyB0d28gaW50ZWdlcnMuIFRoZSBvcGVyYXRpb24gaXMgY2xlYXJseSBzcGVjaWZpZWQgYXMgYWRkaXRpb24g4oCTIHRoYXQncyB0aGUgXCIrXCIgc3ltYm9sLiBUaGUgdHdvIG51bWJlcnMgaW52b2x2ZWQgYXJlIDUgYW5kIDMuIFNvLCB0byBmaW5kIHRoZSBhbnN3ZXIsIEkgc2ltcGx5IG5lZWQgdG8gcGVyZm9ybSB0aGUgYWRkaXRpb246IDUgcGx1cyAzLiBPZiBjb3Vyc2UsIHRoYXQgZXF1YWxzIDguIFNpbXBsZSBhcyB0aGF0LlxuXG5cbiIsCiAgICAgICAgICAgICJ0aG91Z2h0IjogdHJ1ZQogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgInRleHQiOiAiNSArIDMgPSA4IiwKICAgICAgICAgICAgInRob3VnaHRTaWduYXR1cmUiOiAiRXA4QkNwd0JBWExJMm56VnBNeC9oVnF1NXE3MWtxbHR1czlZcWtPdndrYW9XaEJ3blNNN2RrVXZpS2JHOWFmQ1kvSVRXck1CYjlxNGpHNitMK3dLOXVkRExkbWgyMWoreVBaL1ZTNmZqN3p6ckxWUG1uYzUrdkZNZGZDRlE3dFZNV2xsYk1hWkNyT3dHcjM4TUpBR2g4MGhBSFVuNmtqQWtSZG5VY25JeUZmL1Rpd2NaSHY4RGkyZVVWRVNtekhaaUtaV05OWk9oR0s3RXdjQVJPL1pLbzdXIgogICAgICAgICAgfQogICAgICAgIF0sCiAgICAgICAgInJvbGUiOiAibW9kZWwiCiAgICAgIH0sCiAgICAgICJmaW5pc2hSZWFzb24iOiAiU1RPUCIsCiAgICAgICJpbmRleCI6IDAKICAgIH0KICBdLAogICJ1c2FnZU1ldGFkYXRhIjogewogICAgInByb21wdFRva2VuQ291bnQiOiA5LAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogNywKICAgICJ0b3RhbFRva2VuQ291bnQiOiA1NywKICAgICJwcm9tcHRUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogOQogICAgICB9CiAgICBdLAogICAgInRob3VnaHRzVG9rZW5Db3VudCI6IDQxCiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0zLWZsYXNoLXByZXZpZXciLAogICJyZXNwb25zZUlkIjogInJHNXFhZTY1QVk2RHZkSVBqYm1NNFFZIgp9Cg==
-  recorded_at: Fri, 16 Jan 2026 17:00:28 GMT
+      string: |
+        {
+          "candidates": [
+            {
+              "content": {
+                "parts": [
+                  {
+                    "text": "**A Simple Calculation**\n\nOkay, so I'm presented with a straightforward arithmetic problem: \"What is 5 + 3?\". Immediately, my mind identifies this as a basic addition operation. The operands are clearly 5 and 3. There's no complexity here, no need for elaborate formulas or considerations. I just need to perform the addition. \n\nAnd, just like that, 5 + 3 equals 8. The answer is direct, unambiguous, and immediate: 8. Case closed.\n\n\n",
+                    "thought": true
+                  },
+                  {
+                    "text": "5 + 3 = 8",
+                    "thoughtSignature": "EskBCsYBAb4+9vsLp+JMc2SWZNgwDGgO3S4FldebrUR5TUYjUYxTsNnCqL7a+0q/Iq1OgHNtnWPU6g2/EINp4LfSz8kHA9OziHyBc5fHgwjhdgnb7Sd7oU69qt3FMv/6jUz6hpZb2tVUhCr27y6EwYgtOHbx0PVrm8DWoghaeKCA4WWOvr1s7H+cKFWFzpVNTyA4Q5l7GPl8PSu2sHiqyZnM+wxuYPGyx4D2IR8UhGRxbjHQXVD34/Z7yht58VPhny+CfolZT3rFGcJT"
+                  }
+                ],
+                "role": "model"
+              },
+              "finishReason": "STOP",
+              "index": 0
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 9,
+            "candidatesTokenCount": 7,
+            "totalTokenCount": 74,
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 9
+              }
+            ],
+            "thoughtsTokenCount": 58
+          },
+          "modelVersion": "gemini-3-flash-preview",
+          "responseId": "fHObafrTO_aYvdIP7t_iiAI"
+        }
+  recorded_at: Sun, 22 Feb 2026 21:22:05 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent
     body:
       encoding: UTF-8
-      string: '{"contents":[{"role":"user","parts":[{"text":"What is 5 + 3?"}]},{"role":"model","parts":[{"thought":true,"text":"Here''s
-        the summary:\n\n**The Simplest of Calculations**\n\nAlright, let''s see. Someone''s
-        looking for a very basic addition problem solved. It seems they want to know
-        the result of adding two integers. The operation is clearly specified as addition
-        – that''s the \"+\" symbol. The two numbers involved are 5 and 3. So, to find
-        the answer, I simply need to perform the addition: 5 plus 3. Of course, that
-        equals 8. Simple as that.\n\n\n","thoughtSignature":"Ep8BCpwBAXLI2nzVpMx/hVqu5q71kqltus9YqkOvwkaoWhBwnSM7dkUviKbG9afCY/ITWrMBb9q4jG6+L+wK9udDLdmh21j+yPZ/VS6fj7zzrLVPmnc5+vFMdfCFQ7tVMWllbMaZCrOwGr38MJAGh80hAHUn6kjAkRdnUcnIyFf/TiwcZHv8Di2eUVESmzHZiKZWNNZOhGK7EwcARO/ZKo7W"},{"text":"5
+      string: '{"contents":[{"role":"user","parts":[{"text":"What is 5 + 3?"}]},{"role":"model","parts":[{"thought":true,"text":"**A
+        Simple Calculation**\n\nOkay, so I''m presented with a straightforward arithmetic
+        problem: \"What is 5 + 3?\". Immediately, my mind identifies this as a basic
+        addition operation. The operands are clearly 5 and 3. There''s no complexity
+        here, no need for elaborate formulas or considerations. I just need to perform
+        the addition. \n\nAnd, just like that, 5 + 3 equals 8. The answer is direct,
+        unambiguous, and immediate: 8. Case closed.\n\n\n","thoughtSignature":"EskBCsYBAb4+9vsLp+JMc2SWZNgwDGgO3S4FldebrUR5TUYjUYxTsNnCqL7a+0q/Iq1OgHNtnWPU6g2/EINp4LfSz8kHA9OziHyBc5fHgwjhdgnb7Sd7oU69qt3FMv/6jUz6hpZb2tVUhCr27y6EwYgtOHbx0PVrm8DWoghaeKCA4WWOvr1s7H+cKFWFzpVNTyA4Q5l7GPl8PSu2sHiqyZnM+wxuYPGyx4D2IR8UhGRxbjHQXVD34/Z7yht58VPhny+CfolZT3rFGcJT"},{"text":"5
         + 3 = 8"}]},{"role":"user","parts":[{"text":"Now multiply that by 2"}]}],"generationConfig":{"thinkingConfig":{"includeThoughts":true,"thinkingLevel":"low"}}}'
     headers:
       User-Agent:
@@ -85,7 +119,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 16 Jan 2026 17:00:30 GMT
+      - Sun, 22 Feb 2026 21:22:06 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -95,7 +129,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1783
+      - gfet4t7; dur=1769
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -103,6 +137,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIioqQ2FsY3VsYXRpbmcgdGhlIE5leHQgU3RlcCoqXG5cbk9rYXksIHNvIEkgaGF2ZSBteSBwcmV2aW91cyByZXN1bHQsIHdoaWNoIGlzIDguIE5vdywgYWNjb3JkaW5nIHRvIHRoZSBwcm9jZXNzLCBJIG5lZWQgdG8gZG91YmxlIHRoYXQgdmFsdWUuICBUaGF0J3Mgc3RyYWlnaHRmb3J3YXJkIGVub3VnaCDigJMgaXQncyBzaW1wbHkgYSBtdWx0aXBsaWNhdGlvbi4gVGhlIG9wZXJhdGlvbiB0byBwZXJmb3JtIGlzIDggbXVsdGlwbGllZCBieSAyLiAgVGhlIG5leHQgY2FsY3VsYXRpb24gaXMgbm93IHNpbXBsZS5cblxuXG4iLAogICAgICAgICAgICAidGhvdWdodCI6IHRydWUKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIjggw5cgMiA9IDE2IiwKICAgICAgICAgICAgInRob3VnaHRTaWduYXR1cmUiOiAiRXA4QkNwd0JBWExJMm53MGZiVW9DcVJGOC9sZWF5M05ISFNSZVdsN1ovRkhXNVhYWk5qYzQyaHVHMHJTOGFrNmtocC9JeHlnM3lNUEJNQVZhUGlldnEvS2ZjRnpTU0tuanYyenRNQUtnZ1NTZFowM1VReHNYOWxkZSt5ZEhRY3pIemVlSFM5UEk4K1REUmlkN1dOaXM3WTVLU2lLYWhHekJzazhIa1J5enlES0V2S0pCQTgrelptcGlCSmFJbGdlRFBld3NjMFdETWxOaUpwb2F5WUFZeGU3IgogICAgICAgICAgfQogICAgICAgIF0sCiAgICAgICAgInJvbGUiOiAibW9kZWwiCiAgICAgIH0sCiAgICAgICJmaW5pc2hSZWFzb24iOiAiU1RPUCIsCiAgICAgICJpbmRleCI6IDAKICAgIH0KICBdLAogICJ1c2FnZU1ldGFkYXRhIjogewogICAgInByb21wdFRva2VuQ291bnQiOiAxMzEsCiAgICAiY2FuZGlkYXRlc1Rva2VuQ291bnQiOiA4LAogICAgInRvdGFsVG9rZW5Db3VudCI6IDE3MywKICAgICJwcm9tcHRUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogMTMxCiAgICAgIH0KICAgIF0sCiAgICAidGhvdWdodHNUb2tlbkNvdW50IjogMzQKICB9LAogICJtb2RlbFZlcnNpb24iOiAiZ2VtaW5pLTMtZmxhc2gtcHJldmlldyIsCiAgInJlc3BvbnNlSWQiOiAiclc1cWFZYjlPdkNZdmRJUHhibTVPUSIKfQo=
-  recorded_at: Fri, 16 Jan 2026 17:00:30 GMT
-recorded_with: VCR 6.4.0
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIioqTXkgTmV4dCBDYWxjdWxhdGlvbioqXG5cbk9rYXksIHNvIEkgaGF2ZSB0aGUgcHJldmlvdXMgcmVzdWx0LCB3aGljaCB3YXMgOC4gTm93IEkgbmVlZCB0byBtdWx0aXBseSB0aGF0IGJ5IDIuIEl0J3Mgc3RyYWlnaHRmb3J3YXJkLCByZWFsbHkuIE5vIG5lZWQgZm9yIGNvbXBsZXggYWxnb3JpdGhtcyBoZXJlLiBJdCdzIGEgc2ltcGxlIG9wZXJhdGlvbjogOCBtdWx0aXBsaWVkIGJ5IDIuIExldCdzIGRvIGl0Li4uIDggKiAyID0gMTYuIFRoZXJlIHdlIGdvLCB0aGUgbmV3IHJlc3VsdCBpcyAxNi5cblxuXG4iLAogICAgICAgICAgICAidGhvdWdodCI6IHRydWUKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIjggw5cgMiA9IDE2IiwKICAgICAgICAgICAgInRob3VnaHRTaWduYXR1cmUiOiAiRW9ZQkNvTUJBYjQrOXZzLzhuMFJyd25zM2dWaktFY1JSSVBxY1RVdGFwNlYvUXdrOVFXZ0V6SGlWTU5PZG4wUWMyUGYvZ21DWjZUZU1UZXZWUitHb0tXaDUzd1YvTlFjRUIyeVBaYjhzM2pwU1A1cWtRTzlCNkl2UnVBVEQxOG9UVGNOSHY1OGtLbGswYmdqTlBHUjdUcG5seUZkcHVhcHBLK1JXaUR1M0cvcEdxa0tOaGNKbEZnPSIKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJyb2xlIjogIm1vZGVsIgogICAgICB9LAogICAgICAiZmluaXNoUmVhc29uIjogIlNUT1AiLAogICAgICAiaW5kZXgiOiAwCiAgICB9CiAgXSwKICAidXNhZ2VNZXRhZGF0YSI6IHsKICAgICJwcm9tcHRUb2tlbkNvdW50IjogMTMxLAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogOCwKICAgICJ0b3RhbFRva2VuQ291bnQiOiAxNjcsCiAgICAicHJvbXB0VG9rZW5zRGV0YWlscyI6IFsKICAgICAgewogICAgICAgICJtb2RhbGl0eSI6ICJURVhUIiwKICAgICAgICAidG9rZW5Db3VudCI6IDEzMQogICAgICB9CiAgICBdLAogICAgInRob3VnaHRzVG9rZW5Db3VudCI6IDI4CiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0zLWZsYXNoLXByZXZpZXciLAogICJyZXNwb25zZUlkIjogImZuT2JhWXFsTC1UWXZkSVByTnVGaVFjIgp9Cg==
+  recorded_at: Sun, 22 Feb 2026 21:22:06 GMT
+recorded_with: VCR 6.3.1
