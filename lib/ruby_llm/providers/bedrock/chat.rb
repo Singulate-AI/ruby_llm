@@ -20,7 +20,7 @@ module RubyLLM
             messages: render_messages(chat_messages)
           }
 
-          system_blocks = render_system(system_messages)
+          system_blocks = render_system(system_messages, schema)
           payload[:system] = system_blocks unless system_blocks.empty?
 
           payload[:inferenceConfig] = render_inference_config(model, temperature)
@@ -193,8 +193,12 @@ module RubyLLM
           end
         end
 
-        def render_system(messages)
-          messages.flat_map { |msg| Media.render_content(msg.content, used_document_names: @used_document_names) }
+        def render_system(messages, schema = nil)
+          blocks = messages.flat_map do |msg|
+            Media.render_content(msg.content, used_document_names: @used_document_names)
+          end
+          blocks << { text: "You should respond with json that follows this schema: #{schema}" } if schema
+          blocks
         end
 
         def render_inference_config(_model, temperature)

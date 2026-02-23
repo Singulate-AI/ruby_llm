@@ -8,14 +8,14 @@ http_interactions:
       string: '{"messages":[{"role":"user","content":[{"text":"Hello"}]}],"inferenceConfig":{}}'
     headers:
       User-Agent:
-      - Faraday v2.14.1
+      - Faraday v2.14.0
       X-Amz-Date:
-      - 20260210T085516Z
+      - 20260223T222449Z
       X-Amz-Content-Sha256:
       - 011a5fda23d037906520eb46f0b03de19befe113b1faad6be1c4aec97bb86fee
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=invalid-key/20260210/<AWS_REGION>/bedrock/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=f15990b07c113c68f7499163422245186a5c192bc44e8df05a0924bd530d793d
+      - AWS4-HMAC-SHA256 Credential=invalid-key/20260223/<AWS_REGION>/bedrock/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=114ad2a071e46ca54c54e6fe6e97187f53436daa8fe43c301c069e926c273daa
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -28,7 +28,7 @@ http_interactions:
       message: Forbidden
     headers:
       Date:
-      - Tue, 10 Feb 2026 08:55:17 GMT
+      - Mon, 23 Feb 2026 22:24:49 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -36,11 +36,11 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 85434522-8f35-478d-9e0b-041e34571802
+      - fbc1b305-6cd4-4444-b87a-03ac95ce73cb
       X-Amzn-Errortype:
       - UnrecognizedClientException:http://internal.amazon.com/coral/com.amazon.coral.service/
     body:
       encoding: UTF-8
       string: '{"message":"The security token included in the request is invalid."}'
-  recorded_at: Thu, 19 Feb 2026 16:22:15 GMT
-recorded_with: VCR 6.4.0
+  recorded_at: Mon, 23 Feb 2026 22:24:49 GMT
+recorded_with: VCR 6.3.1

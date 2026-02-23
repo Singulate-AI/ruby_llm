@@ -29,6 +29,37 @@ RSpec.describe RubyLLM::Providers::Anthropic::Chat do
     end
   end
 
+  describe '.build_system_content' do
+    it 'returns an empty array when there are no system messages and no schema' do
+      result = described_class.build_system_content([], nil)
+      expect(result).to eq([])
+    end
+
+    it 'appends a schema instruction when schema is provided with system messages' do
+      schema = { type: 'object', properties: { name: { type: 'string' } } }
+      system_message = RubyLLM::Message.new(role: :system, content: 'Be helpful')
+
+      result = described_class.build_system_content([system_message], schema)
+
+      expect(result.length).to eq(2)
+      expect(result.first).to eq({ type: 'text', text: 'Be helpful' })
+      expect(result.last[:type]).to eq('text')
+      expect(result.last[:text]).to include('json')
+      expect(result.last[:text]).to include(schema.to_s)
+    end
+
+    it 'returns a schema instruction even when there are no system messages' do
+      schema = { type: 'object', properties: { age: { type: 'integer' } } }
+
+      result = described_class.build_system_content([], schema)
+
+      expect(result.length).to eq(1)
+      expect(result.first[:type]).to eq('text')
+      expect(result.first[:text]).to include('json')
+      expect(result.first[:text]).to include(schema.to_s)
+    end
+  end
+
   describe '.parse_completion_response' do
     it 'captures cache usage metrics on the message' do
       response_body = {
