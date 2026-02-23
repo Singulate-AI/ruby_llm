@@ -154,7 +154,7 @@ module RubyLLM
 
       if @schema && response.content.is_a?(String) && !response.tool_call?
         begin
-          response.content = JSON.parse(response.content)
+          response.content = JSON.parse(extract_json(response.content))
         rescue JSON::ParserError
           # If parsing fails, keep content as string
         end
@@ -185,6 +185,15 @@ module RubyLLM
     end
 
     private
+
+    def extract_json(text)
+      return text if text.nil? || text.empty?
+
+      # Will return the first json object or array embedded in the text
+      text.match(/[{\[]{1}([,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]|".*?")+[}\]]/).then do |match|
+        (match && match[0]) || text
+      end
+    end
 
     def normalize_schema_payload(raw_schema)
       return nil if raw_schema.nil?

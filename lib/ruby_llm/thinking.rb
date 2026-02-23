@@ -19,6 +19,10 @@ module RubyLLM
       new(text: text, signature: signature)
     end
 
+    def to_s
+      text.to_s
+    end
+
     def pretty_print(printer)
       printer.object_group(self) do
         printer.breakable

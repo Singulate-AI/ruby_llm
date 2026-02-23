@@ -7,6 +7,7 @@ module RubyLLM
       module Models
         # Gemini and other Google models that aren't returned by the API
         KNOWN_GOOGLE_MODELS = %w[
+          gemini-2.5-flash-image
           gemini-2.5-flash-lite
           gemini-2.5-pro
           gemini-2.5-flash
@@ -24,6 +25,14 @@ module RubyLLM
           gemini-exp-1206
           gemini-exp-1121
           gemini-embedding-001
+          imagegeneration@005
+          imagen-3.0-capability-001
+          imagen-3.0-fast-generate-001
+          imagen-3.0-generate-001
+          imagen-3.0-generate-002
+          imagen-4.0-fast-generate-001
+          imagen-4.0-generate-001
+          imagen-4.0-ultra-generate-001
           text-embedding-005
           text-embedding-004
           text-multilingual-embedding-002
@@ -75,10 +84,23 @@ module RubyLLM
               modalities: nil,
               capabilities: %w[streaming function_calling],
               pricing: nil,
-              metadata: {
-                source: 'known_models'
-              }
+              metadata: build_known_metadata(model_id)
             )
+          end
+        end
+
+        def build_known_metadata(model_id)
+          if model_id.include?('flash-image')
+            {
+              version: '2.0',
+              description: 'Gemini 2.5 Flash Preview Image',
+              supported_generation_methods: %w[generateContent countTokens],
+              source: 'known_models'
+            }
+          else
+            {
+              source: 'known_models'
+            }
           end
         end
 
