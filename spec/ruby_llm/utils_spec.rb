@@ -50,6 +50,36 @@ RSpec.describe RubyLLM::Utils do
       expect(original).to eq(config: { retries: 3, timeout: 5 }, mode: :safe)
       expect(overrides).to eq(config: { timeout: 10 }, verbose: true)
     end
+
+    it 'concatenates arrays instead of overriding them' do
+      original = { tags: %w[ruby llm] }
+      overrides = { tags: %w[ai chat] }
+
+      result = described_class.deep_merge(original, overrides)
+
+      expect(result[:tags]).to eq(%w[ruby llm ai chat])
+    end
+
+    it 'concatenates arrays within nested hashes' do
+      original = { config: { plugins: %w[auth logging], timeout: 5 } }
+      overrides = { config: { plugins: %w[caching], retries: 3 } }
+
+      result = described_class.deep_merge(original, overrides)
+
+      expect(result[:config][:plugins]).to eq(%w[auth logging caching])
+      expect(result[:config][:timeout]).to eq(5)
+      expect(result[:config][:retries]).to eq(3)
+    end
+
+    it 'does not mutate original arrays' do
+      original_tags = %w[ruby llm]
+      original = { tags: original_tags }
+      overrides = { tags: %w[ai] }
+
+      described_class.deep_merge(original, overrides)
+
+      expect(original_tags).to eq(%w[ruby llm])
+    end
   end
 
   describe '.deep_dup' do
@@ -74,7 +104,7 @@ RSpec.describe RubyLLM::Utils do
   describe '.deep_stringify_keys' do
     it 'converts nested keys and symbol values to strings' do
       data = {
-        config: {
+        :config => {
           retries: 3,
           mode: :safe
         },

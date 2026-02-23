@@ -16,10 +16,10 @@ module RubyLLM
                            schema: nil, thinking: nil, tool_prefs: nil)
           tool_prefs ||= {}
           system_messages, chat_messages = separate_messages(messages)
-          system_content = build_system_content(system_messages)
+          system_content = build_system_content(system_messages, schema)
 
           build_base_payload(chat_messages, model, stream, thinking).tap do |payload|
-            add_optional_fields(payload, system_content:, tools:, tool_prefs:, temperature:, schema:)
+            add_optional_fields(payload, system_content:, tools:, tool_prefs:, temperature:, schema:, model:)
           end
         end
         # rubocop:enable Metrics/ParameterLists
@@ -28,8 +28,8 @@ module RubyLLM
           messages.partition { |msg| msg.role == :system }
         end
 
-        def build_system_content(system_messages)
-          return [] if system_messages.empty?
+        def build_system_content(system_messages, schema)
+          return [] if system_messages.empty? && schema.nil?
 
           if system_messages.length > 1
             RubyLLM.logger.warn(
@@ -38,7 +38,7 @@ module RubyLLM
             )
           end
 
-          system_messages.flat_map do |msg|
+          messages = system_messages.flat_map do |msg|
             content = msg.content
 
             if content.is_a?(RubyLLM::Content::Raw)
@@ -47,6 +47,11 @@ module RubyLLM
               Media.format_content(content)
             end
           end
+
+          return messages unless schema
+
+          messages << { text: "You should respond with json that follows this schema: #{schema}",
+                        type: 'text' }
         end
 
         def build_base_payload(chat_messages, model, stream, thinking)
@@ -63,7 +68,7 @@ module RubyLLM
           payload
         end
 
-        def add_optional_fields(payload, system_content:, tools:, tool_prefs:, temperature:, schema: nil) # rubocop:disable Metrics/ParameterLists
+        def add_optional_fields(payload, system_content:, tools:, tool_prefs:, temperature:, model:, schema: nil) # rubocop:disable Metrics/ParameterLists,Metrics/PerceivedComplexity
           if tools.any?
             payload[:tools] = tools.values.map { |t| Tools.function_for(t) }
             unless tool_prefs[:choice].nil? && tool_prefs[:calls].nil?
@@ -72,7 +77,9 @@ module RubyLLM
           end
           payload[:system] = system_content unless system_content.empty?
           payload[:temperature] = temperature unless temperature.nil?
-          payload[:output_config] = build_output_config(schema) if schema
+          return unless schema && model.capabilities.include?('structured_output')
+
+          payload[:output_config] = build_output_config(schema)
         end
 
         def build_output_config(schema)

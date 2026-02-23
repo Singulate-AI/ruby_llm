@@ -7,6 +7,7 @@ module RubyLLM
       include VertexAI::Chat
       include VertexAI::Streaming
       include VertexAI::Embeddings
+      include VertexAI::Images
       include VertexAI::Models
       include VertexAI::Transcription
 

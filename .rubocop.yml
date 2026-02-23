@@ -38,5 +38,3 @@ RSpec/ExampleLength:
   Enabled: false
 RSpec/MultipleExpectations:
   Enabled: false
-RSpec/LeakyLocalVariable:
-  Enabled: false
