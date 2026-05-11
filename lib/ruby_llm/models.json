@@ -11248,8 +11248,7 @@
       "function_calling",
       "structured_output",
       "reasoning",
-      "vision",
-      "structured_output"
+      "vision"
     ],
     "pricing": {
       "text_tokens": {
@@ -12135,8 +12134,7 @@
       "function_calling",
       "structured_output",
       "reasoning",
-      "vision",
-      "structured_output"
+      "vision"
     ],
     "pricing": {
       "text_tokens": {
@@ -12520,8 +12518,7 @@
       "function_calling",
       "structured_output",
       "reasoning",
-      "vision",
-      "structured_output"
+      "vision"
     ],
     "pricing": {
       "text_tokens": {
