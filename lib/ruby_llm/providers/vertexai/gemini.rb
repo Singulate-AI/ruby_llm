@@ -7,6 +7,7 @@ module RubyLLM
       class Gemini < Protocols::Gemini
         include VertexAI::Embeddings
         include VertexAI::Models
+        include VertexAI::Images
 
         def completion_url
           "#{@provider.model_path(@model.id)}:generateContent"

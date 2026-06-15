@@ -374,9 +374,19 @@ module RubyLLM
     def normalize_schema_response(response)
       return unless @schema && response.content.is_a?(String) && !response.tool_call?
 
-      response.content = JSON.parse(response.content)
+      response.content = JSON.parse(extract_json(response.content))
     rescue JSON::ParserError
       # If parsing fails, keep content as string.
+    end
+
+    def extract_json(text)
+      return text if text.nil? || text.empty?
+
+      # Return the first JSON object or array embedded in the text, tolerating
+      # any prose a model may emit before/after the structured payload.
+      text.match(/[{\[]{1}([,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]|".*?")+[}\]]/).then do |match|
+        (match && match[0]) || text
+      end
     end
 
     def set_legacy_callback(name, legacy_name, additive_name, &block)
