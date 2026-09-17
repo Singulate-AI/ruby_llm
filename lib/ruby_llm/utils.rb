@@ -3,6 +3,8 @@
 module RubyLLM
   # Provides utility functions for data manipulation within the RubyLLM library
   module Utils
+    UNDERSCORE_BOUNDARY = /(?<=[a-z\d])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/
+
     module_function
 
     def hash_get(hash, key)
@@ -11,9 +13,7 @@ module RubyLLM
 
     # Acronym-aware underscoring: 'HTTPProxyTool' -> 'http_proxy_tool'.
     def underscore(name)
-      name.gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
-          .gsub(/([a-z\d])([A-Z])/, '\1_\2')
-          .downcase
+      name.gsub(UNDERSCORE_BOUNDARY, '_').downcase
     end
 
     def to_safe_array(item)
