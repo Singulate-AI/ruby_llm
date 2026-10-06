@@ -5,6 +5,8 @@ module RubyLLM
     class Mistral
       # Determines capabilities for Mistral models
       module Capabilities
+        VOXTRAL = 'voxtral'
+
         module_function
 
         def supports_streaming?(model_id)
@@ -94,26 +96,31 @@ module RubyLLM
           end
         end
 
+        def voxtral_followed_by?(model_id, marker)
+          start = model_id.index(VOXTRAL)
+          return false unless start
+
+          !model_id.index(marker, start + VOXTRAL.length).nil?
+        end
+
         def capabilities_for(model_id) # rubocop:disable Metrics/PerceivedComplexity
-          case model_id
-          when /moderation/ then ['moderation']
-          when /voxtral.*transcribe/ then ['transcription']
-          when /ocr/ then ['vision']
-          else
-            capabilities = []
-            capabilities << 'streaming' if supports_streaming?(model_id)
-            capabilities << 'function_calling' if supports_tools?(model_id)
-            capabilities << 'structured_output' if supports_json_mode?(model_id)
-            capabilities << 'vision' if supports_vision?(model_id)
+          return ['moderation'] if model_id.match?(/moderation/)
+          return ['transcription'] if voxtral_followed_by?(model_id, 'transcribe')
+          return ['vision'] if model_id.match?(/ocr/)
 
-            capabilities << 'reasoning' if supports_reasoning?(model_id)
-            capabilities << 'batch' unless model_id.match?(/voxtral|ocr|embed|moderation/)
-            capabilities << 'fine_tuning' if model_id.match?(/mistral-(small|medium|large)|devstral/)
-            capabilities << 'distillation' if model_id.match?(/ministral/)
-            capabilities << 'predicted_outputs' if model_id.match?(/codestral/)
+          capabilities = []
+          capabilities << 'streaming' if supports_streaming?(model_id)
+          capabilities << 'function_calling' if supports_tools?(model_id)
+          capabilities << 'structured_output' if supports_json_mode?(model_id)
+          capabilities << 'vision' if supports_vision?(model_id)
 
-            capabilities.uniq
-          end
+          capabilities << 'reasoning' if supports_reasoning?(model_id)
+          capabilities << 'batch' unless model_id.match?(/voxtral|ocr|embed|moderation/)
+          capabilities << 'fine_tuning' if model_id.match?(/mistral-(small|medium|large)|devstral/)
+          capabilities << 'distillation' if model_id.match?(/ministral/)
+          capabilities << 'predicted_outputs' if model_id.match?(/codestral/)
+
+          capabilities.uniq
         end
 
         def pricing_for(_model_id)
