@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require 'timeout'
 
 RSpec.describe RubyLLM::Protocols::ChatCompletions::Chat do
   describe '.parse_completion_response' do
@@ -145,6 +146,72 @@ RSpec.describe RubyLLM::Protocols::ChatCompletions::Chat do
 
       expect(message.output_tokens).to eq(11_395)
       expect(message.thinking_tokens).to eq(193_947)
+    end
+
+    it 'extracts closed <think> tags from string content' do
+      response_body = {
+        'model' => 'sonar-reasoning',
+        'choices' => [
+          {
+            'message' => {
+              'role' => 'assistant',
+              'content' => '<think>reasoning</think>Hello!'
+            }
+          }
+        ]
+      }
+
+      response = instance_double(Faraday::Response, body: response_body)
+      allow(described_class).to receive(:parse_tool_calls).and_return(nil)
+
+      message = described_class.parse_completion_response(response)
+
+      expect(message.content).to eq('Hello!')
+      expect(message.thinking.text).to eq('reasoning')
+    end
+
+    it 'leaves unterminated <think> tags in content' do
+      response_body = {
+        'model' => 'sonar-reasoning',
+        'choices' => [
+          {
+            'message' => {
+              'role' => 'assistant',
+              'content' => 'Hello! <think>trailing'
+            }
+          }
+        ]
+      }
+
+      response = instance_double(Faraday::Response, body: response_body)
+      allow(described_class).to receive(:parse_tool_calls).and_return(nil)
+
+      message = described_class.parse_completion_response(response)
+
+      expect(message.content).to eq('Hello! <think>trailing')
+      expect(message.thinking).to be_nil
+    end
+
+    it 'parses many unterminated <think> tags without excessive backtracking' do
+      response_body = {
+        'model' => 'sonar-reasoning',
+        'choices' => [
+          {
+            'message' => {
+              'role' => 'assistant',
+              'content' => '<think>' * 50_000
+            }
+          }
+        ]
+      }
+
+      response = instance_double(Faraday::Response, body: response_body)
+      allow(described_class).to receive(:parse_tool_calls).and_return(nil)
+
+      message = Timeout.timeout(5) { described_class.parse_completion_response(response) }
+
+      expect(message.content).to eq('<think>' * 50_000)
+      expect(message.thinking).to be_nil
     end
   end
 

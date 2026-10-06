@@ -11,7 +11,7 @@ module RubyLLM
 
         module_function
 
-        # rubocop:disable Metrics/ParameterLists,Metrics/PerceivedComplexity
+        # rubocop:disable-next Metrics/ParameterLists,Metrics/PerceivedComplexity
         def render_payload(messages, tools:, temperature:, model:, stream: false, schema: nil,
                            thinking: nil, citations: false, tool_prefs: nil)
           warn_unsupported_citations(model) if citations && !model.citations?
@@ -50,7 +50,6 @@ module RubyLLM
           payload[:stream_options] = { include_usage: true } if stream
           payload
         end
-        # rubocop:enable Metrics/ParameterLists,Metrics/PerceivedComplexity
 
         def warn_unsupported_citations(model)
           RubyLLM.logger.warn(
@@ -285,11 +284,26 @@ module RubyLLM
           block['text'] if block['text'].is_a?(String)
         end
 
-        def extract_think_tag_content(text)
-          return [text, nil] unless text.include?('<think>')
+        THINK_OPEN_TAG = '<think>'
+        THINK_CLOSE_TAG = '</think>'
 
-          thinking = text.scan(%r{<think>(.*?)</think>}m).join
-          content = text.gsub(%r{<think>.*?</think>}m, '').strip
+        def extract_think_tag_content(text)
+          return [text, nil] unless text.include?(THINK_OPEN_TAG)
+
+          thinking = +''
+          content = +''
+          rest = text
+
+          while (start = rest.index(THINK_OPEN_TAG))
+            finish = rest.index(THINK_CLOSE_TAG, start + THINK_OPEN_TAG.length)
+            break unless finish
+
+            content << rest.slice(0, start)
+            thinking << rest.slice(start + THINK_OPEN_TAG.length, finish - start - THINK_OPEN_TAG.length)
+            rest = rest.slice((finish + THINK_CLOSE_TAG.length)..) || +''
+          end
+
+          content = (content + rest).strip
 
           [content.empty? ? nil : content, thinking.empty? ? nil : thinking]
         end
